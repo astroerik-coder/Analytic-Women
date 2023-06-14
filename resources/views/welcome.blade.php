@@ -13,67 +13,92 @@
   <!-- Barra de navegación -->
   @component('layouts.components.navbar')@endcomponent
 
-  <div class="slider text-gray-100 ">
-    <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1504194921103-f8b80cadd5e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
-      <div class="overlay">
+  <div class="slider relative w-full h-screen overflow-hidden">
+    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
+      style="background-image: url('https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+      <div
+        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
         <h2 class="text-3xl font-bold">Título de la imagen 1</h2>
         <p>Descripción de la imagen 1</p>
       </div>
     </div>
-    <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1573167627769-e201a7ddf409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80')">
-      <div class="overlay">
+    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
+      style="background-image: url('https://images.unsplash.com/photo-1504194921103-f8b80cadd5e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+
+      <div
+        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
         <h2 class="text-3xl font-bold">Título de la imagen 2</h2>
         <p>Descripción de la imagen 2</p>
       </div>
     </div>
-    <div class="slide"style="background-image: url('https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
-      <div class="overlay">
+    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
+      style="background-image: url('https://images.unsplash.com/photo-1573167627769-e201a7ddf409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80')">
+      <div
+        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
         <h2 class="text-3xl font-bold">Título de la imagen 3</h2>
         <p>Descripción de la imagen 3</p>
       </div>
     </div>
-    <div class="button-container">
-      <button class="button prev">
+    <div class="button-container absolute top-1/2 left-0 transform -translate-y-1/2 w-full flex justify-between z-10">
+      <button
+        class="button bg-primary bg-opacity-50 text-white w-10 h-10 flex items-center justify-center transition duration-300 hover:bg-opacity-70">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" />
         </svg>
       </button>
-      <button class="button next">
+      <button
+        class="button bg-primary bg-opacity-50 text-white w-10 h-10 flex items-center justify-center transition duration-300 hover:bg-opacity-70">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round" />
         </svg>
       </button>
     </div>
+    <div
+      class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
+      <div class="indicators flex justify-center">
+        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
+        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
+        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
+      </div>
+    </div>
   </div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+  const indicators = document.querySelectorAll('.indicator');
+  let currentSlide = 0;
 
-    setInterval(() => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    }, 5000);
+  setInterval(() => {
+    goToSlide((currentSlide + 1) % slides.length);
+  }, 5000);
 
-    const prevButton = document.querySelector('.button.prev');
-    const nextButton = document.querySelector('.button.next');
+  const prevButton = document.querySelector('.button:first-child');
+  const nextButton = document.querySelector('.button:last-child');
 
-    prevButton.addEventListener('click', () => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-      slides[currentSlide].classList.add('active');
+  prevButton.addEventListener('click', () => {
+    goToSlide((currentSlide - 1 + slides.length) % slides.length);
+  });
+
+  nextButton.addEventListener('click', () => {
+    goToSlide((currentSlide + 1) % slides.length);
+  });
+
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      goToSlide(index);
     });
+  });
 
-    nextButton.addEventListener('click', () => {
-      slides[currentSlide].classList.remove('active');
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.add('active');
-    });
+  function goToSlide(index) {
+    slides[currentSlide].classList.remove('opacity-100');
+    indicators[currentSlide].classList.remove('bg-white');
+    currentSlide = index;
+    slides[currentSlide].classList.add('opacity-100');
+    indicators[currentSlide].classList.add('bg-white');
+  }
   </script>
-
 
   <!-- Contenido principal -->
   <div class="container mx-auto mt-16">
@@ -414,7 +439,7 @@
         })
 
     }) 
-  </script> 
+  </script>
   @component('layouts.components.footer') @endcomponent
 </body>
 
