@@ -156,57 +156,236 @@
       </div>
     </section>
   </div>
+
+  
+<!-- ====== Cards Section Start -->
+<section class="pt-20 lg:pt-[120px] pb-10 lg:pb-20 bg-[#F3F4F6]">
+  <div class="container">
+     <div class="flex flex-wrap -mx-4">
+        <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+           <div class="bg-white rounded-lg overflow-hidden mb-10">
+              <img
+                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                 alt="image"
+                 class="w-full"
+                 />
+              <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                 <h3>
+                    <a
+                       href="javascript:void(0)"
+                       class="
+                       font-semibold
+                       text-dark text-xl
+                       sm:text-[22px]
+                       md:text-xl
+                       lg:text-[22px]
+                       xl:text-xl
+                       2xl:text-[22px]
+                       mb-4
+                       block
+                       hover:text-primary
+                       "
+                       >
+                   Mision
+                    </a>
+                 </h3>
+                 <p class="text-base text-body-color leading-relaxed mb-7">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                    elit. Lorem consectetur adipiscing elit.
+                 </p>
+                 <a
+                    href="javascript:void(0)"
+                    class="
+                    inline-block
+                    py-2
+                    px-7
+                    border border-[#E5E7EB]
+                    rounded-full
+                    text-base text-body-color
+                    font-medium
+                    hover:border-primary hover:bg-primary hover:text-white
+                    transition
+                    "
+                    >
+                 Mas
+                 </a>
+              </div>
+           </div>
+        </div>
+        <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+           <div class="bg-white rounded-lg overflow-hidden mb-10">
+              <img
+                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                 alt="image"
+                 class="w-full"
+                 />
+              <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                 <h3>
+                    <a
+                       href="javascript:void(0)"
+                       class="
+                       font-semibold
+                       text-dark text-xl
+                       sm:text-[22px]
+                       md:text-xl
+                       lg:text-[22px]
+                       xl:text-xl
+                       2xl:text-[22px]
+                       mb-4
+                       block
+                       hover:text-primary
+                       "
+                       >
+                   Vision
+                    </a>
+                 </h3>
+                 <p class="text-base text-body-color leading-relaxed mb-7">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                    elit. Lorem consectetur adipiscing elit.
+                 </p>
+                 <a
+                    href="javascript:void(0)"
+                    class="
+                    inline-block
+                    py-2
+                    px-7
+                    border border-[#E5E7EB]
+                    rounded-full
+                    text-base text-body-color
+                    font-medium
+                    hover:border-primary hover:bg-primary hover:text-white
+                    transition
+                    "
+                    >
+                 Mas
+                 </a>
+              </div>
+           </div>
+        </div>
+        <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+           <div class="bg-white rounded-lg overflow-hidden mb-10">
+              <img
+                 src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                 alt="image"
+                 class="w-full"
+                 />
+              <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                 <h3>
+                    <a
+                       href="javascript:void(0)"
+                       class="
+                       font-semibold
+                       text-dark text-xl
+                       sm:text-[22px]
+                       md:text-xl
+                       lg:text-[22px]
+                       xl:text-xl
+                       2xl:text-[22px]
+                       mb-4
+                       block
+                       hover:text-primary
+                       "
+                       >
+                    Cultura Organizacional
+                    </a>
+                 </h3>
+                 <p class="text-base text-body-color leading-relaxed mb-7">
+                    Lorem ipsum dolor sit amet pretium consectetur adipiscing
+                    elit. Lorem consectetur adipiscing elit.
+                 </p>
+                 <a
+                    href="javascript:void(0)"
+                    class="
+                    inline-block
+                    py-2
+                    px-7
+                    border border-[#E5E7EB]
+                    rounded-full
+                    text-base text-body-color
+                    font-medium
+                    hover:border-primary hover:bg-primary hover:text-white
+                    transition
+                    "
+                    >
+                 Mas
+                 </a>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</section>
+<!-- ====== Cards Section End -->
+
   {{-- Empresa --}}
 
   <!-- component -->
   <div class="py-16 white">
     <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-      <h2 class="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">What's our customers say</h2>
+      <h2 class="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">Socias Accionistas</h2>
       <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
         <div class="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
           <div class="h-full flex flex-col justify-center space-y-4">
             <img class="w-20 h-20 mx-auto rounded-full"
-              src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp"
+              src="https://img.icons8.com/?size=512&id=82220&format=png"
               alt="user avatar" height="220" width="220" loading="lazy">
-            <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam
-              consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad
-              doloribus. <span class="font-serif">"</span></p>
-            <div>
-              <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
-              <span class="text-xs text-gray-500">Product Designer</span>
-            </div>
+              <div>
+                <h6 class="text-lg font-semibold leading-none">Ing. Sara Yánez, Msc.</h6>
+                <span class="text-xs text-gray-500">Gerente General</span>
+              </div>
+              <p class="text-gray-600"> 
+              Ingeniera en Sistemas ESPE y UDLA. Maestría en Evaluación de la Política Pública IAEN. Egresada de la Maestría Dirección de Proyectos UESS. Diplomado en:
+              Gobernanza y Liderazgo Político, Políticas Públicas, Liderazgo local IDE Bussines Scholl. Diplomado en Liderazgo de los ODS SODECTEC Argentina. Fundadora y
+              presidenta de la Red de Profesionales de Cotopaxi. Fundadora y ex presidenta de la Red Nacional de Apoyo a la Mujer Ecuatoriana (RENAME). Cofundadora de
+              la Red de Gobierno Abierto Ecuador. Designada como Facilitadora de la Red de Economía Violeta de Ecuador.
+              Experiencia en Desarrollo de software para la banca privada: PRODUBANCO y Banco Pichincha. Análisis de bases de datos de Instituciones Públicas. Desarrollo
+              de proyectos sociales con organizaciones de mujeres y grupos vulnerables, Coordinación con la academia para el desarrollo de aplicaciones informáticas, que
+              servirán para potencializar el emprendimiento y promover el turismo sostenible, la gastronomía y cultura comunitaria del Ecuador. Desarrollo de Capacitaciones
+              y Formación Continua en temas de economía, gobernanza y política. Apoyo en la elaboración del plan de Gobierno Abierto de Ecuador 2019-2022. Miembro
+              del Consejo Consultivo de las Negociaciones de la Unión Europea con Ecuador 2018 – 2021. Actualmente, apoyando en la Mesa de Justicia Abierta de Ecuador y
+              del grupo de Ciencia Abierta de Ecuador.
+              </p>
+            
           </div>
         </div>
 
         <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
           <img class="w-20 h-20 mx-auto rounded-full"
-            src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp" alt="user avatar"
+            src="https://img.icons8.com/?size=512&id=82220&format=png" alt="user avatar"
             height="220" width="220" loading="lazy">
-          <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-            <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur
-              repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span
-                class="font-serif">"</span></p>
+          <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">     
             <div>
-              <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
-              <span class="text-xs text-gray-500">Product Designer</span>
-            </div>
+              <h6 class="text-lg font-semibold leading-none">Arq. Carolina Ramos Pinto, Msc.</h6>
+              <span class="text-xs text-gray-500">Presidenta</span>
+            </div>    
+            <p class="text-gray-600">Arquitecta con maestría en Dirección de Proyectos. Certificación en Prevención de riesgos laborales: construcción y obras públicas. Cursando Diplomado en
+              Gestión de Empresas Constructoras, de Arquitectura e Inmobiliarias. Estudios en liderazgo y productividad.
+              Experiencia en fiscalización de obras civiles e infraestructura urbana. Desarrollo de estudios de consultoría de arquitectura e ingeniería. Coordinadora y
+              parte del equipo de proyectos de consultoría de ingeniería en el ámbito de infraestructura sanitaria en entidades públicas. Manejo de equipos
+              multidisciplinarios.Desarrollo y evaluación de proyectos. Coordinación y desarrollo de estudios socioeconómicos y de mercado para consultorías de
+              infraestructura sanitaria, vías y regeneración urbana.
+              </p>  
           </div>
         </div>
         <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
           <img class="w-20 h-20 mx-auto rounded-full"
-            src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar"
+            src="https://img.icons8.com/?size=512&id=82220&format=png" alt="user avatar"
             height="220" width="220" loading="lazy">
           <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-            <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur
-              repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span
-                class="font-serif">"</span></p>
             <div>
-              <h6 class="text-lg font-semibold leading-none">Jane Doe</h6>
-              <span class="text-xs text-gray-500">Product Designer</span>
+              <h6 class="text-lg font-semibold leading-none">Ec. Carmen López Saravia</h6>
+              <span class="text-xs text-gray-500">Directora Financiera</span>
             </div>
+            <p class="text-gray-600">Economista UCE. Socia del Colegio de Economistas de Pichincha. Profesional orientada a objetivos y metas medibles. Certificación en Resiliencia Laboral,
+              habilidades blandas y atención al cliente (Enfoque en la norma ISO 9001-2015). Certificación Internacional en Hubspot. Escuela de formadores y capacitadores
+              banco del Pacífico.
+              Experiencia: Elaboración de Presupuestos comerciales y determinación del mercado objetivo. Manejo operacional, Digital, Ventas Inbound. Comercio electrónico y
+              de servicios. Elaboración de lineamentos comerciales con aplicación nacional. Diseño y manejo de indicadores comerciales y de productividad.Captación y
+              mantenimiento de socios corporativos. Formular y evaluar planes para la implementación de estrategias comerciales. Gestión área comercial (Instituciones
+              Financieras y Aseguradoras). Dirección de equipos comerciales de alto rendimientos. Capacitaciones y talleres en ventas, liderazgo, motivación, trabajo en equipo,
+              servicio al cliente.
+              </p>
+           
           </div>
         </div>
       </div>
@@ -217,11 +396,11 @@
   <!-- component -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
     <div class="text-center pb-12">
-      <h2 class="text-base font-bold text-indigo-600">
-        Socias-Accionistas
+      <h2 class="text-4xl font-bold text-tertiary">
+        Aliados Estrategicos
       </h2>
-      <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
-        Check our awesome team members
+      <h1 class="font-bold text-2xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+        Consultores externos
       </h1>
     </div>
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -341,8 +520,7 @@
                 <div class="swiper-slide">
                   <blockquote class="text-left ">
                     <div class="relative">
-                      <div class="relative"><img
-                          src="https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
+                      <div class="relative"><img src="https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80"
                           alt="aji" class="object-cover w-full h-60 mx-auto rounded-t-2xl" />
                         <div class="rounded-t-2xl absolute bg-gradient-to-t from-gray-800 opacity-75 inset-0 z-0"></div>
                       </div>
@@ -440,6 +618,8 @@
 
     }) 
   </script>
+ 
+
   @component('layouts.components.footer') @endcomponent
 </body>
 

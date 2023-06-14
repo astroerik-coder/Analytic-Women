@@ -49,7 +49,7 @@
                         dark:hover:bg-gray-700 
                         dark:hover:text-white
                         md:dark:hover:bg-transparent 
-                        dark:border-gray-700">About</a>
+                        dark:border-gray-700">Blog</a>
                 </li>
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4
@@ -62,7 +62,7 @@
                      dark:hover:bg-gray-700 
                      dark:hover:text-white 
                      md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Servicios</a>
+                     dark:border-gray-700">Social</a>
                 </li>
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4
@@ -75,7 +75,7 @@
                     dark:hover:bg-gray-700 
                     dark:hover:text-white 
                     md:dark:hover:bg-transparent 
-                    dark:border-gray-700">Precios</a>
+                    dark:border-gray-700">Servicios</a>
                 </li>
                 <li>
                     <a href="#" class="block py-2 pl-3 pr-4
