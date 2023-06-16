@@ -27,10 +27,10 @@
                     <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-primary">Redes Sociales</h2>
                     <ul class="text-white-600 dark:text-white-400 font-medium">
                         <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Facebook</a>
+                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Linkedln</a>
+                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
                         </li>
                     </ul>
                 </div>
