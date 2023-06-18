@@ -78,7 +78,7 @@
                     dark:border-gray-700">Precios</a>
                 </li>
                 <li>
-                    <a href="indice.php">Contactos</a>
+                    <a href="http://localhost/Analytic-Women/resources/views/layouts/components/indice.php">Contactos</a>
                 </li>
                 <li>
                     <a href="/register" 
