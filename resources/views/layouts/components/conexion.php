@@ -1,3 +1,3 @@
 <?php
-    $conex=mysqli_connect("localhost","root","","womens");
+    $conex=mysqli_connect("localhost","root","","dashboard");
 ?>
