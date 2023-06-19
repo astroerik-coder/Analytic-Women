@@ -84,34 +84,75 @@
         </div>
     </div>
 
-
-    <!-- Contenido principal -->
-    <div class="container mx-auto mt-16">
-        <!-- component -->
-        <section class="max-w-screen-xl flex flex-wrap text-black body-font">
-            <div class="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center">
-                <div
-                    class="lg:flex-grow flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                    <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold ">¿Quiénes
-                        somos?
-                    </h1>
-                    <p class="mb-8 leading-relaxed opacity-50 ">
-                        Somos una empresa conformada por
-                        un grupo multidisciplinario de mujeres
-                        profesionales de diferentes provincias
-                        del país, con una trayectoria
-                        importante de trabajo y experiencia en
-                        empresas públicas y privadas; tenemos
-                        un recorrido amplio de trabajo social
-                        con grupos de atención prioritaria.
-                        Somos multifacéticas y creemos que la
-                        mujer está preparada para hacer que
-                        las cosas sucedan.
-                    </p>
+    <section class="bg-blueGray-200 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+                  </div>
+                  <h6 class="text-xl font-semibold">MISIÓN</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Transformar data en información mediante conceptos innovadores y ágiles, para que las organizaciones e instituciones públicas y privadas, cuenten con las mejores soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad.
+                  </p>
                 </div>
+              </div>
             </div>
-        </section>
-    </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300">
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">VISIÓN</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Ser una compañía ecuatoriana referente en el ámbito de la investigación financiera, económica, social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad, buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo multidisciplinario de profesionales con equidad de género.
+                  <br><br><br>
+                </p>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+<div class="container mx-auto mt-16">
+    <!-- component -->
+    <section class="max-w-screen-xl flex flex-wrap text-black body-font">
+        <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
+            <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center"> <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
+                <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
+                <p class="mb-8 leading-relaxed opacity-100 text-black "> <!-- Added 'text-black' class -->
+                    Somos una empresa conformada por
+                    un grupo multidisciplinario de mujeres
+                    profesionales de diferentes provincias
+                    del país, con una trayectoria
+                    importante de trabajo y experiencia en
+                    empresas públicas y privadas; tenemos
+                    un recorrido amplio de trabajo social
+                    con grupos de atención prioritaria.
+                    Somos multifacéticas y creemos que la
+                    mujer está preparada para hacer que
+                    las cosas sucedan.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
 
 <!----------------CARRUSEL ACCIONISTAS------------------>
 
@@ -195,202 +236,157 @@ servicio al cliente
       </div>
     </div>
   </div>
-  
-  
-  
-  
-  
-
-  
-  
-  
-  
-      
-
-  
-    
-  
-  
-
-
 <!-----------------FIN CARRUSEL ACCIONISTAS------->
 
 
-
-    {{-- Empresa --}}
-    <div class="py-16 white">
-        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-            <h2 class="mb-12 text-center text-2xl text-gray-900 font-bold md:text-4xl">Socias Accionistas</h2>
-            <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
-                <div class="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
-                    <div class="h-full flex flex-col justify-center space-y-4">
-                        <img class="w-20 h-20 mx-auto rounded-full"
-                            src="https://img.icons8.com/?size=512&id=82220&format=png" alt="user avatar" height="220"
-                            width="220" loading="lazy">
-                        <div>
-                            <h6 class="text-lg font-semibold leading-none">Ing. Sara Yánez, Msc.</h6>
-                            <span class="text-xs text-gray-500">Gerente General</span>
-                        </div>
-                        <p class="text-gray-600">
-                            Ingeniera en Sistemas ESPE y UDLA. Maestría en Evaluación de la Política Pública IAEN.
-                            Egresada de la Maestría Dirección de Proyectos UESS. Diplomado en:
-                            Gobernanza y Liderazgo Político, Políticas Públicas, Liderazgo local IDE Bussines Scholl.
-                            Diplomado en Liderazgo de los ODS SODECTEC Argentina. Fundadora y
-                            presidenta de la Red de Profesionales de Cotopaxi. Fundadora y ex presidenta de la Red
-                            Nacional de Apoyo a la Mujer Ecuatoriana (RENAME). Cofundadora de
-                            la Red de Gobierno Abierto Ecuador. Designada como Facilitadora de la Red de Economía
-                            Violeta de Ecuador.
-                            Experiencia en Desarrollo de software para la banca privada: PRODUBANCO y Banco Pichincha.
-                            Análisis de bases de datos de Instituciones Públicas. Desarrollo
-                            de proyectos sociales con organizaciones de mujeres y grupos vulnerables, Coordinación con
-                            la academia para el desarrollo de aplicaciones informáticas, que
-                            servirán para potencializar el emprendimiento y promover el turismo sostenible, la
-                            gastronomía y cultura comunitaria del Ecuador. Desarrollo de Capacitaciones
-                            y Formación Continua en temas de economía, gobernanza y política. Apoyo en la elaboración
-                            del plan de Gobierno Abierto de Ecuador 2019-2022. Miembro
-                            del Consejo Consultivo de las Negociaciones de la Unión Europea con Ecuador 2018 – 2021.
-                            Actualmente, apoyando en la Mesa de Justicia Abierta de Ecuador y
-                            del grupo de Ciencia Abierta de Ecuador.
-                        </p>
-
-                    </div>
-                </div>
-
-                <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
-                    <img class="w-20 h-20 mx-auto rounded-full"
-                        src="https://img.icons8.com/?size=512&id=82220&format=png" alt="user avatar" height="220"
-                        width="220" loading="lazy">
-                    <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-                        <div>
-                            <h6 class="text-lg font-semibold leading-none">Arq. Carolina Ramos Pinto, Msc.</h6>
-                            <span class="text-xs text-gray-500">Presidenta</span>
-                        </div>
-                        <p class="text-gray-600">Arquitecta con maestría en Dirección de Proyectos. Certificación en
-                            Prevención de riesgos laborales: construcción y obras públicas. Cursando Diplomado en
-                            Gestión de Empresas Constructoras, de Arquitectura e Inmobiliarias. Estudios en liderazgo y
-                            productividad.
-                            Experiencia en fiscalización de obras civiles e infraestructura urbana. Desarrollo de
-                            estudios de consultoría de arquitectura e ingeniería. Coordinadora y
-                            parte del equipo de proyectos de consultoría de ingeniería en el ámbito de infraestructura
-                            sanitaria en entidades públicas. Manejo de equipos
-                            multidisciplinarios.Desarrollo y evaluación de proyectos. Coordinación y desarrollo de
-                            estudios socioeconómicos y de mercado para consultorías de
-                            infraestructura sanitaria, vías y regeneración urbana.
-                        </p>
-                    </div>
-                </div>
-                <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
-                    <img class="w-20 h-20 mx-auto rounded-full"
-                        src="https://img.icons8.com/?size=512&id=82220&format=png" alt="user avatar" height="220"
-                        width="220" loading="lazy">
-                    <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-                        <div>
-                            <h6 class="text-lg font-semibold leading-none">Ec. Carmen López Saravia</h6>
-                            <span class="text-xs text-gray-500">Directora Financiera</span>
-                        </div>
-                        <p class="text-gray-600">Economista UCE. Socia del Colegio de Economistas de Pichincha.
-                            Profesional orientada a objetivos y metas medibles. Certificación en Resiliencia Laboral,
-                            habilidades blandas y atención al cliente (Enfoque en la norma ISO 9001-2015). Certificación
-                            Internacional en Hubspot. Escuela de formadores y capacitadores
-                            banco del Pacífico.
-                            Experiencia: Elaboración de Presupuestos comerciales y determinación del mercado objetivo.
-                            Manejo operacional, Digital, Ventas Inbound. Comercio electrónico y
-                            de servicios. Elaboración de lineamentos comerciales con aplicación nacional. Diseño y
-                            manejo de indicadores comerciales y de productividad.Captación y
-                            mantenimiento de socios corporativos. Formular y evaluar planes para la implementación de
-                            estrategias comerciales. Gestión área comercial (Instituciones
-                            Financieras y Aseguradoras). Dirección de equipos comerciales de alto rendimientos.
-                            Capacitaciones y talleres en ventas, liderazgo, motivación, trabajo en equipo,
-                            servicio al cliente.
-                        </p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     {{-- Users --}}
-    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 py-5">
         <div class="text-center pb-12">
-            <h2 class="text-base font-bold text-indigo-600">
-                Socias-Accionistas
-            </h2>
             <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
                 Check our awesome team members
             </h1>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full"
-                        src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-                        alt="photo">
-                </div>
-                <div class="w-full md:w-3/5 text-left p-6 md:p-4 space-y-2">
-                    <p class="text-xl text-gray-700 font-bold">Dany Bailey</p>
-                    <p class="text-base text-gray-400 font-normal">Software Engineer</p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="flex justify-start space-x-2">
-                    </div>
-                </div>
-            </div>
-            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full"
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-                        alt="photo">
-                </div>
-                <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-                    <p class="text-xl text-gray-700 font-bold">Lucy Carter</p>
-                    <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="flex justify-start space-x-2">
-
-                    </div>
-                </div>
-            </div>
-            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full"
-                        src="https://images.unsplash.com/photo-1499952127939-9bbf5af6c51c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80"
-                        alt="photo">
-                </div>
-                <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-                    <p class="text-xl text-gray-700 font-bold">Jade Bradley</p>
-                    <p class="text-base text-gray-400 font-normal">Dev Ops</p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="flex justify-start space-x-2">
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col md:flex-row">
-                <div class="w-full md:w-2/5 h-80">
-                    <img class="object-center object-cover w-full h-full"
-                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-                        alt="photo">
-                </div>
-                <div class="w-full md:w-3/5 text-left p-4 md:p-4 space-y-2">
-                    <p class="text-xl text-gray-700 font-bold">Lucy Carter</p>
-                    <p class="text-base text-gray-400 font-normal">Graphic Designer</p>
-                    <p class="text-base leading-relaxed text-gray-500 font-normal">Lorem ipsum dolor sit amet,
-                        consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div class="flex justify-start space-x-2">
-
-                    </div>
-                </div>
-            </div>
-        </div>
         </div>
     </section>
+<!-- component -->
+<html>
+   <head>
+      <!-- JIT SUPPORT, for using peer-* below -->
+      <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+   </head>
+   <body>
+    <div class="min-h-screen bg-gray-100 p-3 relative">
+        <div class="w-128 mx-auto" style="scroll-snap-type: x mandatory;">
+            <!-- first -->
+            <div class="">
+               <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+               <!-- content #1 -->
+               <div
+                  class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  <div class="flex justify-center">
+                    <img class="rounded-t-lg w-96 h-64" src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80" alt="" />
+                 </div>
+                  <div class="py-4 px-8">
+                     <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+                        Abg. Patricia de Guzmán Valdivieso, Msc
+                     </h1>
+                     <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                        Abogada por la Pontificia Universidad Católica del Ecuador. Máster en
+                        Política por The University of Manchester en el Reino Unido. Vicepresidente
+                        de International Youth Democratic Union. Ex Subsecretaria de
+                        Gobernabilidad en el Ministerio de Gobierno de Guillermo Lasso. Asesora de
+                        bancada en la Asamblea Nacional del PSC. Asesora del Alcalde de Quito.
+                        Defensora Pública Penal. Consultora y capacitadora político jurídica, a nivel
+                        nacional e internacional. Formadora de jóvenes.
+                     </p>
+                  </div>
+                  <!-- controls -->
+                  <div class="absolute top-1/2 w-full flex justify-between z-20">
+                     <label for="carousel-3" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                     <label for="carousel-2" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                  </div>
+               </div>
+            </div>
+            <!-- second -->
+            <div class="">
+               <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
+               <!-- content #2 -->
+               <div
+                  class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  <div class="flex justify-center">
+                    <img class="rounded-t-lg w-96 h-64" src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80" alt="" />
+                 </div>
+                  <div class="py-4 px-8">
+                     <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+                        Ing. Silvia Erazo, Msc.
+                     </h1>
+                     <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                        Estudios en Ingeniería Comercial mención Recursos Humanos en la Universidad
+                        Estatal de Milagro, Maestría en Administración Pública, Capacitadora
+                        Independiente avalada por el Ministerio de Trabajo en Contratación Pública y
+                        Gestión de Bodegas y Manejo de Inventarios, Certificación por Competencias
+                        en Administración, Certificación por Competencias en Formador de
+                        Formadores. Posee conocimientos y experiencia en Contratación Pública,
+                        Gestión Administrativa, Levantamiento de Información para establecer Flujo de
+                        Procesos. Experiencia con más de 10 años en instituciones públicas,
+                        cumpliendo funciones en jefaturas de mandos medios en área Administrativa y
+                        Financiera.
+                     </p>
+                  </div>
+                  <!-- controls -->
+                  <div class="absolute top-1/2 w-full flex justify-between z-20">
+                     <label for="carousel-1" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                     <label for="carousel-3" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                  </div>
+               </div>
+            </div>
+            <!-- three -->
+            <div class="">
+               <input class="sr-only peer" type="radio" name="carousel" id="carousel-3" />
+               <!-- content #3 -->
+               <div
+                  class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+                  <div class="flex justify-center">
+                    <img class="rounded-t-lg w-96 h-64" src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80" alt="" />
+                 </div>
+                  <div class="py-4 px-8">
+                     <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+                        Ing. Juan Carlos Avilés Aguirre, Msc.
+                     </h1>
+                     <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+                        Ingeniero Ambiental, con maestr;iua en Salud, Seguridad y Ambiente. Realizó
+                        Especialización en Rellenos Sanitarios, infraestructura vial con enfoque de
+                        Cambio climático y Construcción Sostenible (2021-2022).
+                        Director Nacional de Gestión Socio Ambiental del Ministerio de Transportes y
+                        Obras Públicas, 2022. Durante el período 2019-2021 fue Secretario de
+                        Ambiente del Municipio del Distrito Metropolitano de Quito, espacio en el cual
+                        permitió aprobar el Plan de acción Climático Quito PACQ 2020.
+                        Presidente Alianza Profesionales Ambientales del Ecuador. Socio fundador J3M
+                        energía solar 2019. Presidente del Comité Consultivo de la carrera de
+                        Ingeniería Ambiental de la UDLA 2021 -2023. Fundador Colegio de Ingenieros
+                        Ambientales del Ecuador. Consultor Ambiental calificado desde el año 2008
+                     </p>
+                  </div>
+                  <!-- controls -->
+                  <div class="absolute top-1/2 w-full flex justify-between z-20">
+                     <label for="carousel-2" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                     <label for="carousel-1" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                        </svg>
+                     </label>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--------
+      <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right animate-bounce">
+      <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white">
+    </a>
+    ----------->
+   </body>
+</html>
 
     <!-- component -->
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
