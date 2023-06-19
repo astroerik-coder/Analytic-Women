@@ -8,17 +8,11 @@
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/accionistas.jss">
+    <script src="js/accionistas.js"></script>
 </head>
-<body class="bg-gray-100">
+<body>
     <!-- Barra de navegación -->
-    <script>
-    window.addEventListener("scroll", function () {
-        var nav = document.querySelector("nav");
-        nav.classList.toggle("fixedNavbar", window.scrollY > 0);
-    });
-</script>
-
-
 <nav class="bg-primary text-black border-primary-200 dark:bg-primary-900 fixedNavbar">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" class="flex items-center">
@@ -36,12 +30,7 @@
         <div class="items-lef justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
             <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-primary md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li>
-                    <a href="#" class="bg-primary block 
-                    py-2 pl-3 pr-4 
-                    text-gray-900 rounded 
-                  hover:bg-primary
-                    md:hover:text-secundary
-                    md:p-0 md:dark:text-blue-500" aria-current="page">Inicio</a>
+                    <a href="http://localhost:8000/#">Inicio</a>
                 </li>
                 <li>
                     
@@ -157,10 +146,10 @@
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
             <input class="btn" type="submit" name="contact" value="Enviar mensaje">        
         </form>
+        
     </div>
-    <?php
-    include("contactos.php");
-    ?>
+
+ <!-- Barra del footer 
     <footer class="bg-primary text-white dark:bg-white-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
@@ -229,6 +218,11 @@
             </div>
         </div>
     </div>
-</footer>
+</footer>-->
+    <?php
+    include("contactos.php");
+    ?>
+   
 </body>
+
 </html>
