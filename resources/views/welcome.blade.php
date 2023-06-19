@@ -84,6 +84,23 @@
         </div>
     </div>
 
+    <style>
+      .bg-pink-400 {
+        background-image: url("images/favicon.png");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    </style>
+
+<style>
+  .bg-purple-300 {
+    background-image: url("images/favicon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+</style>
+    
+
     <section class="bg-blueGray-200 -mt-24">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
@@ -163,7 +180,7 @@
     <div class="max-w-7xl w-full lg:flex">
       <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('images/Accionista1.png')" title="Woman holding a mug">
       </div>
-      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-pink-300">
+      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-white">
         <div class="mb-8">
           <p class="text-sm text-grey-dark flex items-center">
           </p>
@@ -194,7 +211,7 @@ del grupo de Ciencia Abierta de Ecuador.
     <div class="max-w-7xl w-full lg:flex flex-row-reverse">
       <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-r text-center overflow-hidden" style="background-image: url('images/Accionista2.png')" title="Woman holding a mug">
       </div>
-      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-l p-4 flex flex-col justify-between leading-normal bg-pink-300">
+      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-l p-4 flex flex-col justify-between leading-normal bg-white">
         <div class="mb-8">
             <div class="text-black font-bold text-xl mb-2">Arq. Carolina Ramos Pinto, Msc.</div>
             <div class="text-black font-bold text-xl mb-2">Presidenta</div>
@@ -217,7 +234,7 @@ infraestructura sanitaria, vías y regeneración urbana.
     <div class="max-w-7xl w-full lg:flex">
       <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('images/Accionista3.png')" title="Woman holding a mug">
       </div>
-      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-pink-300">
+      <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal bg-white">
         <div class="mb-8">
             <div class="text-black font-bold text-xl mb-2">Ec. Carmen López Saravia</div>
             <div class="text-black font-bold text-xl mb-2">Directora Financiera</div>
