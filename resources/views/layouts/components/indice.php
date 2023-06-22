@@ -9,6 +9,7 @@
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="css/accionistas.jss">
+    <script src="https://kit.fontawesome.com/2655b6ac6f.js" crossorigin="anonymous"></script>
     <script src="js/accionistas.js"></script>
 </head>
 <body>
@@ -120,36 +121,38 @@
 
     <div class="form-container">
         <h2>Contáctanos</h2>
+        <i class="fa-solid fa-phone"></i>
         <form method="post" autocomplete="off">
+            <br><b>Formulario de contacto:</b></br> 
             <div class="form-group">
                 <div class="font-content">
-                    <label for="name">Nombre</label>
+                    <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" placeholder="Nombre">
                 </div>
                 <div class="font-content">
-                    <label for="email">Correo</label>
+                    <label for="email">Correo:</label>
                     <input type="email" id="email" name="email" placeholder="Correo">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="font-content">
-                    <label for="direction">Direccion</label>
+                    <label for="direction">Dirección:</label>
                     <input type="text" id="direction" name="direction" placeholder="Direccion">
                 </div>
                 <div class="font-content">
-                    <label for="phone">Telefono</label>
+                    <label for="phone">Teléfono:</label>
                     <input type="tel" id="phone" name="phone" placeholder="Telefono">
                 </div>
             </div>
-            <label for="message">Mensaje</label>
+            <label for="message">Mensaje:</label>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
             <input class="btn" type="submit" name="contact" value="Enviar mensaje">        
         </form>
         
     </div>
 
- <!-- Barra del footer 
+ <!-- Barra del footer -->
     <footer class="bg-primary text-white dark:bg-white-900">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
@@ -218,7 +221,7 @@
             </div>
         </div>
     </div>
-</footer>-->
+</footer>
     <?php
     include("contactos.php");
     ?>
