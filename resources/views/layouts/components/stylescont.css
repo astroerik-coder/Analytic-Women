@@ -5,10 +5,11 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(100deg,rgba(37,34,63,1)0%,rgba(31,61,98,1)50%,rgba(35,40,72,1)100%);
+    background-image: url('organizer-791939_1280.jpg');
     display: fixed;
     align-items: center;
     justify-content: center;
+    background-size: cover;
     min-height: 100vh;
 }
 
@@ -21,8 +22,46 @@ body{
     margin-top: 7%;
     text-align: center;
     font-size: 40px;
-    color: #F5FCFF;
+    color: darkmagenta;
     margin-bottom: 10px;
+}
+
+.objeto1{
+    margin-top: 2%;
+    margin-left: 5%;
+    text-align: left;
+    font-size: 16px;
+    color: #851d77;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 10%;
+}
+.objeto2{
+    margin-top: 0%;
+    text-align: center;
+    font-size: 16px;
+    color: #851d77;
+    margin-bottom: 0px;
+    display: inline-block;
+    margin-right: 10%;
+}
+.objeto3{
+    margin-top: 0%;
+    text-align: center;
+    font-size: 16px;
+    color: #851d77;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 10%;
+}
+.objeto4{
+    margin-top: 0%;
+    text-align: center;
+    font-size: 16px;
+    color: #851d77;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 10%;
 }
 
 .form-container h3{

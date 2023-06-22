@@ -117,10 +117,14 @@
         </div>
     </div>
 </nav>
+
 <!--Formulario de contactos-->
     <div class="form-container">
         <h2>Contáctanos</h2>
-        <div><i class="fa-solid fa-phone"> +0999785416</i></div>
+        <div class="objeto1"><i class="fa-solid fa-phone"> +0999785416</i><br><i class="fa-solid fa-phone">+0999785416</i><br><i class="fa-solid fa-phone">+0999785416</i></div>
+        <div class="objeto2"><i class="fa-brands fa-whatsapp"> +0999785416</i><br><i class="fa-brands fa-whatsapp">+0984654656</i><br><i class="fa-brands fa-whatsapp">+0984649456</i></div>
+        <div class="objeto3"><i class="fa-solid fa-envelope"> dschancusig@gmail.com</i><br><i class="fa-solid fa-envelope">dschancusig@gmail.com</i></div>
+        <div class="objeto4"><i class="fa-solid fa-location-dot"> ESPE</i></div>
 
         <form method="post" autocomplete="off">
             <br><b><h3>Formulario de contacto:</h3></b></br> 
