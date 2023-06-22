@@ -14,18 +14,24 @@ body{
 
 .form-container{
     text-align: left;
+    padding-left: 18px;
 }
 
 .form-container h2{
     margin-top: 7%;
+    text-align: center;
     font-size: 40px;
     color: #F5FCFF;
     margin-bottom: 10px;
 }
 
+.form-container h3{
+    color: #F5FCFF;
+}
+
 form{
-    padding: 79px;
-    background: linear-gradient(50deg,rgba(43,54,108,1)0%,rgba(43,73,125,1)50%,rgba(40,90,140,1) 100%);
+    padding: 22px;
+    background: linear-gradient(50deg,rgb(167, 20, 187)0%,rgb(182, 8, 130)50%,rgb(212, 4, 150) 100%);
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     width: 808px;
@@ -33,7 +39,7 @@ form{
     display: flex;
     flex-direction: column;
     justify-items: start;
-    margin-top: 30%;
+    margin-top: 18%;
     margin-bottom: 5%;
 }
 
@@ -83,13 +89,13 @@ textarea{
 }
 .success{
     position: absolute;
-    top:50px;
+    top:57%;
     color: rgb(2,227,211);
     font-size: 18px;
 }
 .error{
     position: absolute;
-    top: 50px;
+    top: 57%;
     color: #E02D00;
     font-size: 18px;
 }

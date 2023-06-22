@@ -13,15 +13,16 @@ if(isset($_POST['contact'])){
         $direction=trim($_POST['direction']);
         $phone=trim($_POST['phone']);
         $message=trim($_POST['message']);
-        $fecha=date("d/m/Y");
+        $created_at=date("Y-m-d H:i:s");
+        $updated_at=date("Y-m-d H:i:s");
 
-        $consulta="INSERT INTO datoscontact(nombre,email,direccion,telefono,mensaje,fecha)
-        VALUES('$name','$email','$direction','$phone','$message','$fecha');
+        $consulta="INSERT INTO datoscontact(nombre,email,direccion,telefono,mensaje,created_at,updated_at)
+        VALUES('$name','$email','$direction','$phone','$message','$created_at','$updated_at');
         ";
         $resultado=mysqli_query($conex,$consulta);
         if($resultado){
             ?>
-            <h3 class="success">Tu registro se a completado</h3>
+            <h3 class="success">Tu registro se ha completado correctamente!!</h3>
             
             <?php
         }else{

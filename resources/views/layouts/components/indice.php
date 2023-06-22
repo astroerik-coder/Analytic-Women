@@ -8,9 +8,8 @@
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/accionistas.jss">
+    <!--Enlace del archivo de los iconos-->
     <script src="https://kit.fontawesome.com/2655b6ac6f.js" crossorigin="anonymous"></script>
-    <script src="js/accionistas.js"></script>
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -118,12 +117,13 @@
         </div>
     </div>
 </nav>
-
+<!--Formulario de contactos-->
     <div class="form-container">
         <h2>Contáctanos</h2>
-        <i class="fa-solid fa-phone"></i>
+        <div><i class="fa-solid fa-phone"> +0999785416</i></div>
+
         <form method="post" autocomplete="off">
-            <br><b>Formulario de contacto:</b></br> 
+            <br><b><h3>Formulario de contacto:</h3></b></br> 
             <div class="form-group">
                 <div class="font-content">
                     <label for="name">Nombre:</label>
@@ -149,7 +149,9 @@
             <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
             <input class="btn" type="submit" name="contact" value="Enviar mensaje">        
         </form>
-        
+        <?php
+    include("contactos.php");
+    ?>
     </div>
 
  <!-- Barra del footer -->
@@ -222,9 +224,7 @@
         </div>
     </div>
 </footer>
-    <?php
-    include("contactos.php");
-    ?>
+ 
    
 </body>
 
