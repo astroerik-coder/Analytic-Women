@@ -17,6 +17,7 @@ module.exports = {
                 primary:'#BC799D', //color principal
                 secundary: '#E4C9D7', //color secundario
                 tertiary: '#061C57', //color terciario
+                quaternary: '#ED0EBD', //color cuarteario
             },
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

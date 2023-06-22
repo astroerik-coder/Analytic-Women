@@ -18,18 +18,12 @@
 
       
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://api.whatsapp.com/" target="_blank" class="floating-button-whatsapp bg-green-500 hover:bg-green-600 text-white rounded-full p-2 shadow-lg">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12l1-2h2l1 2h10l1-2h2l1 2v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zm8-2a2 2 0 100-4 2 2 0 000 4z" />
-        </svg>
-    </a>
+    <a href="https://api.whatsapp.com/" class="floating-button-whatsapp animate-bounce" target="_blank" id="floating-icon">
+    <img src="images/icono_What.png" alt="..." class="w-14">
+  </a>
+    
 
-    <!-- Botón flotante para ir arriba -->
-    <a href="#" class="floating-button-up bg-primary hover:bg-tertiary text-white rounded-full p-2 shadow-lg">
-        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-    </a>
+  
 
     <div class="slider relative w-full h-screen overflow-hidden">
         <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
@@ -299,12 +293,12 @@ servicio al cliente
                   </div>
                   <!-- controls -->
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
-                     <label for="carousel-3" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-3" class="inline-block text-primary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
                         </svg>
                      </label>
-                     <label for="carousel-2" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-2" class="inline-block text-primary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                         </svg>
@@ -340,12 +334,12 @@ servicio al cliente
                   </div>
                   <!-- controls -->
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
-                     <label for="carousel-1" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-1" class="inline-block text-quaternary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
                         </svg>
                      </label>
-                     <label for="carousel-3" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-3" class="inline-block text-quaternary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                         </svg>
@@ -382,12 +376,12 @@ servicio al cliente
                   </div>
                   <!-- controls -->
                   <div class="absolute top-1/2 w-full flex justify-between z-20">
-                     <label for="carousel-2" class="inline-block text-pink-400 cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-2" class="inline-block text-tertiary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z" clip-rule="evenodd" />
                         </svg>
                      </label>
-                     <label for="carousel-1" class="inline-block text-pink-400 cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+                     <label for="carousel-1" class="inline-block text-tertiary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                         </svg>
@@ -397,11 +391,9 @@ servicio al cliente
             </div>
          </div>
       </div>
-      <!--------
-      <a href="https://www.buymeacoffee.com/dgauderman" target="_blank" class="md:absolute bottom-0 right-0 p-4 float-right animate-bounce">
-      <img src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" alt="Buy Me A Coffee" class="transition-all rounded-full w-14 -rotate-45 hover:shadow-sm shadow-lg ring hover:ring-4 ring-white">
-    </a>
-    ----------->
+     
+      
+    
    </body>
 </html>
 
@@ -522,7 +514,7 @@ servicio al cliente
             </div>
         </div>
     </div>
-
+    
     @component('layouts.components.footer') @endcomponent
 </body>
 
@@ -603,3 +595,5 @@ indicators[currentSlide].classList.add('bg-white');
 
     }) 
 </script>
+
+
