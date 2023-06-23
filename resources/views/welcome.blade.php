@@ -14,9 +14,8 @@
 <body class="bg-gray-100">
 
     <!-- Barra de navegación -->
-    @component('layouts.components.navbar')@endcomponent
+   @component('layouts.components.navbar')@endcomponent
 
-      
     <!-- Botón flotante de WhatsApp -->
     <a href="https://api.whatsapp.com/" class="floating-button-whatsapp animate-bounce" target="_blank" id="floating-icon">
     <img src="images/icono_What.png" alt="..." class="w-14">
