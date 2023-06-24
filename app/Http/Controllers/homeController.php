@@ -14,3 +14,4 @@ class homeController extends Controller
         return view('indice');
     }
 }
+
