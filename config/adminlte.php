@@ -64,35 +64,11 @@ return [
     */
 
     'logo' => '<b>Analytika </b>Women',
-    'logo_img' => asset('images/Analytika Women.png'),
+    'logo_img' => 'public/images/Analytika Women.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
     'logo_img_alt' => 'Analytika Women Logo',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can setup an alternative logo to use on your login and register
-    | screens. When disabled, the admin panel logo will be used instead.
-    |
-    | For detailed instructions you can look the auth logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'auth_logo' => [
-        'enabled' => false,
-        'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'Auth Logo',
-            'class' => '',
-            'width' => 50,
-            'height' => 50,
-        ],
-    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -109,11 +85,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-            'path' => asset('images/Analytika Women.png'),
-            'alt' => 'Analytika Women Preloader Image',
+             'path' => ('public/images/Analytika Women.png'),
+             'alt' => 'Analytika Women Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
+            'width' => 100,
+            'height' => 100,
         ],
     ],
 
@@ -131,7 +107,7 @@ return [
 
     'usermenu_enabled' => true,
     'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
+    'usermenu_header_class' => 'bg-purple',
     'usermenu_image' => false,
     'usermenu_desc' => true,
     'usermenu_profile_url' => false,
@@ -192,7 +168,7 @@ return [
     'classes_content_wrapper' => '',
     'classes_content_header' => '',
     'classes_content' => '',
-    'classes_sidebar' => 'sidebar-dark-primary elevation-4',
+    'classes_sidebar' => 'sidebar-dark-purple elevation-4',
     'classes_sidebar_nav' => '',
     'classes_topnav' => 'navbar-white navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
@@ -302,11 +278,11 @@ return [
         ],
 
         // Sidebar items:
-        [
+/*         [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],
-        [
+        ], */
+        /* [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
@@ -318,69 +294,52 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        ['header' => 'Configuracion de cuenta'],
+        */ ['header' => 'Configuracion de cuenta'],
         [
             'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
+       /*[
+            'text' => 'CRUD Generador',
+            'url'  => 'crud',
+            'icon' => 'fas fa-fw fa-server',
+        ],
 
         [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Tablas',
+            'icon'    => 'fas fa-fw fa-table',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                  
+                    'text' => 'Usuarios',
+                    'url'  => 'asset({{ route("user") }})',
+                    'icon' => "fas fa-fw fa-user",
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
+                  
+                    'text' => 'Eventos',
+                    'url'  => 'asset({{ route("user") }})',
+                    'icon' => "fas fa-fw fa-user",
                 ],
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                  
+                    'text' => 'Usuarios',
+                    'url'  => 'asset({{ route("user") }})',
+                    'icon' => "fas fa-fw fa-user",
                 ],
+                [
+                  
+                    'text' => 'Usuarios',
+                    'url'  => 'asset({{ route("user") }})',
+                    'icon' => "fas fa-fw fa-user",
+                ],
+                
             ],
-        ],
-        ['header' => 'labels'],
-        [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
-        ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+        ],*/
+       
     ],
-
+ 
     /*
     |--------------------------------------------------------------------------
     | Menu Filters
