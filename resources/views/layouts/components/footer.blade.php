@@ -10,7 +10,7 @@
             </div>
             <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-primary">Contactos</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-white">Contactos</h2>
                     <ul class="text-white-600 dark:text-white-400 font-medium">
                         <li class="mb-4">
                             <a href="" class="hover:underline">0999785416</a>
@@ -48,8 +48,8 @@
             </div>
         </div>
         <hr class="my-6 border-white-200 sm:mx-auto dark:border-white-700 lg:my-8" />
-        <div class="sm:flex sm:items-center sm:justify-between">
-            <span class="text-sm text-white-500 sm:text-center dark:text-white-400">© 2023 <a href=""
+        <div class="sm:flex sm:items-center sm:justify-between ">
+            <span class="text-sm text-white sm:text-center dark:text-white-400">© 2023 <a href=""
                     class="hover:underline">Analityka Women™</a>. All Rights Reserved.
             </span>
             <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">

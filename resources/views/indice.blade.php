@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link href="{{ asset( 'css/stylescont.css' ) }}" rel="stylesheet">
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
@@ -15,42 +14,38 @@
     <!-- Barra de navegación -->
 @component('layouts.components.navbar')@endcomponent
 <!--Formulario de contactos-->
-    <div class="form-container">
-        <h2>Contáctanos</h2>
-        <div class="objeto1"><i class="fa-solid fa-phone"> +0999785416</i><br><i class="fa-solid fa-phone">+0999785416</i><br><i class="fa-solid fa-phone">+0999785416</i></div>
-        <div class="objeto2"><i class="fa-brands fa-whatsapp"> +0999785416</i><br><i class="fa-brands fa-whatsapp">+0984654656</i><br><i class="fa-brands fa-whatsapp">+0984649456</i></div>
-        <div class="objeto3"><i class="fa-solid fa-envelope"> dschancusig@gmail.com</i><br><i class="fa-solid fa-envelope">dschancusig@gmail.com</i></div>
-        <div class="objeto4"><i class="fa-solid fa-location-dot"> ESPE</i></div>
-            <form method="post" autocomplete="off" action="indice">
-                @csrf
-                <br><b><h3>Formulario de contacto:</h3></b> 
-                <div class="form-group">
-                <div class="font-content">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
-                </div>
-                <div class="font-content">
-                    <label for="email">Correo:</label>
-                    <input type="email" id="email" name="email" placeholder="Correo">
-                </div>
-            </div>
+    <!-- Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  -->
 
-            <div class="form-group">
-                <div class="font-content">
-                    <label for="direccion">Dirección:</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Direccion">
-                </div>
-                <div class="font-content">
-                    <label for="telefono">Teléfono:</label>
-                    <input type="tel" id="telefono" name="telefono" placeholder="Telefono">
-                </div>
-            </div>
-            <label for="mensaje">Mensaje:</label>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            <input class="btn" type="submit" name="contact" value="Enviar mensaje">        
-        </form>
+
+<div class="flex min-h-screen items-center justify-start bg-white">
+    <div class="mx-auto w-full max-w-lg">
+      <h1 class="text-4xl font-medium">Contact us</h1>
+      <p class="mt-3">Email us at help@domain.com or message us here:</p>
+  
+      <form action="https://api.web3forms.com/submit" class="mt-10">
+      
+      <!-- This is a working contact form. 
+           Get your free access key from: https://web3forms.com/  -->
+  
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" /> 
+        <div class="grid gap-6 sm:grid-cols-2">
+          <div class="relative z-0">
+            <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your name</label>
+          </div>
+          <div class="relative z-0">
+            <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your email</label>
+          </div>
+          <div class="relative z-0 col-span-2">
+            <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" "></textarea>
+            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your message</label>
+          </div>
         </div>
+        <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white">Send Message</button>
+      </form>
     </div>
+  </div>
  <!-- Barra del footer -->
 
  @component('layouts.components.footer') @endcomponent

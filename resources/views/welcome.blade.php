@@ -7,8 +7,7 @@
     <title>Inicio</title>
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/accionistas.jss">
-    <script src="js/accionistas.js"></script>
+
 </head>
 
 <body class="bg-gray-100">
@@ -594,5 +593,7 @@ indicators[currentSlide].classList.add('bg-white');
 
     }) 
 </script>
+
+<script src="js/accionistas.js"></script>
 
 

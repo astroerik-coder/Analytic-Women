@@ -26,5 +26,13 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+
+    Route::get('/crud', function () {
+        return view('crud');
+    })->name('crud');
+
+    Route::get('/users', function () {
+        return view('tables.users');
+    })->name('users');
 });
 

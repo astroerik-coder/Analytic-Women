@@ -27,16 +27,15 @@
             </button>
         </div>
         <div class="items-lef justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-            <ul
-                class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-primary md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                 <li><a href="{{route('welcome')}}" title="">Inicio</a></li>
-                
+
                 <li>
-                    
+
                     <a href="#" class="bg-primary block 
                         py-2 pl-3 pr-4 
                         text-gray-900 rounded 
-                      hover:bg-primary
+                      hover:bg-red-100
                         md:hover:text-secundary
                         md:p-0 dark:text-white 
                         md:dark:hover:text-blue-500 
@@ -73,8 +72,7 @@
                 </li>
                 <li><a href="{{route('indice')}}" title="">Contactos</a></li>
                 <li>
-                    <a href="/register" 
-                    class="
+                    <a href="/register" class="
                     relative flex h-9 ml-auto 
                     items-center justify-center 
                     sm:px-6 before:absolute 
@@ -85,16 +83,15 @@
                     before:duration-300 
                     hover:before:scale-105 
                     active:duration-75 active:before:scale-95">
-                    <span class="
+                        <span class="
                     relative text-sm 
                     font-semibold 
                     text-white 
-                    dark:text-gray-900">Registarse</span>                    
-                </a>
+                    dark:text-gray-900">Registarse</span>
+                    </a>
                 </li>
-               <li>
-                <a href="/login" 
-                    class="
+                <li>
+                    <a href="/login" class="
                     relative flex h-9 ml-auto 
                     items-center justify-center 
                     sm:px-6 before:absolute 
@@ -105,13 +102,13 @@
                     before:duration-300 
                     hover:before:scale-105 
                     active:duration-75 active:before:scale-95">
-                    <span class="
+                        <span class="
                     relative text-sm 
                     font-semibold 
                     text-white 
-                    dark:text-gray-900">Iniciar Sesion</span>                    
-                </a>
-               </li>
+                    dark:text-gray-900">Iniciar Sesion</span>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
