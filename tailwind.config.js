@@ -3,7 +3,7 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: 'media', // Opción 1: Utiliza la configuración basada en preferencias del sistema operativo
+    darkMode: 'class', // Opción 1: Utiliza la configuración basada en preferencias del sistema operativo
 
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
