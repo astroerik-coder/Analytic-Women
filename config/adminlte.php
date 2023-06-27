@@ -15,7 +15,7 @@ return [
     */
 
     'title' => 'Analytika Women',
-    'title_prefix' => 'AW|',
+    'title_prefix' => 'AW | ',
     'title_postfix' => '',
 
     /*
@@ -64,7 +64,7 @@ return [
     */
 
     'logo' => '<b>Analytika </b>Women',
-    'logo_img' => 'public/images/Analytika Women.png',
+    'logo_img' => 'vendor/adminlte/dist/img/Analytika Women.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -85,11 +85,11 @@ return [
     'preloader' => [
         'enabled' => true,
         'img' => [
-             'path' => ('public/images/Analytika Women.png'),
-             'alt' => 'Analytika Women Preloader Image',
+            'path' => 'vendor/adminlte/dist/img/Analytika Women.png',
+            'alt' => 'Analytika Women Preloader Image',
             'effect' => 'animation__shake',
-            'width' => 100,
-            'height' => 100,
+            'width' => 125,
+            'height' => 125,
         ],
     ],
 
@@ -272,71 +272,40 @@ return [
             'text'         => 'search',
             'topnav_right' => true,
         ],
+
         [
             'type'         => 'fullscreen-widget',
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
-/*         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ], */
-        /* [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
         [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
+            'text' => 'Dashboard',
+            'url'  => 'dashboard',
+            'icon' => 'fa-regular fa-house" style="color: #ffffff;',
         ],
-        */ ['header' => 'Configuracion de cuenta'],
+
+        ['header' => 'Configuracion de cuenta'],
+
         [
             'text' => 'Perfil',
             'url'  => 'user/profile',
             'icon' => 'fas fa-fw fa-user',
         ],
-       /*[
-            'text' => 'CRUD Generador',
+
+        ['header' => 'Base de Datos'],
+        [
+            'text' => 'CRUD',
             'url'  => 'crud',
             'icon' => 'fas fa-fw fa-server',
         ],
 
+        ['header' => 'Datos'],
         [
-            'text'    => 'Tablas',
-            'icon'    => 'fas fa-fw fa-table',
-            'submenu' => [
-                [
-                  
-                    'text' => 'Usuarios',
-                    'url'  => 'asset({{ route("user") }})',
-                    'icon' => "fas fa-fw fa-user",
-                ],
-                [
-                  
-                    'text' => 'Eventos',
-                    'url'  => 'asset({{ route("user") }})',
-                    'icon' => "fas fa-fw fa-user",
-                ],
-                [
-                  
-                    'text' => 'Usuarios',
-                    'url'  => 'asset({{ route("user") }})',
-                    'icon' => "fas fa-fw fa-user",
-                ],
-                [
-                  
-                    'text' => 'Usuarios',
-                    'url'  => 'asset({{ route("user") }})',
-                    'icon' => "fas fa-fw fa-user",
-                ],
-                
-            ],
-        ],*/
+            'text' => 'Usuarios',
+            'url'  => 'users',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+      
        
     ],
  
