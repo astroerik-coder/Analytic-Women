@@ -19,7 +19,7 @@
 
 <div class="flex min-h-screen items-center justify-start bg-white">
     <div class="mx-auto w-full max-w-lg">
-      <h1 class="text-4xl font-medium">Contact us</h1>
+      <h1 class="text-4xl font-medium">Contactanos</h1>
       <p class="mt-3">Email us at help@domain.com or message us here:</p>
   
       <form action="https://api.web3forms.com/submit" class="mt-10">

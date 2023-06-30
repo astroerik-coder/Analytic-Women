@@ -124,7 +124,7 @@
             <div class="pt-6 w-full md:w-4/12 px-4 text-center">
               <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
                 <div class="px-4 py-5 flex-auto">
-                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+                  <div  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
                     <i class="fas fa-fingerprint"></i>
                   </div>
                   <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
@@ -138,12 +138,12 @@
           </div>
 </section>
 
-<div class="container mx-auto mt-16">
+<div  class="container mx-auto mt-16">
     <!-- component -->
-    <section class="max-w-screen-xl flex flex-wrap text-black body-font">
-        <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
+    <section  class="max-w-screen-xl flex flex-wrap text-black body-font">
+        <div  class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
             <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center"> <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
-                <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
+                <h1  class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
                 <p class="mb-8 leading-relaxed opacity-100 text-black "> <!-- Added 'text-black' class -->
                     Somos una empresa conformada por
                     un grupo multidisciplinario de mujeres
