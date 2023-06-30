@@ -34,5 +34,14 @@ Route::middleware([
     Route::get('/users', function () {
         return view('tables.users');
     })->name('users');
+
+    Route::get('/eventos', function () {
+        return view('tables.eventos');
+    })->name('eventos');
+
+    Route::get('/clientes', function () {
+        return view('tables.clientes');
+    })->name('clientes');
+
 });
 

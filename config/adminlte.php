@@ -305,7 +305,16 @@ return [
             'url'  => 'users',
             'icon' => 'fas fa-fw fa-user',
         ],
-      
+        [
+            'text' => 'Eventos',
+            'url'  => 'eventos',
+            'icon' => 'fas fa-fw fa-event',
+        ],
+        [
+            'text' => 'Clientes',
+            'url'  => 'clientes',
+            'icon' => 'fas fa-fw fa-user',
+        ],
        
     ],
  

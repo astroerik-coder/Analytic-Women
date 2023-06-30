@@ -40,6 +40,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Cliente extends Model
 {
+	public $sortBy; // Agrega esta línea para definir la variable $sortBy
+
 	protected $table = 'cliente';
 	protected $primaryKey = 'ID_CLT';
 	public $incrementing = false;

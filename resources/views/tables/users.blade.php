@@ -23,5 +23,7 @@
 @stop
 
 @section('js')
+    <link rel="stylesheet" href="/js/app.js">
+    <link rel="stylesheet" href="/js/alpine.js">
     <script> console.log('Estoy aquiii!'); </script>
 @stop
