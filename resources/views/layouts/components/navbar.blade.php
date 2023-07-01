@@ -28,21 +28,31 @@
         </div>
         <div class="items-lef justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
             <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li><a href="{{route('welcome')}}" title="">Inicio</a></li>
-
                 <li>
-
-                    <a href="#uno" class="bg-primary block 
-                        py-2 pl-3 pr-4 
-                        text-gray-900 rounded 
-                      hover:bg-red-100
-                        md:hover:text-secundary
-                        md:p-0 dark:text-white 
-                        md:dark:hover:text-blue-500 
-                        dark:hover:bg-gray-700 
-                        dark:hover:text-white
-                        md:dark:hover:bg-transparent 
-                        dark:border-gray-700">Nosotros</a>
+                    <a href="{{route('welcome')}}" class="block py-2 pl-3 pr-4
+                     text-gray-900 rounded 
+                     hover:bg-primary
+                     md:bg-primary 
+                    md:hover:text-secundary
+                     md:p-0 dark:text-white 
+                     md:dark:hover:text-blue-500 
+                     dark:hover:bg-gray-700 
+                     dark:hover:text-white 
+                     md:dark:hover:bg-transparent 
+                     dark:border-gray-700">Inicio</a>
+                </li>
+                <li>
+                    <a href="#uno" class="block py-2 pl-3 pr-4
+                     text-gray-900 rounded 
+                     hover:bg-primary
+                     md:bg-primary 
+                    md:hover:text-secundary
+                     md:p-0 dark:text-white 
+                     md:dark:hover:text-blue-500 
+                     dark:hover:bg-gray-700 
+                     dark:hover:text-white 
+                     md:dark:hover:bg-transparent 
+                     dark:border-gray-700">Nosotros</a>
                 </li>
                 <li>
                     <a href="{{route('servicios')}}" class="block py-2 pl-3 pr-4
@@ -57,7 +67,19 @@
                      md:dark:hover:bg-transparent 
                      dark:border-gray-700">Servicios</a>
                 </li>
-                <li><a href="{{route('indice')}}" title="">Contactos</a></li>
+                <li>
+                    <a href="{{route('indice')}}" class="block py-2 pl-3 pr-4
+                     text-gray-900 rounded 
+                     hover:bg-primary
+                     md:bg-primary 
+                    md:hover:text-secundary
+                     md:p-0 dark:text-white 
+                     md:dark:hover:text-blue-500 
+                     dark:hover:bg-gray-700 
+                     dark:hover:text-white 
+                     md:dark:hover:bg-transparent 
+                     dark:border-gray-700">Contactos</a>
+                </li>
                 <li>
                     <a href="/register" class="
                     relative flex h-9 ml-auto 
