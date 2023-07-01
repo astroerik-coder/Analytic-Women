@@ -17,35 +17,112 @@
     <!-- Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  -->
 
 
-<div class="flex min-h-screen items-center justify-start bg-white">
-    <div class="mx-auto w-full max-w-lg">
-      <h1 class="text-4xl font-medium">Contact us</h1>
-      <p class="mt-3">Email us at help@domain.com or message us here:</p>
-  
-      <form action="https://api.web3forms.com/submit" class="mt-10">
-      
-      <!-- This is a working contact form. 
-           Get your free access key from: https://web3forms.com/  -->
-  
-        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" /> 
-        <div class="grid gap-6 sm:grid-cols-2">
-          <div class="relative z-0">
-            <input type="text" name="name" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your name</label>
-          </div>
-          <div class="relative z-0">
-            <input type="text" name="email" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" " />
-            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your email</label>
-          </div>
-          <div class="relative z-0 col-span-2">
-            <textarea name="message" rows="5" class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0" placeholder=" "></textarea>
-            <label class="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">Your message</label>
-          </div>
-        </div>
-        <button type="submit" class="mt-5 rounded-md bg-black px-10 py-2 text-white">Send Message</button>
-      </form>
-    </div>
-  </div>
+<!-- component -->
+<body class="bg-white">
+	<!-- Container -->
+	<div class="container mx-auto">
+		<div class="flex justify-center px-6 my-12">
+			<!-- Row -->
+			<div class="w-full xl:w-3/4 lg:w-11/12 flex">
+				<!-- Col -->
+				<div
+					class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
+					style="background-image: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')"
+				></div>
+				<!-- Col -->
+				<div class="w-full lg:w-7/12 bg-gray-300 p-5 rounded-lg lg:rounded-l-none">
+					<h3 class="pt-4 text-2xl text-center">Create an Account!</h3>
+					<form class="px-8 pt-6 pb-8 mb-4 bg-gray-300 rounded">
+						<div class="mb-4 md:flex md:justify-between">
+							<div class="mb-4 md:mr-2 md:mb-0">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
+									First Name
+								</label>
+								<input
+									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									id="firstName"
+									type="text"
+									placeholder="First Name"
+								/>
+							</div>
+							<div class="md:ml-2">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="lastName">
+									Last Name
+								</label>
+								<input
+									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									id="lastName"
+									type="text"
+									placeholder="Last Name"
+								/>
+							</div>
+						</div>
+						<div class="mb-4">
+							<label class="block mb-2 text-sm font-bold text-gray-700" for="email">
+								Email
+							</label>
+							<input
+								class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+								id="email"
+								type="email"
+								placeholder="Email"
+							/>
+						</div>
+						<div class="mb-4 md:flex md:justify-between">
+							<div class="mb-4 md:mr-2 md:mb-0">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+									Password
+								</label>
+								<input
+									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									id="password"
+									type="password"
+									placeholder="******************"
+								/>
+								<p class="text-xs italic text-red-500">Please choose a password.</p>
+							</div>
+							<div class="md:ml-2">
+								<label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
+									Confirm Password
+								</label>
+								<input
+									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+									id="c_password"
+									type="password"
+									placeholder="******************"
+								/>
+							</div>
+						</div>
+						<div class="mb-6 text-center">
+							<button
+								class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+								type="button"
+							>
+								Register Account
+							</button>
+						</div>
+						<hr class="mb-6 border-t" />
+						<div class="text-center">
+							<a
+								class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+								href="#"
+							>
+								Forgot Password?
+							</a>
+						</div>
+						<div class="text-center">
+							<a
+								class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+								href="./index.html"
+							>
+								Already have an account? Login!
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
  <!-- Barra del footer -->
 
  @component('layouts.components.footer') @endcomponent

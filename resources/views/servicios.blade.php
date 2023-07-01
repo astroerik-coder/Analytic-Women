@@ -20,7 +20,7 @@
 
 <!-- component -->
 <!-- ====== Cards Section Start -->
-<section class="flex justify-center pt-10 lg:pt-[50px] pb-10 lg:pb-10 bg-[#F3F4F6]">
+<section class="flex justify-center pt-10 lg:pt-[50px] pb-10 lg:pb-10 bg-[#d8e2dc]">
    <div class="container">
       <div class="flex flex-wrap -mx-4">
          <div class="w-full md:w-1/2 xl:w-1/3 px-4">
@@ -179,7 +179,7 @@
 <!-- ====== Cards Section End -->
 <!-- component -->
 <!-- ====== Cards Section Start -->
-<section class="flex justify-center pt-10 lg:pt-[20px] pb-10 lg:pb-10 bg-[#F3F4F6]">
+<section class="flex justify-center pt-10 lg:pt-[20px] pb-10 lg:pb-10 bg-[#d8e2dc]">
    <div class="container">
       <div class="flex flex-wrap -mx-4">
          <div class="w-full md:w-1/2 xl:w-1/3 px-4">
@@ -337,110 +337,38 @@
 </section>
 <!-- ====== Cards Section End -->
 <!-- component -->
-<body class="bg-gray-400">
-	<!-- Container -->
-	<div class="container mx-auto">
-		<div class="flex justify-center px-6 my-12">
-			<!-- Row -->
-			<div class="w-full xl:w-3/4 lg:w-11/12 flex">
-				<!-- Col -->
-				<div
-					class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-					style="background-image: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')"
-				></div>
-				<!-- Col -->
-				<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-					<h3 class="pt-4 text-2xl text-center">Create an Account!</h3>
-					<form class="px-8 pt-6 pb-8 mb-4 bg-white rounded">
-						<div class="mb-4 md:flex md:justify-between">
-							<div class="mb-4 md:mr-2 md:mb-0">
-								<label class="block mb-2 text-sm font-bold text-gray-700" for="firstName">
-									First Name
-								</label>
-								<input
-									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="firstName"
-									type="text"
-									placeholder="First Name"
-								/>
-							</div>
-							<div class="md:ml-2">
-								<label class="block mb-2 text-sm font-bold text-gray-700" for="lastName">
-									Last Name
-								</label>
-								<input
-									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="lastName"
-									type="text"
-									placeholder="Last Name"
-								/>
-							</div>
-						</div>
-						<div class="mb-4">
-							<label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-								Email
-							</label>
-							<input
-								class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-								id="email"
-								type="email"
-								placeholder="Email"
-							/>
-						</div>
-						<div class="mb-4 md:flex md:justify-between">
-							<div class="mb-4 md:mr-2 md:mb-0">
-								<label class="block mb-2 text-sm font-bold text-gray-700" for="password">
-									Password
-								</label>
-								<input
-									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="password"
-									type="password"
-									placeholder="******************"
-								/>
-								<p class="text-xs italic text-red-500">Please choose a password.</p>
-							</div>
-							<div class="md:ml-2">
-								<label class="block mb-2 text-sm font-bold text-gray-700" for="c_password">
-									Confirm Password
-								</label>
-								<input
-									class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-									id="c_password"
-									type="password"
-									placeholder="******************"
-								/>
-							</div>
-						</div>
-						<div class="mb-6 text-center">
-							<button
-								class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
-								type="button"
-							>
-								Register Account
-							</button>
-						</div>
-						<hr class="mb-6 border-t" />
-						<div class="text-center">
-							<a
-								class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-								href="#"
-							>
-								Forgot Password?
-							</a>
-						</div>
-						<div class="text-center">
-							<a
-								class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-								href="./index.html"
-							>
-								Already have an account? Login!
-							</a>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="py-16 bg-white">
+    <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
+        <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
+            <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
+                <h1 class="text-4xl text-gray-700 font-bold md:text-5xl">Servicios <span class="text-blue-500">30% off</span></h1>
+                <p class="text-lg">Be part of millions people around the world using tailus in modern User Interfaces.</p>
+                <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
+                    <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+                        <span class="block text-white font-semibold">
+                            Start buying
+                        </span>
+                    </button>
+                    <button type="button" title="more about" class="w-full order-first py-3 px-6 text-center rounded-xl bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
+                        <span class="block text-gray-600 font-semibold">
+                            More about
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
+                <div class="col-span-2 row-span-4">
+                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/kushagra.webp" class="rounded-full" width="640" height="960" alt="shoes" loading="lazy">
+                </div>
+                <div class="col-span-2 row-span-2">
+                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/iman.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
+                </div>
+                <div class="col-span-3 row-span-3">
+                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/daniel.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     @component('layouts.components.footer') @endcomponent
 </html>
