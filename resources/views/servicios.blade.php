@@ -442,4 +442,5 @@
 			</div>
 		</div>
 	</div>
+    @component('layouts.components.footer') @endcomponent
 </html>
