@@ -138,14 +138,10 @@
           </div>
 </section>
 
-<div class="container mx-auto mt-16">
-    <!-- component -->
-    <section class="max-w-screen-xl flex flex-wrap text-black body-font">
-        <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
-            <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center"> <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
-                <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
-                <p class="mb-8 leading-relaxed opacity-100 text-black "> <!-- Added 'text-black' class -->
-                    Somos una empresa conformada por
+
+<div class="w-full p-10 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-20 dark:bg-gray-800 dark:border-gray-700">
+    <h5 class="mb-5 text-5xl font-bold text-gray-1000 dark:text-white">¿Quiénes somos?</h5>
+    <p class="mb-5 text-base text-gray-800 sm:text-lg dark:text-gray-400">Somos una empresa conformada por
                     un grupo multidisciplinario de mujeres
                     profesionales de diferentes provincias
                     del país, con una trayectoria
@@ -155,11 +151,7 @@
                     con grupos de atención prioritaria.
                     Somos multifacéticas y creemos que la
                     mujer está preparada para hacer que
-                    las cosas sucedan.
-                </p>
-            </div>
-        </div>
-    </section>
+                    las cosas sucedan.</p>
 </div>
 
 
