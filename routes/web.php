@@ -17,6 +17,7 @@ use App\Http\Controllers\homeController;
 Route::get('/',[homeController::class,'home'])->name('welcome');
 Route::get('/indice',[homeController::class,'indice'])->name('indice');
 Route::post('/indice', [datoscontactController::class, 'store'])->name('indice');
+Route::get('/servicios',[homeController::class,'servicios'])->name('servicios');
 
 Route::middleware([
     'auth:sanctum',
