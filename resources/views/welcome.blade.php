@@ -91,8 +91,6 @@
     background-position: center;
   }
 </style>
-    
-
     <section class="bg-blueGray-200 -mt-24">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
@@ -128,7 +126,7 @@
                     <i class="fas fa-fingerprint"></i>
                   </div>
                   <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
-                  <p class="mt-2 mb-4 text-blueGray-500">
+                  <p id="uno"class="mt-2 mb-4 text-blueGray-500">
                   Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo multidisciplinario de profesionales con equidad de género.
                   <br><br><br>
                 </p>
@@ -137,32 +135,6 @@
             </div>
           </div>
 </section>
-
-<div class="container mx-auto mt-16">
-    <!-- component -->
-    <section class="max-w-screen-xl flex flex-wrap text-black body-font">
-        <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
-            <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center"> <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
-                <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
-                <p class="mb-8 leading-relaxed opacity-100 text-black "> <!-- Added 'text-black' class -->
-                    Somos una empresa conformada por
-                    un grupo multidisciplinario de mujeres
-                    profesionales de diferentes provincias
-                    del país, con una trayectoria
-                    importante de trabajo y experiencia en
-                    empresas públicas y privadas; tenemos
-                    un recorrido amplio de trabajo social
-                    con grupos de atención prioritaria.
-                    Somos multifacéticas y creemos que la
-                    mujer está preparada para hacer que
-                    las cosas sucedan.
-                </p>
-            </div>
-        </div>
-    </section>
-</div>
-
-
 <!----------------CARRUSEL ACCIONISTAS------------------>
 
 <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold" style="margin-left: 40px;">
