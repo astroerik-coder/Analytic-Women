@@ -81,100 +81,86 @@
     }
   </style>
 
-  <style>
-    .bg-purple-300 {
-      background-image: url("images/favicon.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  </style>
+<style>
+  .bg-purple-300 {
+    background-image: url("images/favicon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+</style>
+    
 
-
-  <section class="bg-blueGray-200 -mt-24">
-    <div class="container mx-auto px-4">
-      <div class="flex flex-wrap">
-        <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+    <section class="bg-blueGray-200 -mt-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+                  </div>
+                  <h6 class="text-xl font-semibold">MISIÓN</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Transformar data en información mediante conceptos innovadores y ágiles, para que las organizaciones e instituciones públicas y privadas, cuenten con las mejores soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad.
+                  </p>
+                </div>
               </div>
-              <h6 class="text-xl font-semibold">MISIÓN</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Transformar data en información mediante conceptos innovadores y ágiles, para que las organizaciones e
-                instituciones públicas y privadas, cuenten con las mejores soluciones en la toma de decisiones a nivel
-                técnico, económico, político y social; considerando enfoques de tipo intergeneracional, intersectorial,
-                intercultural, ambiental, de género y movilidad.
-              </p>
+            </div>
+            <div class="w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300">
+                    <i class="fas fa-retweet"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">VISIÓN</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Ser una compañía ecuatoriana referente en el ámbito de la investigación financiera, económica, social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad, buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="pt-6 w-full md:w-4/12 px-4 text-center">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
+                <div class="px-4 py-5 flex-auto">
+                  <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
+                    <i class="fas fa-fingerprint"></i>
+                  </div>
+                  <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
+                  <p class="mt-2 mb-4 text-blueGray-500">
+                  Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo multidisciplinario de profesionales con equidad de género.
+                  <br><br><br>
+                </p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="w-full md:w-4/12 px-4 text-center">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300">
-                <i class="fas fa-retweet"></i>
-              </div>
-              <h6 class="text-xl font-semibold">VISIÓN</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Ser una compañía ecuatoriana referente en el ámbito de la investigación financiera, económica, social y
-                política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad, buenas prácticas
-                y aplicando metodologías innovadoras en la investigación y análisis de información.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="pt-6 w-full md:w-4/12 px-4 text-center">
-          <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-            <div class="px-4 py-5 flex-auto">
-              <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
-                <i class="fas fa-fingerprint"></i>
-              </div>
-              <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
-                Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas
-                frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo
-                multidisciplinario de profesionales con equidad de género.
-                <br><br><br>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </section>
+</section>
 
-  <div class="container mx-auto mt-16">
+<div class="container mx-auto mt-16">
     <!-- component -->
     <section class="max-w-screen-xl flex flex-wrap text-black body-font">
-      <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center">
-        <!-- Added 'justify-center' class -->
-        <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center">
-          <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
-          <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes
-            somos?</h1> <!-- Added 'text-black' class -->
-          <p class="mb-8 leading-relaxed opacity-100 text-black ">
-            <!-- Added 'text-black' class -->
-            Somos una empresa conformada por
-            un grupo multidisciplinario de mujeres
-            profesionales de diferentes provincias
-            del país, con una trayectoria
-            importante de trabajo y experiencia en
-            empresas públicas y privadas; tenemos
-            un recorrido amplio de trabajo social
-            con grupos de atención prioritaria.
-            Somos multifacéticas y creemos que la
-            mujer está preparada para hacer que
-            las cosas sucedan.
-          </p>
+        <div class="container mx-auto flex px-10 md:flex-row flex-col items-center justify-center"> <!-- Added 'justify-center' class -->
+            <div class="lg:flex-grow flex flex-col md:items-center md:text-center mb-16 md:mb-0 items-center text-center"> <!-- Modified 'md:items-start' and 'md:text-left' to 'md:items-center' and 'md:text-center' -->
+                <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold text-black ">¿Quiénes somos?</h1> <!-- Added 'text-black' class -->
+                <p class="mb-8 leading-relaxed opacity-100 text-black "> <!-- Added 'text-black' class -->
+                    Somos una empresa conformada por
+                    un grupo multidisciplinario de mujeres
+                    profesionales de diferentes provincias
+                    del país, con una trayectoria
+                    importante de trabajo y experiencia en
+                    empresas públicas y privadas; tenemos
+                    un recorrido amplio de trabajo social
+                    con grupos de atención prioritaria.
+                    Somos multifacéticas y creemos que la
+                    mujer está preparada para hacer que
+                    las cosas sucedan.
+                </p>
+            </div>
         </div>
-      </div>
     </section>
-  </div>
+</div>
 
 
-  <!----------------CARRUSEL ACCIONISTAS------------------>
+<!----------------CARRUSEL ACCIONISTAS------------------>
 
   <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold" style="margin-left: 40px;">
     SOCIAS - ACCIONISTAS
