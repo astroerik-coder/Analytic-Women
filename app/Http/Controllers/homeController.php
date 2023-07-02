@@ -13,5 +13,8 @@ class homeController extends Controller
     public function indice(){
         return view('indice');
     }
+    public function servicios(){
+        return view ('servicios');
+    }
 }
 
