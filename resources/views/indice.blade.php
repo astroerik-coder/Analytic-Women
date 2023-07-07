@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Contactanos</title>
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
@@ -32,21 +32,21 @@
 				></div>
 				<!-- Col -->
 				<div class="w-full lg:w-7/12 bg-gray-300 p-5 rounded-lg lg:rounded-l-none">
-					<h3 class="pt-4 text-2xl text-center">Crea una cuenta!</h3>
+					<h3 class="pt-4 text-2xl text-center">Contactanos</h3>
 
 					<form method="post" autocomplete="off" action="indice">
 						@csrf
 						<div class="mb-4 md:flex md:justify-between">
 							<div class="mb-4 md:mr-2 md:mb-0">
 								<label class="block mb-2 text-sm font-bold text-gray-700" for="nombre">
-									Primer nombre
+									Nombre
 								</label>
 								<input
 									class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
 									id="nombre"
 									name="nombre" 
 									type="text"
-									placeholder="Primer Nombre"
+									placeholder="Nombre"
 								/>
 							</div>
 							<div class="md:ml-2">
