@@ -45,7 +45,7 @@
                         dark:border-gray-700">Nosotros</a>
                 </li>
                 <li>
-                    <a href="{{route('servicios')}}" class="block py-2 pl-3 pr-4
+                    <a href="{{route('cursos')}}" class="block py-2 pl-3 pr-4
                      text-gray-900 rounded 
                      hover:bg-primary
                      md:bg-primary 

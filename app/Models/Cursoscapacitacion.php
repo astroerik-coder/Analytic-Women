@@ -30,7 +30,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Cursoscapacitacion extends Model
 {
-	protected $table = 'cursoscapacitacion';
+	protected $table = 'cursos';
 	protected $primaryKey = 'ID_CUR';
 	public $incrementing = false;
 	public $timestamps = false;

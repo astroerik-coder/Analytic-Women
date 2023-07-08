@@ -16,5 +16,8 @@ class homeController extends Controller
     public function servicios(){
         return view ('servicios');
     }
+    public function cursos(){
+        return view ('cursos');
+    }
 }
 
