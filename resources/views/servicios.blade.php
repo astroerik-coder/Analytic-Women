@@ -336,39 +336,199 @@
    </div>
 </section>
 <!-- ====== Cards Section End -->
-<!-- component -->
-<div class="py-16 bg-white">
-    <div  class="container m-auto px-6 space-y-8 text-gray-500 md:px-12 lg:px-20">
-        <div class="justify-center text-center gap-6 md:text-left md:flex lg:items-center  lg:gap-16">
-            <div class="order-last mb-6 space-y-6 md:mb-0 md:w-6/12 lg:w-6/12">
-                <h1 class="text-4xl text-gray-700 font-bold md:text-5xl">Servicios <span class="text-blue-500">30% off</span></h1>
-                <p class="text-lg">Be part of millions people around the world using tailus in modern User Interfaces.</p>
-                <div class="flex flex-row-reverse flex-wrap justify-center gap-4 md:gap-6 md:justify-end">
-                    <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
-                        <span class="block text-white font-semibold">
-                            Start buying
-                        </span>
-                    </button>
-                    <button type="button" title="more about" class="w-full order-first py-3 px-6 text-center rounded-xl bg-gray-100 transition hover:bg-gray-200 active:bg-gray-300 focus:bg-gray-200 sm:w-max">
-                        <span class="block text-gray-600 font-semibold">
-                            More about
-                        </span>
-                    </button>
-                </div>
-            </div>
-            <div class="grid grid-cols-5 grid-rows-4 gap-4 md:w-5/12 lg:w-6/12">
-                <div class="col-span-2 row-span-4">
-                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/kushagra.webp" class="rounded-full" width="640" height="960" alt="shoes" loading="lazy">
-                </div>
-                <div class="col-span-2 row-span-2">
-                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/iman.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="640" alt="shoe" loading="lazy">
-                </div>
-                <div class="col-span-3 row-span-3">
-                    <img src="https://tailus.io/sources/blocks/ecommerce-site/preview/images/products/daniel.webp" class="w-full h-full object-cover object-top rounded-xl" width="640" height="427" alt="shoes" loading="lazy">
-                </div>
-            </div>
-        </div>
+<div class="gallery rounded mx-auto m-5 bg-white mt-5" style="width:1000px;">
+  <div class="top flex p-2 border-b select-none">
+    <div class="heading text-gray-800 w-full pl-3 font-semibold my-auto"></div>
+    <div class="buttons ml-auto flex text-gray-600 mr-1">
+      <svg action="prev" class="w-7 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="prev" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+      <svg action="next" class="w-7 rounded-r-lg p-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path action="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
     </div>
+  </div>
+  <div class="content-area w-full h-120 overflow-hidden">
+    <div class="platform shadow-xl h-full flex">
+      <!-- frame start -->
+      <div class="each-frame border-box flex-none h-full" title="Cursos"> <!-- title shows in top -->
+        <!-- this is full editable area -->
+        <div class="main flex w-full p-8"> 
+          <div class="sub w-4/8 my-auto">
+            <img class="w-full p-8" src="https://images-na.ssl-images-amazon.com/images/I/81eJpEEQwYL._AC_SL1500_.jpg" alt="">
+          </div>
+          <div class="sub w-full my-auto">
+            <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4">Pasteleria</h1>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus quisquam, numquam dolorum molestiae ea perferendis pariatur. Modi nemo inventore officiis repudiandae consequuntur, molestiae rerum eaque accusantium excepturi sint minus.</p>
+            <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">$20.00</h1>
+            <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+               <span class="block text-white font-semibold">
+                  Inscribete
+               </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- frame end -->
+
+      <div class="each-frame border-box flex-none h-full" title="Cursos"> <!-- title shows in top -->
+        <!-- this is full editable area -->
+        <div class="main flex w-full p-8"> 
+          <div class="sub w-4/8 my-auto">
+            <img class="w-full p-8" src="https://image.freepik.com/free-vector/cute-lion-cartoon_160606-353.jpg" alt="">
+          </div>
+          <div class="sub w-full my-auto">
+            <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4">Pasteleria</h1>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus quisquam, numquam dolorum molestiae ea perferendis pariatur. Modi nemo inventore officiis repudiandae consequuntur, molestiae rerum eaque accusantium excepturi sint minus.</p>
+            <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">$20.00</h1>
+            <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+               <span class="block text-white font-semibold">
+                  Inscribete
+               </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- frame end -->
+
+      <div class="each-frame border-box flex-none h-full" title="Cursos"> <!-- title shows in top -->
+        <!-- this is full editable area -->
+        <div class="main flex w-full p-8"> 
+          <div class="sub w-4/8 my-auto">
+            <img class="w-full p-8" src="https://i.pinimg.com/originals/07/1d/d0/071dd09d7b36e49139fe2cf08ff728a8.jpg" alt="">
+          </div>
+          <div class="sub w-full my-auto">
+            <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4">Pasteleria</h1>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus quisquam, numquam dolorum molestiae ea perferendis pariatur. Modi nemo inventore officiis repudiandae consequuntur, molestiae rerum eaque accusantium excepturi sint minus.</p>
+            <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">$20.00</h1>
+            <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+               <span class="block text-white font-semibold">
+                  Inscribete
+               </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- frame end -->
+
+      <div class="each-frame border-box flex-none h-full" title="Cursos"> <!-- title shows in top -->
+        <!-- this is full editable area -->
+        <div class="main flex w-full p-8"> 
+          <div class="sub w-4/8 my-auto">
+            <img class="w-full p-8" src="https://image.freepik.com/free-vector/cartoon-owl-tree-branch_194935-43.jpg" alt="">
+          </div>
+          <div class="sub w-full my-auto">
+            <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4">Pasteleria</h1>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus quisquam, numquam dolorum molestiae ea perferendis pariatur. Modi nemo inventore officiis repudiandae consequuntur, molestiae rerum eaque accusantium excepturi sint minus.</p>
+            <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">$20.00</h1>
+            <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+               <span class="block text-white font-semibold">
+                  Inscribete
+               </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- frame end -->
+      <div class="each-frame border-box flex-none h-full" title="Cursos"> <!-- title shows in top -->
+        <!-- this is full editable area -->
+        <div class="main flex w-full p-8"> 
+          <div class="sub w-4/8 my-auto">
+            <img class="w-full p-8" src="https://image.freepik.com/free-vector/cartoon-owl-tree-branch_194935-43.jpg" alt="">
+          </div>
+          <div class="sub w-full my-auto">
+            <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4">Pasteleria</h1>
+            <p class="text-lg mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus temporibus quisquam, numquam dolorum molestiae ea perferendis pariatur. Modi nemo inventore officiis repudiandae consequuntur, molestiae rerum eaque accusantium excepturi sint minus.</p>
+            <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">$20.00</h1>
+            <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
+               <span class="block text-white font-semibold">
+                  Inscribete
+               </span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- frame end -->
+    </div>
+  </div>
+</div>
+
+<style>
+  .platform {
+    position: relative;
+    transition: right 0.3s;
+  }
+  .body {
+    background-color: white !important;
+  }
+</style>
+
+<script>
+  function gallery() {
+    this.index = 0;
+    this.load = function () {
+      this.rootEl = document.querySelector(".gallery");
+      this.platform = this.rootEl.querySelector(".platform");
+      this.frames = this.platform.querySelectorAll(".each-frame");
+      this.contentArea = this.rootEl.querySelector(".content-area");
+      this.width = parseInt(this.rootEl.style.width);
+      this.limit = { start: 0, end: this.frames.length - 1 };
+      this.frames.forEach((each) => {
+        each.style.width = this.width + "px";
+      });
+      this.goto(this.index);
+    };
+    this.set_title = function () {
+      this.rootEl.querySelector(".heading").innerText = this.frames[this.index].getAttribute("title");
+    };
+    this.next = function () {
+      if (this.index === this.limit.end) {
+        this.index = this.limit.start;
+      } else {
+        this.index++;
+      }
+      this.platform.style.right = this.width * this.index + "px";
+      this.set_title();
+    };
+    this.prev = function () {
+      if (this.index === this.limit.start) {
+        this.index = this.limit.end;
+      } else {
+        this.index--;
+      }
+      this.platform.style.right = this.width * this.index + "px";
+      this.set_title();
+    };
+    this.goto = function (index) {
+      this.platform.style.right = this.width * index + "px";
+      this.index = index;
+      this.set_title();
+    };
+    this.load();
+  }
+  var G = new gallery();
+  G.rootEl.addEventListener("click", function (t) {
+    var val = t.target.getAttribute("action");
+    if (val == "next") {
+      G.next();
+    }
+    if (val == "prev") {
+      G.prev();
+    }
+    if (val == "goto") {
+      let rv = t.target.getAttribute("goto");
+      rv = rv == "end" ? G.limit.end : rv;
+      G.goto(parseInt(rv));
+    }
+  });
+  document.addEventListener("keyup", function (t) {
+    var val = t.keyCode;
+    if (val == 39) {
+      G.next();
+    }
+    if (val == 37) {
+      G.prev();
+    }
+  });
+
+  // run G.load() if new data loaded with ajax
+</script>
 </div>
     @component('layouts.components.footer') @endcomponent
 </html>
