@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Evento;
+use App\Models\Provincium;
 
-class Eventos extends Component
+class Provincias extends Component
 {
     use WithPagination;
 
@@ -20,7 +20,7 @@ class Eventos extends Component
     /**
      * @var string
      */
-    public $sortBy = 'ID_EVT';
+    public $sortBy = 'ID_PRO';
 
     /**
      * @var bool
@@ -48,15 +48,13 @@ class Eventos extends Component
         $results = $this->query()
             ->when($this->q, function ($query) {
                 return $query->where(function ($query) {
-                    $query->where('NOMBRE_EVT', 'like', '%' . $this->q . '%')
-                        ->orWhere('FECHA_EVT', 'like', '%' . $this->q . '%')
-                        ->orWhere('HORA_EVT', 'like', '%' . $this->q . '%');
+                    $query->where('NOMBRE_PRO', 'like', '%' . $this->q . '%');
                 });
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.eventos', [
+        return view('livewire.provincias', [
             'results' => $results
         ]);
     }
@@ -81,6 +79,6 @@ class Eventos extends Component
 
     public function query(): Builder
     {
-        return Evento::query();
+        return Provincium::query();
     }
 }

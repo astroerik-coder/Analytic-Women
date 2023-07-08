@@ -1,39 +1,18 @@
- @extends('adminlte::page')
-
-@section('title', 'Dashboard')
-
-@section('content_header')
-    <h1>Dashboard</h1>
-@stop
-
-@section('content')
 <x-app-layout>
-   <x-slot name="header">
+    <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
-    </x-slot> 
+    </x-slot>
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-              @component("layouts.infoCards")
-              @endcomponent
+                @component('layouts.infoCards')@endcomponent
             </div>
         </div>
     </div>
+    <div>
+       @component('layouts.components.sidebar')@endcomponent
+    </div>
 </x-app-layout>
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-    <link rel="stylesheet" href="/css/app.css">
-@stop
-
-@section('js')
-    <script> console.log('Estoy aquiii!'); </script>
-@stop
-
-
-
-{{--   @extends('adminlte::page', ['iFrameEnabled' => true]) --}}
