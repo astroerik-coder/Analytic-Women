@@ -20,23 +20,58 @@
   <!-- Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  -->
 
   
-  @foreach ($servicios as $servicio)
-<div class="max-w-lg mx-auto">
-    <div class="bg-white shadow-md border border-gray-200 rounded-lg max-w-sm mb-5">
-        <a href="#">
-            <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="">
-        </a>
-        <div class="p-5">
-            <a href="#">
-                <h5 class="text-gray-900 font-bold text-2xl tracking-tight mb-2">{{ $servicio->nombre_ser}}</h5>
-            </a>
-            <p class="font-normal text-gray-700 mb-3">{{ $servicio->descripcion_ser}}</p>
+ 
+
+<!-- ====== Cards Section Start -->
+
+<section class="flex justify-center pt-10 lg:pt-[50px] pb-10 lg:pb-10 bg-[#d8e2dc]">
+    <div class="container">
+        <div class="flex flex-wrap -mx-4">
+            @foreach ($servicios as $servicio)
+            <div class="w-full md:w-1/2 xl:w-1/3 px-4">
+                <div class="bg-white rounded-lg overflow-hidden mb-10">
+                    <img src="{{$servicio->imagen_ser}}" alt="image" class="w-full" />
+                    <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
+                        <h3>
+                            <a href="javascript:void(0)" class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary">
+                                {{ $servicio->nombre_ser}}
+                            </a>
+                        </h3>
+                        <p class="text-base text-body-color leading-relaxed mb-7">
+                            {{ $servicio->descripcion_ser}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
-</div>
-@endforeach
-
+</section>
 </html>
+
+
+<br><br><br><br>
+
+<h1>Cursos disponibles</h1>
+
+    @foreach ($cursos as $curso)
+        <div>
+            <h2>{{ $curso->nombre_curso }}</h2>
+            <p>{{ $curso->descripcion_curso }}</p>
+            <img src="{{ $curso->imagen_curso}}" alt="Imagen del curso">
+        </div>
+    @endforeach
+
+
+
+                     
+
+
+
+
+
+
+
 
 
    
