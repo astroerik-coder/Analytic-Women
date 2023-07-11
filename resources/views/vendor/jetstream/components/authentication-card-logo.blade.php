@@ -1,0 +1,1 @@
+<img src="{{asset('images/Analytika Women.png')}}" alt="" style="width:128px;">

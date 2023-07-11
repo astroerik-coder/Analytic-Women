@@ -40,12 +40,26 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
+//CRUD
     Route::get('/crud', function () {
-        return view('crud');
+        return view('tables.crud');
     })->name('crud');
 
-    Route::get('/users', function () {
-        return view('tables.users');
-    })->name('users');
+   Route::get('/eventos', function () {
+        return view('tables.eventos');
+    })->name('eventos');
+ /* 
+    Route::get('/blog', function () {
+        return view('tables.blog');
+    })->name('blog');
+
+    Route::get('/ciudades', function () {
+        return view('tables.ciudades');
+    })->name('ciudades'); 
+
+    Route::get('/provincias', function () {
+        return view('tables.provincias');
+    })->name('provincias');
+*/
 });
 
