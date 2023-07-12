@@ -5,8 +5,11 @@ use App\Http\Controllers\CursosController as ControllersCursosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\datoscontactController;
 use App\Http\Controllers\homeController;
-use App\Http\Controllers\serviciosController;
 use App\Http\Controllers\servicios_cursosController;
+use App\Http\Controllers\reportesController;
+use App\Http\Controllers\pagoCursosController;
+use App\Http\Controllers\empleoReporteController;
+
 
 
 /*
@@ -30,6 +33,16 @@ Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 //Ruta que tiene el controller con ambas tablas 
 Route::get('/servicios', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');
 
+Route::get('/pdf', [reportesController::class, 'mostrar']);
+
+//Ruta del reporte de pago de cursos
+Route::get('/reportePagoCurso', [pagoCursosController::class, 'reportePagoCursos'])->name('reportePagoCurso');
+//Ruta del reporte de servicios
+Route::get('/reporteCursos', [servicios_cursosController::class, 'reporteCursos'])->name('reporteCursos');
+//Ruta del reporte de empleos
+Route::get('/reporteEmpleos', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
+
+
 
 Route::middleware([
     'auth:sanctum',
@@ -40,26 +53,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-//CRUD
     Route::get('/crud', function () {
-        return view('tables.crud');
+        return view('crud');
     })->name('crud');
 
-   Route::get('/eventos', function () {
-        return view('tables.eventos');
-    })->name('eventos');
- /* 
-    Route::get('/blog', function () {
-        return view('tables.blog');
-    })->name('blog');
-
-    Route::get('/ciudades', function () {
-        return view('tables.ciudades');
-    })->name('ciudades'); 
-
-    Route::get('/provincias', function () {
-        return view('tables.provincias');
-    })->name('provincias');
-*/
+    Route::get('/users', function () {
+        return view('tables.users');
+    })->name('users');
 });
 
