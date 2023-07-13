@@ -15,7 +15,7 @@
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm text-gray-500">Usuarios</div>
-                        <div class="font-bold text-lg">1259</div>
+                        <div class="font-bold text-lg"><?php echo app('App\Http\Controllers\UserController')->getTotalUsuarios(); ?></div>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm text-gray-500">Pedidos</div>
-                        <div class="font-bold text-lg">230</div>
+                        <div class="font-bold text-lg"></div>
                     </div>
                 </div>
             </div>
