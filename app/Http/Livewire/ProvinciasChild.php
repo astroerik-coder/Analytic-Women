@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use \Illuminate\View\View;
-use App\Models\Provincium;
+use App\Models\Provincia;
 
 class ProvinciasChild extends Component
 {
@@ -24,6 +24,7 @@ class ProvinciasChild extends Component
      * @var array
      */
     protected $rules = [
+        'item.ID_PRO' => '',
         'item.NOMBRE_PRO' => '',
     ];
 
@@ -31,6 +32,7 @@ class ProvinciasChild extends Component
      * @var array
      */
     protected $validationAttributes = [
+        'item.ID_PRO' => 'Id Pro',
         'item.NOMBRE_PRO' => 'Nombre Pro',
     ];
 
@@ -67,12 +69,12 @@ class ProvinciasChild extends Component
 
     public function deleteItem(): void
     {
-        Provincium::destroy($this->primaryKey);
+        Provincia::destroy($this->primaryKey);
         $this->confirmingItemDeletion = false;
         $this->primaryKey = '';
         $this->reset(['item']);
         $this->emitTo('provincias', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
     public function showCreateForm(): void
@@ -85,18 +87,19 @@ class ProvinciasChild extends Component
     public function createItem(): void
     {
         $this->validate();
-        $item = Provincium::create([
+        $item = Provincia::create([
+            'ID_PRO' => $this->item['ID_PRO'] ?? '', 
             'NOMBRE_PRO' => $this->item['NOMBRE_PRO'] ?? '', 
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('provincias', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
-    public function showEditForm(Provincium $provincium): void
+    public function showEditForm(Provincia $provincia): void
     {
         $this->resetErrorBag();
-        $this->item = $provincium;
+        $this->item = $provincia;
         $this->confirmingItemEdit = true;
     }
 
@@ -107,7 +110,7 @@ class ProvinciasChild extends Component
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('provincias', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Updated Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 
 }

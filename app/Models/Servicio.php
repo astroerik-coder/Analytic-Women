@@ -1,48 +1,26 @@
-<?php
-
-/**
- * Created by Reliese Model.
- */
+<?php 
 
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Servicio
- * 
- * @property int $ID_SER
- * @property int|null $ID_CLT
- * @property string|null $NOMBRE_SER
- * @property string|null $DESCRIPCION_SER
- * @property string|null $OBSERVACIONES_SER
- * 
- * @property Cliente|null $cliente
- *
- * @package App\Models
- */
 class Servicio extends Model
 {
-	protected $table = 'servicios';
-	protected $primaryKey = 'ID_SER';
-	public $incrementing = false;
-	public $timestamps = false;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-	protected $casts = [
-		'ID_SER' => 'int',
-		'ID_CLT' => 'int'
-	];
+    protected $table = 'servicios';
 
-	protected $fillable = [
-		'ID_CLT',
-		'NOMBRE_SER',
-		'DESCRIPCION_SER',
-		'OBSERVACIONES_SER'
-	];
-
-	public function cliente()
-	{
-		return $this->belongsTo(Cliente::class, 'ID_CLT');
-	}
+    protected $fillable = ['ID_SER','ID_CLT','NOMBRE_SER','DESCRIPCION_SER','OBSERVACIONES_SER'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function cliente()
+    {
+        return $this->hasOne('App\Models\Cliente', 'ID_CLT', 'ID_CLT');
+    }
+    
 }

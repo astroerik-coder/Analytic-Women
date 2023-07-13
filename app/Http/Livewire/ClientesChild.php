@@ -24,6 +24,7 @@ class ClientesChild extends Component
      * @var array
      */
     protected $rules = [
+        'item.ID_CLT' => '',
         'item.ID_EMPR' => '',
         'item.ID_GEN' => '',
         'item.ID_PRO' => '',
@@ -43,6 +44,7 @@ class ClientesChild extends Component
      * @var array
      */
     protected $validationAttributes = [
+        'item.ID_CLT' => 'Id Clt',
         'item.ID_EMPR' => 'Id Empr',
         'item.ID_GEN' => 'Id Gen',
         'item.ID_PRO' => 'Id Pro',
@@ -96,7 +98,7 @@ class ClientesChild extends Component
         $this->primaryKey = '';
         $this->reset(['item']);
         $this->emitTo('clientes', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
     public function showCreateForm(): void
@@ -110,6 +112,7 @@ class ClientesChild extends Component
     {
         $this->validate();
         $item = Cliente::create([
+            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
             'ID_EMPR' => $this->item['ID_EMPR'] ?? '', 
             'ID_GEN' => $this->item['ID_GEN'] ?? '', 
             'ID_PRO' => $this->item['ID_PRO'] ?? '', 
@@ -126,7 +129,7 @@ class ClientesChild extends Component
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('clientes', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
     public function showEditForm(Cliente $cliente): void
@@ -143,7 +146,7 @@ class ClientesChild extends Component
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('clientes', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Updated Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 
 }

@@ -36,12 +36,12 @@ class EventosChild extends Component
      * @var array
      */
     protected $validationAttributes = [
-        'item.NOMBRE_EVT' => 'Nombre Evt',
-        'item.DESCRIPCION_EVT' => 'Descripcion Evt',
-        'item.FECHA_EVT' => 'Fecha Evt',
-        'item.HORA_EVT' => 'Hora Evt',
-        'item.OBSERVACIONES_EVT' => 'Observaciones Evt',
-        'item.UBICACION_EVT' => 'Ubicacion Evt',
+        'item.NOMBRE_EVT' => 'Nombre',
+        'item.DESCRIPCION_EVT' => 'Descripcion',
+        'item.FECHA_EVT' => 'Fecha',
+        'item.HORA_EVT' => 'Hora',
+        'item.OBSERVACIONES_EVT' => 'Observaciones',
+        'item.UBICACION_EVT' => 'Ubicacion',
     ];
 
     /**
@@ -122,7 +122,7 @@ class EventosChild extends Component
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Updated Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado correctamente');
     }
 
 }

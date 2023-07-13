@@ -1,11 +1,8 @@
 <section class="antialiased bg-gray-100 text-black  px-4 mb-5">
     <div class="mt-8">
-
         <div class="flex justify-between">
             <div class="text-2xl">Eventos</div>
         </div>
-
-
         <div class="mt-6">
             <div class="flex justify-between">
                 <div class="flex">
@@ -14,7 +11,7 @@
                 <div class="flex">
                     <x-tall-crud-page-dropdown />
                 </div>
-                
+
                 <div class="mt-4">
                     {{ $results->links() }}
                 </div>
@@ -28,9 +25,8 @@
                     </button>
                 </div>
             </div>
-
-
-            <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8" wire:loading.class.delay="opacity-50">
+            <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
+                wire:loading.class.delay="opacity-50">
                 <thead class="bg-gray-5">
                     <tr>
                         <th class="px-3 py-2">
@@ -50,7 +46,7 @@
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
                     @php
-                        $numero = 1;
+                    $numero = 1;
                     @endphp
                     @foreach($results as $result)
                     <tr class="hover:bg-violet-50 ">
@@ -61,7 +57,6 @@
                         <td class="px-6 py-4">{{ $result->HORA_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->OBSERVACIONES_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->UBICACION_EVT }}</td>
-                        </td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
                                 {{-- Editar --}}
@@ -74,6 +69,7 @@
                                             d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                                     </svg>
                                 </button>
+                                {{-- Eliminar --}}
                                 <button type="submit"
                                     wire:click="$emitTo('eventos-child', 'showDeleteForm', {{ $result->ID_EVT}});"
                                     class="material-icons-round text-base">
@@ -91,8 +87,8 @@
                 </tbody>
             </table>
         </div>
-</section>
 
-@livewire('eventos-child')
-@livewire('livewire-toast')
-</div>
+        @livewire('eventos-child')
+        @livewire('livewire-toast')
+    </div>
+</section>

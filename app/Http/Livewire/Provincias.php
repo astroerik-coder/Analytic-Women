@@ -7,7 +7,7 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Provincium;
+use App\Models\Provincia;
 
 class Provincias extends Component
 {
@@ -35,7 +35,7 @@ class Provincias extends Component
     /**
      * @var int
      */
-    public $per_page = 15;
+    public $per_page = 10;
 
 
     public function mount(): void
@@ -72,13 +72,8 @@ class Provincias extends Component
         $this->resetPage();
     }
 
-    public function updatingPerPage(): void
-    {
-        $this->resetPage();
-    }
-
     public function query(): Builder
     {
-        return Provincium::query();
+        return Provincia::query();
     }
 }

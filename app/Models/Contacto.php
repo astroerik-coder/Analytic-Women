@@ -1,49 +1,26 @@
-<?php
-
-/**
- * Created by Reliese Model.
- */
+<?php 
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Contacto
- * 
- * @property int $ID_CONT
- * @property string|null $NOMBRE_CONT
- * @property string|null $TELEFONO1_CONT
- * @property string|null $TELEFONO2_CONT
- * @property string|null $EMAIL1_CONT
- * @property string|null $EMAIL2_CONT
- * 
- * @property Collection|Informacion[] $informacions
- *
- * @package App\Models
- */
 class Contacto extends Model
 {
-	protected $table = 'contacto';
-	protected $primaryKey = 'ID_CONT';
-	public $incrementing = false;
-	public $timestamps = false;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-	protected $casts = [
-		'ID_CONT' => 'int'
-	];
+    protected $table = 'contactos';
 
-	protected $fillable = [
-		'NOMBRE_CONT',
-		'TELEFONO1_CONT',
-		'TELEFONO2_CONT',
-		'EMAIL1_CONT',
-		'EMAIL2_CONT'
-	];
-
-	public function informacions()
-	{
-		return $this->hasMany(Informacion::class, 'ID_CONT');
-	}
+    protected $fillable = ['ID_CONT','NOMBRE_CONT','TELEFONO1_CONT','TELEFONO2_CONT','EMAIL1_CONT','EMAIL2_CONT'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function informaciones()
+    {
+        return $this->hasMany('App\Models\Informacione', 'ID_CONT', 'ID_CONT');
+    }
+    
 }
