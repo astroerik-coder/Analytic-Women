@@ -225,20 +225,20 @@
                 <ul class="mb-8 text-sm font-medium">
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 1</span>
+                            href="reportePagoCurso">
+                            <span class="select-none">Reporte de pago de cursos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 2</span>
+                            href="reporteCursos">
+                            <span class="select-none">Reporte de cursos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 3</span>
+                            href="reporteEmpleos">
+                            <span class="select-none">Reporte  de empleos</span>
                         </a>
                     </li>
                     <li>

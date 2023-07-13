@@ -4,6 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\datoscontactController;
 use App\Http\Controllers\homeController;
 use App\Http\Controllers\servicios_cursosController;
+use App\Http\Controllers\reportesController;
+use App\Http\Controllers\pagoCursosController;
+use App\Http\Controllers\empleoReporteController;
+use Illuminate\Support\Facades\View;
+
 
 
 /*
@@ -23,6 +28,18 @@ Route::post('/indice',[datoscontactController::class, 'store'])->name('indice');
 Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 //Ruta que tiene el controller con ambas tablas 
 Route::get('/servicios', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');
+
+//Ruta del reporte de pago de cursos
+Route::get('/reportePagoCurso', [pagoCursosController::class, 'reportePagoCursos'])->name('reportePagoCurso');
+//Ruta del reporte de servicios
+Route::get('/reporteCursos', [servicios_cursosController::class, 'reporteCursos'])->name('reporteCursos');
+//Ruta del reporte de empleos
+Route::get('/reporteEmpleos', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
+
+
+
+
+//Route::get('/usuarios', [pagoCursosController::class, 'getTotalUsuarios'])->name('usuarios');
 
 
 Route::middleware([

@@ -11,7 +11,7 @@ class Empleo extends Model
 	
     public $timestamps = true;
 
-    protected $table = 'empleos';
+    protected $table = 'empleo';
 
     protected $fillable = ['ID_EMP','NOMBRE_EMP','DESCRIPCION_EMP','MODALIDAD_EMP','HORARIO_EMP','FECHA_PUBLICACION_EMP','EXPERIENCIA_EMP'];
 	
