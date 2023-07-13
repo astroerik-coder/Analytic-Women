@@ -38,7 +38,7 @@
                             </a>
                         </h3>
                         <p class="text-base text-body-color leading-relaxed mb-7">
-                            {{ $servicio->descripcion_ser}}
+                            {{$servicio->descripcion_ser}}
                         </p>
                     </div>
                 </div>

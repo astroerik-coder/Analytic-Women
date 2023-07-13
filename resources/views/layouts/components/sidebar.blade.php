@@ -142,6 +142,45 @@
             </div>
             <!-- navigation group end-->
 
+            <!----Reportes-->
+            <div class="px-4 pb-2">
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
+                    Reportes
+                </h3>
+                <ul class="mb-2 text-sm font-medium">
+                    <li>
+                        <table class="w-full mt-2">
+                            <tr>
+                                <td>
+                                    <a class="active flex items-center rounded py-2 px-4 text-white bg-gray-500 hover:bg-gray-600"
+                                        href="reportePagoCurso">
+                                        <span class="select-none">Reporte pago de cursos</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="active flex items-center rounded py-2 px-4 text-white bg-gray-500 hover:bg-gray-600"
+                                        href="reporteCursos">
+                                        <span class="select-none">Reporte cursos impartidos</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="active flex items-center rounded py-2 px-4 text-white bg-gray-500 hover:bg-gray-600"
+                                        href="reporteEmpleo">
+                                        <span class="select-none">Reporte empleos</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            
+            
+
             <!-- example copies start -->
             <div class="px-4 pb-6">
                 <h3 class="mb-2 text-xs font-medium font-bold uppercase text-gray-100">
