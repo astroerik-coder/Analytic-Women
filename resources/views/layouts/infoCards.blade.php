@@ -13,12 +13,10 @@
                            </path>
                         </svg>
                     </div>
-                    @if(isset($totalUsuarios))
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm text-gray-500">Usuarios</div>
-                        <div class="font-bold text-lg">1259</div>
+                        <div class="font-bold text-lg"><?php echo app('App\Http\Controllers\UserController')->getTotalUsuarios(); ?></div>
                     </div>
-                    @endif
                 </div>
             </div>
             <div class="col-span-12 sm:col-span-6 md:col-span-3">
