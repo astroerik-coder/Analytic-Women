@@ -39,7 +39,7 @@ Route::get('/reportePagoCurso', [pagoCursosController::class, 'reportePagoCursos
 //Ruta del reporte de servicios
 Route::get('/reporteCursos', [servicios_cursosController::class, 'reporteCursos'])->name('reporteCursos');
 //Ruta del reporte de empleos
-Route::get('/reporteEmpleosh', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
+Route::get('/reporteEmpleos', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
 
 
 >>>>>>> Stashed changes
