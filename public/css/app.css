@@ -1135,6 +1135,9 @@ select {
 .m-auto {
   margin: auto;
 }
+.m-3 {
+  margin: 0.75rem;
+}
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
@@ -1859,6 +1862,14 @@ select {
 .border-transparent {
   border-color: transparent;
 }
+.border-gray-800 {
+  --tw-border-opacity: 1;
+  border-color: rgb(31 41 55 / var(--tw-border-opacity));
+}
+.border-gray-900 {
+  --tw-border-opacity: 1;
+  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+}
 .bg-\[\#d8e2dc\] {
   --tw-bg-opacity: 1;
   background-color: rgb(216 226 220 / var(--tw-bg-opacity));
@@ -2005,6 +2016,18 @@ select {
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+.bg-gray-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-secundary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 201 215 / var(--tw-bg-opacity));
+}
+.bg-tertiary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 28 87 / var(--tw-bg-opacity));
 }
 .bg-opacity-25 {
   --tw-bg-opacity: 0.25;
@@ -2714,6 +2737,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(133 77 14 / var(--tw-bg-opacity));
 }
+.hover\:bg-violet-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(237 233 254 / var(--tw-bg-opacity));
+}
 .hover\:bg-opacity-70:hover {
   --tw-bg-opacity: 0.7;
 }
@@ -2747,6 +2774,14 @@ select {
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(188 121 157 / var(--tw-text-opacity));
+}
+.hover\:text-orange-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(251 146 60 / var(--tw-text-opacity));
+}
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
@@ -3039,6 +3074,10 @@ select {
 :is(.dark .dark\:text-white) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+:is(.dark .dark\:text-black) {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 :is(.dark .dark\:before\:bg-tertiary)::before {
   content: var(--tw-content);

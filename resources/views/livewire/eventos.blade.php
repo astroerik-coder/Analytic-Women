@@ -57,7 +57,6 @@
                         <td class="px-6 py-4">{{ $result->HORA_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->OBSERVACIONES_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->UBICACION_EVT }}</td>
-                        </td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
                                 {{-- Editar --}}

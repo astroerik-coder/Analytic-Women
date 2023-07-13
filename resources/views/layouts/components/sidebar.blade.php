@@ -20,15 +20,15 @@
     }
 
     #sidebar ul li a.active {
-        background: #BC799D;
-        background-color: #BC799D;
+        background: #E4C9D7;
+        background-color: #061C57;
     }
 </style>
 
 
 <!-- Navbar start -->
 
-<nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-primary px-4 sm:justify-between">
+<nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-tertiary px-4 sm:justify-between">
     <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-white hover:text-gray-200">
         <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="h-8 w-8">
@@ -40,16 +40,6 @@
         </svg>
     </button>
 
-    {{--Logo  --}}
-    <div class="p-2.5 mt-1 flex items-center">
-        <img src="" alt="" sizes="" srcset="">
-        <i class="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600"></i>
-        <h1 class="font-bold text-gray-200 text-[15px] ml-3">Analytika Women</h1>
-        <i
-          class="bi bi-x cursor-pointer ml-28 lg:hidden"
-          onclick="openSidebar()"
-        ></i>
-      </div>
     <!-- Dropdown button de usuario -->
     <div class="relative inline-block">
         <button id="dropdownButton" class="relative z-10 flex items-center py-4 text-sm text-white hover:text-gray-200">
@@ -86,8 +76,8 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <a href="#" onclick="event.preventDefault(); this.closest('form').submit();"
-                    class="block px-4 py-3 text-sm text-gray-600 hover:bg-red-400 capitalize transition-colors duration-200 transform dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white">
-                    Cerrar sesión
+                    class="block px-4 py-3 text-sm text-gray-600 hover:bg-red-400 hover:text-white capitalize transition-colors duration-200 transform dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">
+                    Cerrar Sesión
                 </a>
             </form>
 
@@ -101,21 +91,17 @@
 <div id="containerSidebar" class="z-40">
     <div class="navbar-menu relative z-40">
         <nav id="sidebar"
-            class="fixed left-0 bottom-0 flex w-1/4 -translate-x-full flex-col overflow-y-auto bg-primary pt-6 pb-8 sm:max-w-xs lg:w-80">
+            class="fixed left-0 bottom-0 flex w-1/4 -translate-x-full flex-col overflow-y-auto bg-tertiary pt-6 pb-8 sm:max-w-xs lg:w-80">
             <div class="px-4 pb-6">
                 {{-- --}}
-                <div class="px-4 pb-6">
-                    <a href="#"
-                        class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
-                        <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
-                            src="{{ Auth::user()->profile_photo_url }}" alt="Usuario">
-                        <div class="mx-1">
-                            <h1 class="text-sm font-semibold text-gray-700 dark:text-gray-200"> {{ Auth::user()->name }}
-                            </h1>
-                            <p class="text-sm text-gray-500 dark:text-gray-400">{{ Auth::user()->email }}</p>
-                        </div>
-                    </a>
-                </div>
+                <div class="p-2.5 mt-1 flex items-center">
+                    <img src="{{ asset('images/Analytika Women.png') }}" width="64px" height="64px">
+                    <h1 class="font-bold text-gray-200 text-[15px] ml-3">Analytika Women</h1>
+                    <i
+                      class="bi bi-x cursor-pointer ml-28 lg:hidden"
+                      onclick="openSidebar()"
+                    ></i>
+                  </div>
                 {{-- --}}
                 <hr>
                 <ul class="mb-8 text-sm font-medium">
