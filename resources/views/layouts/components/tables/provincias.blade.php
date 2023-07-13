@@ -7,6 +7,6 @@
         </div>
     </div>
     <div>
-        @component('components.sidebar')@endcomponent
+        @component('layouts.components.sidebar')@endcomponent
     </div>
 </x-app-layout>

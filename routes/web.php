@@ -36,20 +36,20 @@ Route::middleware([
 
 //CRUD
 Route::get('/crud', function () {return view('crud');})->name('crud');
-Route::get('/blogs', function () {  return view('components.tables.blogs'); })->name('blogs');
-Route::get('/categorias', function () {return view('components.tables.categorias'); })->name('categorias');
-Route::get('/ciudades', function () {return view('components.tables.ciudades'); })->name('ciudades');
-Route::get('/clientes', function () { return view('components.tables.clientes');})->name('clientes');
-Route::get('/comentarios', function () { return view('components.tables.comentarios');})->name('comentarios');
-Route::get('/contactos', function () { return view('components.tables.contactos');})->name('contactos');
-Route::get('/cursos', function () { return view('components.tables.cursos');})->name('cursos');
-Route::get('/empleos', function () { return view('components.tables.empleos');})->name('empleos');
-Route::get('/empresas', function () { return view('components.tables.empresas');})->name('empresas');
-Route::get('/eventos', function () { return view('components.tables.eventos');})->name('eventos');
-Route::get('/generos', function () { return view('components.tables.generos');})->name('generos');
-Route::get('/informaciones', function () { return view('components.tables.informaciones');})->name('informaciones');
-Route::get('/pagos', function () { return view('components.tables.pagos');})->name('pagos');
-Route::get('/provincias', function () { return view('components.tables.provincias');})->name('provincias');
-Route::get('/redes', function () {return view('components.tables.redes');})->name('redes');
-Route::get('/servicios', function () {return view('components.tables.servicios');})->name('servicios'); 
+Route::get('/blogs', function () {  return view('layouts.components.tables.blogs'); })->name('blogs');
+Route::get('/categorias', function () {return view('layouts.components.tables.categorias'); })->name('categorias');
+Route::get('/ciudades', function () {return view('layouts.components.tables.ciudades'); })->name('ciudades');
+Route::get('/clientes', function () { return view('layouts.components.tables.clientes');})->name('clientes');
+Route::get('/comentarios', function () { return view('layouts.components.tables.comentarios');})->name('comentarios');
+Route::get('/contactos', function () { return view('layouts.components.tables.contactos');})->name('contactos');
+Route::get('/cursos', function () { return view('layouts.components.tables.cursos');})->name('cursos');
+Route::get('/empleos', function () { return view('layouts.components.tables.empleos');})->name('empleos');
+Route::get('/empresas', function () { return view('layouts.components.tables.empresas');})->name('empresas');
+Route::get('/eventos', function () { return view('layouts.components.tables.eventos');})->name('eventos');
+Route::get('/generos', function () { return view('layouts.components.tables.generos');})->name('generos');
+Route::get('/informaciones', function () { return view('layouts.components.tables.informaciones');})->name('informaciones');
+Route::get('/pagos', function () { return view('layouts.components.tables.pagos');})->name('pagos');
+Route::get('/provincias', function () { return view('layouts.components.tables.provincias');})->name('provincias');
+Route::get('/redes', function () {return view('layouts.components.tables.redes');})->name('redes');
+Route::get('/servicios', function () {return view('layouts.components.tables.servicios');})->name('servicios'); 
 });
