@@ -25,7 +25,9 @@
     }
 </style>
 
+
 <!-- Navbar start -->
+
 <nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
     <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-white hover:text-gray-200">
         <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -40,28 +42,23 @@
 
     <!-- Dropdown button de usuario -->
     <div class="relative inline-block">
-        <button id="dropdownButton"
-            class="relative z-10 flex items-center py-4 text-sm text-white hover:text-gray-200">
+        <button id="dropdownButton" class="relative z-10 flex items-center py-4 text-sm text-white hover:text-gray-200">
             <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
-            src="{{ Auth::user()->profile_photo_url }}"
-            alt="Avatar de usuario">
+                src="{{ Auth::user()->profile_photo_url }}" alt="Avatar de usuario">
             <span class="mx-1">{{ Auth::user()->name }}</span>
             <svg class="w-5 h-5 mx-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
+                <path d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
                     fill="currentColor"></path>
             </svg>
         </button>
 
         <!-- Dropdown menu de usuario -->
-        <div
-            class="absolute right-0 z-20 w-56 mt-14 -mr-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800 hidden"
+        <div class="absolute right-0 z-20 w-56 mt-14 -mr-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800 hidden"
             id="dropdownMenu">
             <a href="#"
                 class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
                 <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
-                    src="{{ Auth::user()->profile_photo_url }}"
-                    alt="Usuario">
+                    src="{{ Auth::user()->profile_photo_url }}" alt="Usuario">
                 <div class="mx-1">
                     <h1 class="text-sm font-semibold text-gray-700 dark:text-gray-200"> {{ Auth::user()->name }}</h1>
                     <p class="text-sm text-gray-500 dark:text-gray-400">{{ Auth::user()->email }}</p>
@@ -83,7 +80,7 @@
                     Cerrar sesión
                 </a>
             </form>
-             
+
         </div>
     </div>
 </nav>
@@ -91,28 +88,40 @@
 <!-- Navbar end -->
 
 <!-- Sidebar start-->
- <div id="containerSidebar" class="z-40">
+<div id="containerSidebar" class="z-40">
     <div class="navbar-menu relative z-40">
         <nav id="sidebar"
-            class="fixed left-0 bottom-0 flex w-3/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80">
-            <!-- one category / navigation group -->
+            class="fixed left-0 bottom-0 flex w-1/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80">
             <div class="px-4 pb-6">
-                <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
-                    Main
-                </h3>
+                {{-- --}}
+                <div class="px-4 pb-6">
+                    <a href="#"
+                        class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                        <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
+                            src="{{ Auth::user()->profile_photo_url }}" alt="Usuario">
+                        <div class="mx-1">
+                            <h1 class="text-sm font-semibold text-gray-700 dark:text-gray-200"> {{ Auth::user()->name }}
+                            </h1>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">{{ Auth::user()->email }}</p>
+                        </div>
+                    </a>
+                </div>
+                {{-- --}}
+                <hr>
                 <ul class="mb-8 text-sm font-medium">
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="dashboard">
-                            <span class="select-none">Inicio</span>
+                            <span class="select-none">Dashboard</span>
                         </a>
                     </li>
                     <li>
                         <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" href="crud">
-                            <span class="select-none">Crud</span>
+                            <span class="select-none">Generador</span>
                         </a>
                     </li>
                 </ul>
+                <hr>
             </div>
             <div class="px-4 pb-6">
                 <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
@@ -121,14 +130,14 @@
                 <ul class="mb-8 text-sm font-medium">
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="eventos">
-                            <span class="select-none">Eventos</span>
+                            href="blogs">
+                            <span class="select-none">Blogs</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="blog">
-                            <span class="select-none">Blog</span>
+                            href="categorias">
+                            <span class="select-none">Categorias</span>
                         </a>
                     </li>
                     <li>
@@ -137,29 +146,126 @@
                             <span class="select-none">Ciudades</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="clientes">
+                            <span class="select-none">Clientes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="comentarios">
+                            <span class="select-none">Comentarios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="contactos">
+                            <span class="select-none">Contacto</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="cursos">
+                            <span class="select-none">Curso</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="empleos">
+                            <span class="select-none">Empleos</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="eventos">
+                            <span class="select-none">Eventos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="generos">
+                            <span class="select-none">Generos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="informaciones">
+                            <span class="select-none">Informaciones</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="pagos">
+                            <span class="select-none">Pagos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="provincias">
+                            <span class="select-none">Provincias</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="redes">
+                            <span class="select-none">Redes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="servicios">
+                            <span class="select-none">Servicios</span>
+                        </a>
+                    </li>
 
                 </ul>
             </div>
-            <!-- navigation group end-->
-
-            <!-- example copies start -->
             <div class="px-4 pb-6">
-                <h3 class="mb-2 text-xs font-medium font-bold uppercase text-gray-100">
-                    Legal
+                <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">
+                    Reportes
                 </h3>
                 <ul class="mb-8 text-sm font-medium">
-
                     <li>
-                        <a class="flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" href="#tc">
-                            <span class="select-none">Terms and Condition</span>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="">
+                            <span class="select-none">Reporte 1</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="">
+                            <span class="select-none">Reporte 2</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="">
+                            <span class="select-none">Reporte 3</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="">
+                            <span class="select-none">Reporte 4</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="">
+                            <span class="select-none">Reporte 5</span>
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </nav>
     </div>
     <div class="mx-auto lg:ml-80"></div>
-</div> 
+</div>
+<!-- Sidebar end -->
+
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", () => {

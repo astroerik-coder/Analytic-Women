@@ -1,13 +1,15 @@
 <section class="antialiased bg-gray-100 text-black  px-4 mb-5">
     <div class="mt-8">
         <div class="flex justify-between">
-            <div class="text-2xl">Eventos</div>
+            <div class="text-2xl">Blogs</div>
         </div>
+
         <div class="mt-6">
             <div class="flex justify-between">
                 <div class="flex">
                     <x-tall-crud-input-search />
                 </div>
+
                 <div class="flex">
                     <x-tall-crud-page-dropdown />
                 </div>
@@ -16,48 +18,45 @@
                     {{ $results->links() }}
                 </div>
                 <div>
-                    <button type="submit" wire:click="$emitTo('eventos-child', 'showCreateForm');"
+                    <button type="submit" wire:click="$emitTo('blogs-child', 'showCreateForm');"
                         class="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
                         <div
                             class="absolute inset-0 w-3 bg-violet-400 transition-all duration-[250ms] ease-out group-hover:w-full">
                         </div>
-                        <span class="relative text-black group-hover:text-white">Agregar Evento</span>
+                        <span class="relative text-black group-hover:text-white">Agregar Blog</span>
                     </button>
                 </div>
             </div>
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
-                wire:loading.class.delay="opacity-50">
-                <thead class="bg-gray-5">
+            wire:loading.class.delay="opacity-50">
+            <thead class="bg-gray-5">
                     <tr>
-                        <th class="px-3 py-2">
+                        <td class="px-3 py-2">
                             <div class="flex items-center">
-                                <button wire:click="sortBy('ID_EVT')" class="text-gray-900">Id</button>
-                                <x-tall-crud-sort-icon sortField="ID_EVT" :sort-by="$sortBy" :sort-asc="$sortAsc" />
+                                <button wire:click="sortBy('id')">Id</button>
+                                <x-tall-crud-sort-icon sortField="ID_BLG" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
-                        </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Nombre</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Descripcion</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Fecha</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Hora</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Observaciones</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Ubicacion</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</th>
+                        </td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Clt</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Com</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Cat</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Titulo</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Valoracion</td>
+                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</td>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
-                    @php
-                    $numero = 1;
-                    @endphp
                     @foreach($results as $result)
-                    <tr class="hover:bg-violet-50 ">
-                        <td class="px-6 py-4">{{ $numero }}</td> @php $numero++;@endphp
-                        <td class="px-6 py-4">{{ $result->NOMBRE_EVT }}</td>
-                        <td class="px-6 py-4">{{ $result->DESCRIPCION_EVT }}</td>
-                        <td class="px-6 py-4">{{ $result->FECHA_EVT }}</td>
-                        <td class="px-6 py-4">{{ $result->HORA_EVT }}</td>
-                        <td class="px-6 py-4">{{ $result->OBSERVACIONES_EVT }}</td>
-                        <td class="px-6 py-4">{{ $result->UBICACION_EVT }}</td>
-                        </td>
+                    <tr class="hover:bg-violet-50 {{ ($loop->even ) ? " bg-violet-100" : "" }}">
+
+                        <td class="px-6 py-4">{{ $result->id }}</td>
+                        <td class="px-6 py-4">{{ $result->ID_BLG }}</td>
+                        <td class="px-6 py-4">{{ $result->ID_CLT }}</td>
+                        <td class="px-6 py-4">{{ $result->ID_COM }}</td>
+                        <td class="px-6 py-4">{{ $result->ID_CAT }}</td>
+                        <td class="px-6 py-4">{{ $result->TITULO_BLG }}</td>
+                        <td class="px-6 py-4">{{ $result->VALORACION_BLG }}</td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
                                 {{-- Editar --}}
@@ -88,8 +87,7 @@
                 </tbody>
             </table>
         </div>
-
-        @livewire('eventos-child')
+        @livewire('blogs-child')
         @livewire('livewire-toast')
     </div>
 </section>

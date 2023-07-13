@@ -22,20 +22,14 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CIU" />
-                @error('item.ID_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
                 <x-tall-crud-label>Id Pro</x-tall-crud-label>
-                <x-tall-crud-select class="block mt-1 w-1/4" wire:model.defer="item.ID_PRO"><option value="1">Yes</option><option value="0">No</option>
-                </x-tall-crud-select> 
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_PRO" />
                 @error('item.ID_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Nombre Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_CIU" />
-                @error('item.NOMBRE_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Nombre Pro</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_PRO" />
+                @error('item.NOMBRE_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
 
@@ -52,20 +46,14 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CIU" />
-                @error('item.ID_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
                 <x-tall-crud-label>Id Pro</x-tall-crud-label>
-                <x-tall-crud-select class="block mt-1 w-1/4" wire:model.defer="item.ID_PRO"><option value="1">Yes</option><option value="0">No</option>
-                </x-tall-crud-select> 
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_PRO" />
                 @error('item.ID_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Nombre Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_CIU" />
-                @error('item.NOMBRE_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Nombre Pro</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_PRO" />
+                @error('item.NOMBRE_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
 

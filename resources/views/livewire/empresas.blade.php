@@ -1,7 +1,7 @@
 <div class="mt-8 min-h-screen">
     <div class="flex justify-between">
-        <div class="text-2xl">Ciudades</div>
-        <button type="submit" wire:click="$emitTo('ciudades-child', 'showCreateForm');" class="text-blue-500">
+        <div class="text-2xl">Empresas</div>
+        <button type="submit" wire:click="$emitTo('empresas-child', 'showCreateForm');" class="text-blue-500">
             <x-tall-crud-icon-add />
         </button> 
     </div>
@@ -13,7 +13,6 @@
             </div>
             <div class="flex">
 
-                <x-tall-crud-page-dropdown />
             </div>
         </div>
         <table class="w-full whitespace-no-wrap mt-4 shadow-2xl text-xs" wire:loading.class.delay="opacity-50">
@@ -25,19 +24,9 @@
                         <x-tall-crud-sort-icon sortField="id" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                     </div>
                 </td>
-                <td class="px-3 py-2" >Id Ciu</td>
-                <td class="px-3 py-2" >
-                    <div class="flex items-center">
-                        <button wire:click="sortBy('ID_PRO')">Id Pro</button>
-                        <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                    </div>
-                </td>
-                <td class="px-3 py-2" >
-                    <div class="flex items-center">
-                        <button wire:click="sortBy('NOMBRE_CIU')">Nombre Ciu</button>
-                        <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                    </div>
-                </td>
+                <td class="px-3 py-2" >Id Empr</td>
+                <td class="px-3 py-2" >Nombre Empr</td>
+                <td class="px-3 py-2" >Logo Empr</td>
                 <td class="px-3 py-2" >Actions</td>
                 </tr>
             </thead>
@@ -45,14 +34,14 @@
             @foreach($results as $result)
                 <tr class="hover:bg-blue-300 {{ ($loop->even ) ? "bg-blue-100" : ""}}">
                     <td class="px-3 py-2" >{{ $result->id }}</td>
-                    <td class="px-3 py-2" >{{ $result->ID_CIU }}</td>
-                    <td class="px-3 py-2" >{{ $result->ID_PRO }}</td>
-                    <td class="px-3 py-2" >{{ $result->NOMBRE_CIU }}</td>
+                    <td class="px-3 py-2" >{{ $result->ID_EMPR }}</td>
+                    <td class="px-3 py-2" >{{ $result->NOMBRE_EMPR }}</td>
+                    <td class="px-3 py-2" >{{ $result->LOGO_EMPR }}</td>
                     <td class="px-3 py-2" >
-                        <button type="submit" wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->id}});" class="text-green-500">
+                        <button type="submit" wire:click="$emitTo('empresas-child', 'showEditForm', {{ $result->id}});" class="text-green-500">
                             <x-tall-crud-icon-edit />
                         </button>
-                        <button type="submit" wire:click="$emitTo('ciudades-child', 'showDeleteForm', {{ $result->id}});" class="text-red-500">
+                        <button type="submit" wire:click="$emitTo('empresas-child', 'showDeleteForm', {{ $result->id}});" class="text-red-500">
                             <x-tall-crud-icon-delete />
                         </button>
                     </td>
@@ -65,6 +54,6 @@
     <div class="mt-4">
         {{ $results->links() }}
     </div>
-    @livewire('ciudades-child')
+    @livewire('empresas-child')
     @livewire('livewire-toast')
 </div>

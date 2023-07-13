@@ -22,20 +22,19 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CIU" />
-                @error('item.ID_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Id Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_EMPR" />
+                @error('item.ID_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Id Pro</x-tall-crud-label>
-                <x-tall-crud-select class="block mt-1 w-1/4" wire:model.defer="item.ID_PRO"><option value="1">Yes</option><option value="0">No</option>
-                </x-tall-crud-select> 
-                @error('item.ID_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Nombre Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_EMPR" />
+                @error('item.NOMBRE_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Nombre Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_CIU" />
-                @error('item.NOMBRE_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Logo Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.LOGO_EMPR" />
+                @error('item.LOGO_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
 
@@ -52,20 +51,19 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CIU" />
-                @error('item.ID_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Id Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_EMPR" />
+                @error('item.ID_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Id Pro</x-tall-crud-label>
-                <x-tall-crud-select class="block mt-1 w-1/4" wire:model.defer="item.ID_PRO"><option value="1">Yes</option><option value="0">No</option>
-                </x-tall-crud-select> 
-                @error('item.ID_PRO') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Nombre Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_EMPR" />
+                @error('item.NOMBRE_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Nombre Ciu</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.NOMBRE_CIU" />
-                @error('item.NOMBRE_CIU') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-label>Logo Empr</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.LOGO_EMPR" />
+                @error('item.LOGO_EMPR') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
 

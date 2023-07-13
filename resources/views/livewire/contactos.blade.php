@@ -1,7 +1,7 @@
 <div class="mt-8 min-h-screen">
     <div class="flex justify-between">
-        <div class="text-2xl">Ciudades</div>
-        <button type="submit" wire:click="$emitTo('ciudades-child', 'showCreateForm');" class="text-blue-500">
+        <div class="text-2xl">Contactos</div>
+        <button type="submit" wire:click="$emitTo('contactos-child', 'showCreateForm');" class="text-blue-500">
             <x-tall-crud-icon-add />
         </button> 
     </div>
@@ -25,19 +25,12 @@
                         <x-tall-crud-sort-icon sortField="id" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                     </div>
                 </td>
-                <td class="px-3 py-2" >Id Ciu</td>
-                <td class="px-3 py-2" >
-                    <div class="flex items-center">
-                        <button wire:click="sortBy('ID_PRO')">Id Pro</button>
-                        <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                    </div>
-                </td>
-                <td class="px-3 py-2" >
-                    <div class="flex items-center">
-                        <button wire:click="sortBy('NOMBRE_CIU')">Nombre Ciu</button>
-                        <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                    </div>
-                </td>
+                <td class="px-3 py-2" >Id Cont</td>
+                <td class="px-3 py-2" >Nombre Cont</td>
+                <td class="px-3 py-2" >Telefono1 Cont</td>
+                <td class="px-3 py-2" >Telefono2 Cont</td>
+                <td class="px-3 py-2" >Email1 Cont</td>
+                <td class="px-3 py-2" >Email2 Cont</td>
                 <td class="px-3 py-2" >Actions</td>
                 </tr>
             </thead>
@@ -45,14 +38,17 @@
             @foreach($results as $result)
                 <tr class="hover:bg-blue-300 {{ ($loop->even ) ? "bg-blue-100" : ""}}">
                     <td class="px-3 py-2" >{{ $result->id }}</td>
-                    <td class="px-3 py-2" >{{ $result->ID_CIU }}</td>
-                    <td class="px-3 py-2" >{{ $result->ID_PRO }}</td>
-                    <td class="px-3 py-2" >{{ $result->NOMBRE_CIU }}</td>
+                    <td class="px-3 py-2" >{{ $result->ID_CONT }}</td>
+                    <td class="px-3 py-2" >{{ $result->NOMBRE_CONT }}</td>
+                    <td class="px-3 py-2" >{{ $result->TELEFONO1_CONT }}</td>
+                    <td class="px-3 py-2" >{{ $result->TELEFONO2_CONT }}</td>
+                    <td class="px-3 py-2" >{{ $result->EMAIL1_CONT }}</td>
+                    <td class="px-3 py-2" >{{ $result->EMAIL2_CONT }}</td>
                     <td class="px-3 py-2" >
-                        <button type="submit" wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->id}});" class="text-green-500">
+                        <button type="submit" wire:click="$emitTo('contactos-child', 'showEditForm', {{ $result->id}});" class="text-green-500">
                             <x-tall-crud-icon-edit />
                         </button>
-                        <button type="submit" wire:click="$emitTo('ciudades-child', 'showDeleteForm', {{ $result->id}});" class="text-red-500">
+                        <button type="submit" wire:click="$emitTo('contactos-child', 'showDeleteForm', {{ $result->id}});" class="text-red-500">
                             <x-tall-crud-icon-delete />
                         </button>
                     </td>
@@ -65,6 +61,6 @@
     <div class="mt-4">
         {{ $results->links() }}
     </div>
-    @livewire('ciudades-child')
+    @livewire('contactos-child')
     @livewire('livewire-toast')
 </div>
