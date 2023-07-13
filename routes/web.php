@@ -30,6 +30,19 @@ Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 //Ruta que tiene el controller con ambas tablas 
 Route::get('/servicios', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');
 
+<<<<<<< Updated upstream
+=======
+Route::get('/pdf', [reportesController::class, 'mostrar']);
+
+//Ruta del reporte de pago de cursos
+Route::get('/reportePagoCurso', [pagoCursosController::class, 'reportePagoCursos'])->name('reportePagoCurso');
+//Ruta del reporte de servicios
+Route::get('/reporteCursos', [servicios_cursosController::class, 'reporteCursos'])->name('reporteCursos');
+//Ruta del reporte de empleos
+Route::get('/reporteEmpleosh', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
+
+
+>>>>>>> Stashed changes
 
 Route::middleware([
     'auth:sanctum',
