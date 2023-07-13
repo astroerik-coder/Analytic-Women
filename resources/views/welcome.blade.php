@@ -133,7 +133,7 @@
                 <i class="fas fa-fingerprint"></i>
               </div>
               <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
-              <p class="mt-2 mb-4 text-blueGray-500">
+              <p id="uno" class="mt-2 mb-4 text-blueGray-500">
                 Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas
                 frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo
                 multidisciplinario de profesionales con equidad de género.
