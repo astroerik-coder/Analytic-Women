@@ -27,10 +27,10 @@
                     <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-primary">Encuentranos</h2>
                     <ul class="text-white-600 dark:text-white-400 font-medium">
                         <li class="mb-4 ">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                            <a><b>Matriz -</b> Quito</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <a><b>Sucursales -</b> Pujili,Guayaquill</a>
                         </li>
                     </ul>
                 </div>
