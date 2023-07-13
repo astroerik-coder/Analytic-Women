@@ -4,7 +4,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="" class="flex items-center">
-                    <img src="https://img.icons8.com/?size=512&id=HyQyTDt8OqK9&format=png" class="h-8 mr-3" alt="FlowBite Logo" />
+                    <img src="{{asset('images/Analytika Women.png')}}" class="h-12 mr-3" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold primaryspace-nowrap dark:text-primary">Analytika Women</span>
                 </a>
             </div>

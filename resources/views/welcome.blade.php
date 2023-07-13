@@ -287,14 +287,6 @@
 
 
   {{-- Users --}}
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 py-5">
-    <div class="text-center pb-12">
-      <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
-        Check our awesome team members
-      </h1>
-    </div>
-    </div>
-  </section>
   <!-- component -->
   <html>
 
@@ -306,6 +298,9 @@
   <body>
     <div class="min-h-screen bg-gray-100 p-3 relative">
       <div class="w-128 mx-auto" style="scroll-snap-type: x mandatory;">
+      <h1 class="text-center font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mt-5">
+      Equipo de aliados estrategicos
+      </h1>
         <!-- first -->
         <div class="">
           <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
