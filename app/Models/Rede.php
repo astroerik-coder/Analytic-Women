@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Empresa extends Model
+class Rede extends Model
 {
 	use HasFactory;
 	
     public $timestamps = true;
 
-    protected $table = 'empresas';
+    protected $table = 'redes';
 
-    protected $fillable = ['ID_EMPR','NOMBRE_EMPR','LOGO_EMPR'];
+    protected $fillable = ['ID_RDS','FACEBOOK','INSTAGRAM','LINKEDIN','TIKTOK'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function clientes()
+    public function informaciones()
     {
-        return $this->hasMany('App\Models\Cliente', 'ID_EMPR', 'ID_EMPR');
+        return $this->hasMany('App\Models\Informacione', 'ID_RDS', 'ID_RDS');
     }
     
 }

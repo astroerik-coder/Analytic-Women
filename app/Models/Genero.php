@@ -1,41 +1,26 @@
-<?php
-
-/**
- * Created by Reliese Model.
- */
+<?php 
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Genero
- * 
- * @property int $ID_GEN
- * @property string|null $NOMBRE_GEN
- * 
- * @property Collection|Cliente[] $clientes
- *
- * @package App\Models
- */
 class Genero extends Model
 {
-	protected $table = 'genero';
-	protected $primaryKey = 'ID_GEN';
-	public $incrementing = false;
-	public $timestamps = false;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-	protected $casts = [
-		'ID_GEN' => 'int'
-	];
+    protected $table = 'generos';
 
-	protected $fillable = [
-		'NOMBRE_GEN'
-	];
-
-	public function clientes()
-	{
-		return $this->hasMany(Cliente::class, 'ID_GEN');
-	}
+    protected $fillable = ['ID_GEN','NOMBRE_GEN'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function clientes()
+    {
+        return $this->hasMany('App\Models\Cliente', 'ID_GEN', 'ID_GEN');
+    }
+    
 }

@@ -5,22 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Servicio extends Model
+class Ciudade extends Model
 {
 	use HasFactory;
 	
     public $timestamps = true;
 
-    protected $table = 'servicios';
+    protected $table = 'ciudades';
 
-    protected $fillable = ['ID_SER','ID_CLT','NOMBRE_SER','DESCRIPCION_SER','OBSERVACIONES_SER'];
+    protected $fillable = ['ID_CIU','ID_PRO','NOMBRE_CIU'];
 	
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function cliente()
+    public function provincia()
     {
-        return $this->hasOne('App\Models\Cliente', 'ID_CLT', 'ID_CLT');
+        return $this->hasOne('App\Models\Provincia', 'ID_PRO', 'ID_PRO');
     }
     
 }

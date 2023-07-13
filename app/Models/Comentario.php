@@ -1,48 +1,26 @@
-<?php
-
-/**
- * Created by Reliese Model.
- */
+<?php 
 
 namespace App\Models;
 
-use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Comentario
- * 
- * @property int $ID_COM
- * @property string|null $CONTENIDO_COM
- * @property Carbon|null $FECHA_PUBLICACION_COM
- * @property int|null $REVISION_COM
- * 
- * @property Collection|Blog[] $blogs
- *
- * @package App\Models
- */
 class Comentario extends Model
 {
-	protected $table = 'comentarios';
-	protected $primaryKey = 'ID_COM';
-	public $incrementing = false;
-	public $timestamps = false;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-	protected $casts = [
-		'ID_COM' => 'int',
-		'FECHA_PUBLICACION_COM' => 'datetime',
-		'REVISION_COM' => 'int'
-	];
+    protected $table = 'comentarios';
 
-	protected $fillable = [
-		'CONTENIDO_COM',
-		'FECHA_PUBLICACION_COM',
-		'REVISION_COM'
-	];
-
-	public function blogs()
-	{
-		return $this->hasMany(Blog::class, 'ID_COM');
-	}
+    protected $fillable = ['ID_COM','CONTENIDO_COM','FECHA_PUBLICACION_COM','REVISION_COM'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function blogs()
+    {
+        return $this->hasMany('App\Models\Blog', 'ID_COM', 'ID_COM');
+    }
+    
 }

@@ -1,41 +1,26 @@
-<?php
-
-/**
- * Created by Reliese Model.
- */
+<?php 
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-/**
- * Class Categoria
- * 
- * @property int $ID_CAT
- * @property string|null $NOMBRE_CAT
- * 
- * @property Collection|Blog[] $blogs
- *
- * @package App\Models
- */
 class Categoria extends Model
 {
-	protected $table = 'categorias';
-	protected $primaryKey = 'ID_CAT';
-	public $incrementing = false;
-	public $timestamps = false;
+	use HasFactory;
+	
+    public $timestamps = true;
 
-	protected $casts = [
-		'ID_CAT' => 'int'
-	];
+    protected $table = 'categorias';
 
-	protected $fillable = [
-		'NOMBRE_CAT'
-	];
-
-	public function blogs()
-	{
-		return $this->hasMany(Blog::class, 'ID_CAT');
-	}
+    protected $fillable = ['ID_CAT','NOMBRE_CAT'];
+	
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function blogs()
+    {
+        return $this->hasMany('App\Models\Blog', 'ID_CAT', 'ID_CAT');
+    }
+    
 }
