@@ -4,9 +4,9 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use \Illuminate\View\View;
-use App\Models\Evento;
+use App\Models\Blog;
 
-class EventosChild extends Component
+class BlogsChild extends Component
 {
 
     public $item;
@@ -24,24 +24,24 @@ class EventosChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.NOMBRE_EVT' => '',
-        'item.DESCRIPCION_EVT' => '',
-        'item.FECHA_EVT' => '',
-        'item.HORA_EVT' => '',
-        'item.OBSERVACIONES_EVT' => '',
-        'item.UBICACION_EVT' => '',
+        'item.ID_BLG' => '',
+        'item.ID_CLT' => '',
+        'item.ID_COM' => '',
+        'item.ID_CAT' => '',
+        'item.TITULO_BLG' => '',
+        'item.VALORACION_BLG' => '',
     ];
 
     /**
      * @var array
      */
     protected $validationAttributes = [
-        'item.NOMBRE_EVT' => 'Nombre',
-        'item.DESCRIPCION_EVT' => 'Descripcion',
-        'item.FECHA_EVT' => 'Fecha',
-        'item.HORA_EVT' => 'Hora',
-        'item.OBSERVACIONES_EVT' => 'Observaciones',
-        'item.UBICACION_EVT' => 'Ubicacion',
+        'item.ID_BLG' => 'Id',
+        'item.ID_CLT' => 'Id Clt',
+        'item.ID_COM' => 'Id Com',
+        'item.ID_CAT' => 'Id Cat',
+        'item.TITULO_BLG' => 'Titulo',
+        'item.VALORACION_BLG' => 'Valoracion',
     ];
 
     /**
@@ -66,7 +66,7 @@ class EventosChild extends Component
 
     public function render(): View
     {
-        return view('livewire.eventos-child');
+        return view('livewire.blogs-child');
     }
 
     public function showDeleteForm(int $id): void
@@ -77,12 +77,12 @@ class EventosChild extends Component
 
     public function deleteItem(): void
     {
-        Evento::destroy($this->primaryKey);
+        Blog::destroy($this->primaryKey);
         $this->confirmingItemDeletion = false;
         $this->primaryKey = '';
         $this->reset(['item']);
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
+        $this->emitTo('blogs', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
     public function showCreateForm(): void
@@ -95,23 +95,23 @@ class EventosChild extends Component
     public function createItem(): void
     {
         $this->validate();
-        $item = Evento::create([
-            'NOMBRE_EVT' => $this->item['NOMBRE_EVT'] ?? '', 
-            'DESCRIPCION_EVT' => $this->item['DESCRIPCION_EVT'] ?? '', 
-            'FECHA_EVT' => $this->item['FECHA_EVT'] ?? '', 
-            'HORA_EVT' => $this->item['HORA_EVT'] ?? '', 
-            'OBSERVACIONES_EVT' => $this->item['OBSERVACIONES_EVT'] ?? '', 
-            'UBICACION_EVT' => $this->item['UBICACION_EVT'] ?? '', 
+        $item = Blog::create([
+            'ID_BLG' => $this->item['ID_BLG'] ?? '', 
+            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
+            'ID_COM' => $this->item['ID_COM'] ?? '', 
+            'ID_CAT' => $this->item['ID_CAT'] ?? '', 
+            'TITULO_BLG' => $this->item['TITULO_BLG'] ?? '', 
+            'VALORACION_BLG' => $this->item['VALORACION_BLG'] ?? '', 
         ]);
         $this->confirmingItemCreation = false;
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('blogs', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
-    public function showEditForm(Evento $evento): void
+    public function showEditForm(Blog $blog): void
     {
         $this->resetErrorBag();
-        $this->item = $evento;
+        $this->item = $blog;
         $this->confirmingItemEdit = true;
     }
 
@@ -121,8 +121,8 @@ class EventosChild extends Component
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro actualizado correctamente');
+        $this->emitTo('blogs', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado  con éxito');
     }
 
 }

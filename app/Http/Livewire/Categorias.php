@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Provincia;
+use App\Models\Categoria;
 
-class Provincias extends Component
+class Categorias extends Component
 {
     use WithPagination;
 
@@ -20,7 +20,7 @@ class Provincias extends Component
     /**
      * @var string
      */
-    public $sortBy = 'ID_PRO';
+    public $sortBy = 'id';
 
     /**
      * @var bool
@@ -46,15 +46,18 @@ class Provincias extends Component
     public function render(): View
     {
         $results = $this->query()
+            ->with(['blogs'])
+            ->withCount(['blogs'])
             ->when($this->q, function ($query) {
                 return $query->where(function ($query) {
-                    $query->where('NOMBRE_PRO', 'like', '%' . $this->q . '%');
+                    $query->where('ID_CAT', 'like', '%' . $this->q . '%')
+                        ->orWhere('NOMBRE_CAT', 'like', '%' . $this->q . '%');
                 });
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.provincias', [
+        return view('livewire.categorias', [
             'results' => $results
         ]);
     }
@@ -72,8 +75,13 @@ class Provincias extends Component
         $this->resetPage();
     }
 
+    public function updatingPerPage(): void
+    {
+        $this->resetPage();
+    }
+
     public function query(): Builder
     {
-        return Provincia::query();
+        return Categoria::query();
     }
 }

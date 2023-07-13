@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Provincia;
+use App\Models\Pago;
 
-class Provincias extends Component
+class Pagos extends Component
 {
     use WithPagination;
 
@@ -20,7 +20,7 @@ class Provincias extends Component
     /**
      * @var string
      */
-    public $sortBy = 'ID_PRO';
+    public $sortBy = 'id';
 
     /**
      * @var bool
@@ -48,13 +48,17 @@ class Provincias extends Component
         $results = $this->query()
             ->when($this->q, function ($query) {
                 return $query->where(function ($query) {
-                    $query->where('NOMBRE_PRO', 'like', '%' . $this->q . '%');
+                    $query->where('ID_EMP', 'like', '%' . $this->q . '%')
+                        ->orWhere('ID_CUR', 'like', '%' . $this->q . '%')
+                        ->orWhere('ID_PAG', 'like', '%' . $this->q . '%')
+                        ->orWhere('NOMBRE_PAG', 'like', '%' . $this->q . '%')
+                        ->orWhere('METODO_PAG', 'like', '%' . $this->q . '%');
                 });
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.provincias', [
+        return view('livewire.pagos', [
             'results' => $results
         ]);
     }
@@ -74,6 +78,6 @@ class Provincias extends Component
 
     public function query(): Builder
     {
-        return Provincia::query();
+        return Pago::query();
     }
 }

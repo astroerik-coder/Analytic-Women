@@ -4,9 +4,9 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use \Illuminate\View\View;
-use App\Models\Provincia;
+use App\Models\Empleo;
 
-class ProvinciasChild extends Component
+class EmpleosChild extends Component
 {
 
     public $item;
@@ -24,16 +24,26 @@ class ProvinciasChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.ID_PRO' => '',
-        'item.NOMBRE_PRO' => '',
+        'item.ID_EMP' => '',
+        'item.NOMBRE_EMP' => '',
+        'item.DESCRIPCION_EMP' => '',
+        'item.MODALIDAD_EMP' => '',
+        'item.HORARIO_EMP' => '',
+        'item.FECHA_PUBLICACION_EMP' => '',
+        'item.EXPERIENCIA_EMP' => '',
     ];
 
     /**
      * @var array
      */
     protected $validationAttributes = [
-        'item.ID_PRO' => 'Id Pro',
-        'item.NOMBRE_PRO' => 'Nombre Pro',
+        'item.ID_EMP' => 'Id Emp',
+        'item.NOMBRE_EMP' => 'Nombre Emp',
+        'item.DESCRIPCION_EMP' => 'Descripcion Emp',
+        'item.MODALIDAD_EMP' => 'Modalidad Emp',
+        'item.HORARIO_EMP' => 'Horario Emp',
+        'item.FECHA_PUBLICACION_EMP' => 'Fecha Publicacion Emp',
+        'item.EXPERIENCIA_EMP' => 'Experiencia Emp',
     ];
 
     /**
@@ -58,7 +68,7 @@ class ProvinciasChild extends Component
 
     public function render(): View
     {
-        return view('livewire.provincias-child');
+        return view('livewire.empleos-child');
     }
 
     public function showDeleteForm(int $id): void
@@ -69,11 +79,11 @@ class ProvinciasChild extends Component
 
     public function deleteItem(): void
     {
-        Provincia::destroy($this->primaryKey);
+        Empleo::destroy($this->primaryKey);
         $this->confirmingItemDeletion = false;
         $this->primaryKey = '';
         $this->reset(['item']);
-        $this->emitTo('provincias', 'refresh');
+        $this->emitTo('empleos', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
@@ -87,19 +97,24 @@ class ProvinciasChild extends Component
     public function createItem(): void
     {
         $this->validate();
-        $item = Provincia::create([
-            'ID_PRO' => $this->item['ID_PRO'] ?? '', 
-            'NOMBRE_PRO' => $this->item['NOMBRE_PRO'] ?? '', 
+        $item = Empleo::create([
+            'ID_EMP' => $this->item['ID_EMP'] ?? '', 
+            'NOMBRE_EMP' => $this->item['NOMBRE_EMP'] ?? '', 
+            'DESCRIPCION_EMP' => $this->item['DESCRIPCION_EMP'] ?? '', 
+            'MODALIDAD_EMP' => $this->item['MODALIDAD_EMP'] ?? '', 
+            'HORARIO_EMP' => $this->item['HORARIO_EMP'] ?? '', 
+            'FECHA_PUBLICACION_EMP' => $this->item['FECHA_PUBLICACION_EMP'] ?? '', 
+            'EXPERIENCIA_EMP' => $this->item['EXPERIENCIA_EMP'] ?? '', 
         ]);
         $this->confirmingItemCreation = false;
-        $this->emitTo('provincias', 'refresh');
+        $this->emitTo('empleos', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
-    public function showEditForm(Provincia $provincia): void
+    public function showEditForm(Empleo $empleo): void
     {
         $this->resetErrorBag();
-        $this->item = $provincia;
+        $this->item = $empleo;
         $this->confirmingItemEdit = true;
     }
 
@@ -109,7 +124,7 @@ class ProvinciasChild extends Component
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
-        $this->emitTo('provincias', 'refresh');
+        $this->emitTo('empleos', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 

@@ -35,7 +35,7 @@ class Eventos extends Component
     /**
      * @var int
      */
-    public $per_page = 15;
+    public $per_page =5;
 
 
     public function mount(): void

@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Provincia;
+use App\Models\Contacto;
 
-class Provincias extends Component
+class Contactos extends Component
 {
     use WithPagination;
 
@@ -20,7 +20,7 @@ class Provincias extends Component
     /**
      * @var string
      */
-    public $sortBy = 'ID_PRO';
+    public $sortBy = 'id';
 
     /**
      * @var bool
@@ -48,13 +48,17 @@ class Provincias extends Component
         $results = $this->query()
             ->when($this->q, function ($query) {
                 return $query->where(function ($query) {
-                    $query->where('NOMBRE_PRO', 'like', '%' . $this->q . '%');
+                    $query->where('NOMBRE_CONT', 'like', '%' . $this->q . '%')
+                        ->orWhere('TELEFONO1_CONT', 'like', '%' . $this->q . '%')
+                        ->orWhere('TELEFONO2_CONT', 'like', '%' . $this->q . '%')
+                        ->orWhere('EMAIL1_CONT', 'like', '%' . $this->q . '%')
+                        ->orWhere('EMAIL2_CONT', 'like', '%' . $this->q . '%');
                 });
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.provincias', [
+        return view('livewire.contactos', [
             'results' => $results
         ]);
     }
@@ -72,8 +76,13 @@ class Provincias extends Component
         $this->resetPage();
     }
 
+    public function updatingPerPage(): void
+    {
+        $this->resetPage();
+    }
+
     public function query(): Builder
     {
-        return Provincia::query();
+        return Contacto::query();
     }
 }

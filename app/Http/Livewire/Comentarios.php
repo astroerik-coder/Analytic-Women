@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\User;
+use App\Models\Comentario;
 
-class Users extends Component
+class Comentarios extends Component
 {
     use WithPagination;
 
@@ -28,11 +28,6 @@ class Users extends Component
     public $sortAsc = true;
 
     /**
-     * @var string
-     */
-    public $q;
-
-    /**
      * @var int
      */
     public $per_page = 10;
@@ -46,16 +41,10 @@ class Users extends Component
     public function render(): View
     {
         $results = $this->query()
-            ->when($this->q, function ($query) {
-                return $query->where(function ($query) {
-                    $query->where('name', 'like', '%' . $this->q . '%')
-                        ->orWhere('email', 'like', '%' . $this->q . '%');
-                });
-            })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.users', [
+        return view('livewire.comentarios', [
             'results' => $results
         ]);
     }
@@ -68,11 +57,6 @@ class Users extends Component
         $this->sortBy = $field;
     }
 
-    public function updatingQ(): void
-    {
-        $this->resetPage();
-    }
-
     public function updatingPerPage(): void
     {
         $this->resetPage();
@@ -80,6 +64,6 @@ class Users extends Component
 
     public function query(): Builder
     {
-        return User::query();
+        return Comentario::query();
     }
 }

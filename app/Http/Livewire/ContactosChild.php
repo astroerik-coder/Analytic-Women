@@ -4,9 +4,9 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use \Illuminate\View\View;
-use App\Models\Evento;
+use App\Models\Contacto;
 
-class EventosChild extends Component
+class ContactosChild extends Component
 {
 
     public $item;
@@ -24,24 +24,24 @@ class EventosChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.NOMBRE_EVT' => '',
-        'item.DESCRIPCION_EVT' => '',
-        'item.FECHA_EVT' => '',
-        'item.HORA_EVT' => '',
-        'item.OBSERVACIONES_EVT' => '',
-        'item.UBICACION_EVT' => '',
+        'item.ID_CONT' => '',
+        'item.NOMBRE_CONT' => '',
+        'item.TELEFONO1_CONT' => '',
+        'item.TELEFONO2_CONT' => '',
+        'item.EMAIL1_CONT' => '',
+        'item.EMAIL2_CONT' => '',
     ];
 
     /**
      * @var array
      */
     protected $validationAttributes = [
-        'item.NOMBRE_EVT' => 'Nombre',
-        'item.DESCRIPCION_EVT' => 'Descripcion',
-        'item.FECHA_EVT' => 'Fecha',
-        'item.HORA_EVT' => 'Hora',
-        'item.OBSERVACIONES_EVT' => 'Observaciones',
-        'item.UBICACION_EVT' => 'Ubicacion',
+        'item.ID_CONT' => 'Id Cont',
+        'item.NOMBRE_CONT' => 'Nombre Cont',
+        'item.TELEFONO1_CONT' => 'Telefono1 Cont',
+        'item.TELEFONO2_CONT' => 'Telefono2 Cont',
+        'item.EMAIL1_CONT' => 'Email1 Cont',
+        'item.EMAIL2_CONT' => 'Email2 Cont',
     ];
 
     /**
@@ -66,7 +66,7 @@ class EventosChild extends Component
 
     public function render(): View
     {
-        return view('livewire.eventos-child');
+        return view('livewire.contactos-child');
     }
 
     public function showDeleteForm(int $id): void
@@ -77,12 +77,12 @@ class EventosChild extends Component
 
     public function deleteItem(): void
     {
-        Evento::destroy($this->primaryKey);
+        Contacto::destroy($this->primaryKey);
         $this->confirmingItemDeletion = false;
         $this->primaryKey = '';
         $this->reset(['item']);
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
+        $this->emitTo('contactos', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
     public function showCreateForm(): void
@@ -95,23 +95,23 @@ class EventosChild extends Component
     public function createItem(): void
     {
         $this->validate();
-        $item = Evento::create([
-            'NOMBRE_EVT' => $this->item['NOMBRE_EVT'] ?? '', 
-            'DESCRIPCION_EVT' => $this->item['DESCRIPCION_EVT'] ?? '', 
-            'FECHA_EVT' => $this->item['FECHA_EVT'] ?? '', 
-            'HORA_EVT' => $this->item['HORA_EVT'] ?? '', 
-            'OBSERVACIONES_EVT' => $this->item['OBSERVACIONES_EVT'] ?? '', 
-            'UBICACION_EVT' => $this->item['UBICACION_EVT'] ?? '', 
+        $item = Contacto::create([
+            'ID_CONT' => $this->item['ID_CONT'] ?? '', 
+            'NOMBRE_CONT' => $this->item['NOMBRE_CONT'] ?? '', 
+            'TELEFONO1_CONT' => $this->item['TELEFONO1_CONT'] ?? '', 
+            'TELEFONO2_CONT' => $this->item['TELEFONO2_CONT'] ?? '', 
+            'EMAIL1_CONT' => $this->item['EMAIL1_CONT'] ?? '', 
+            'EMAIL2_CONT' => $this->item['EMAIL2_CONT'] ?? '', 
         ]);
         $this->confirmingItemCreation = false;
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('contactos', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
-    public function showEditForm(Evento $evento): void
+    public function showEditForm(Contacto $contacto): void
     {
         $this->resetErrorBag();
-        $this->item = $evento;
+        $this->item = $contacto;
         $this->confirmingItemEdit = true;
     }
 
@@ -121,8 +121,8 @@ class EventosChild extends Component
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro actualizado correctamente');
+        $this->emitTo('contactos', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 
 }

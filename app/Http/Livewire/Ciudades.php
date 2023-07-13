@@ -7,7 +7,7 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Ciudad;
+use App\Models\Ciudade;
 
 class Ciudades extends Component
 {
@@ -35,7 +35,7 @@ class Ciudades extends Component
     /**
      * @var int
      */
-    public $per_page = 15;
+    public $per_page = 10;
 
 
     public function mount(): void
@@ -80,6 +80,6 @@ class Ciudades extends Component
 
     public function query(): Builder
     {
-        return Ciudad::query();
+        return Ciudade::query();
     }
 }

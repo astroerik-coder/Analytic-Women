@@ -28,14 +28,9 @@ class Clientes extends Component
     public $sortAsc = true;
 
     /**
-     * @var string
-     */
-    public $q;
-
-    /**
      * @var int
      */
-    public $per_page = 15;
+    public $per_page = 10;
 
 
     public function mount(): void
@@ -46,12 +41,6 @@ class Clientes extends Component
     public function render(): View
     {
         $results = $this->query()
-            ->when($this->q, function ($query) {
-                return $query->where(function ($query) {
-                    $query->where('NOMBRE_CLT', 'like', '%' . $this->q . '%')
-                        ->orWhere('FECHA_NACIMIENTO_CLT', 'like', '%' . $this->q . '%');
-                });
-            })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
@@ -66,11 +55,6 @@ class Clientes extends Component
             $this->sortAsc = !$this->sortAsc;
         }
         $this->sortBy = $field;
-    }
-
-    public function updatingQ(): void
-    {
-        $this->resetPage();
     }
 
     public function updatingPerPage(): void

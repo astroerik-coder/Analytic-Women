@@ -4,9 +4,9 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use \Illuminate\View\View;
-use App\Models\Evento;
+use App\Models\Servicio;
 
-class EventosChild extends Component
+class ServiciosChild extends Component
 {
 
     public $item;
@@ -24,24 +24,20 @@ class EventosChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.NOMBRE_EVT' => '',
-        'item.DESCRIPCION_EVT' => '',
-        'item.FECHA_EVT' => '',
-        'item.HORA_EVT' => '',
-        'item.OBSERVACIONES_EVT' => '',
-        'item.UBICACION_EVT' => '',
+        'item.ID_CLT' => '',
+        'item.NOMBRE_SER' => '',
+        'item.DESCRIPCION_SER' => '',
+        'item.OBSERVACIONES_SER' => '',
     ];
 
     /**
      * @var array
      */
     protected $validationAttributes = [
-        'item.NOMBRE_EVT' => 'Nombre',
-        'item.DESCRIPCION_EVT' => 'Descripcion',
-        'item.FECHA_EVT' => 'Fecha',
-        'item.HORA_EVT' => 'Hora',
-        'item.OBSERVACIONES_EVT' => 'Observaciones',
-        'item.UBICACION_EVT' => 'Ubicacion',
+        'item.ID_CLT' => 'Id Clt',
+        'item.NOMBRE_SER' => 'Nombre Ser',
+        'item.DESCRIPCION_SER' => 'Descripcion Ser',
+        'item.OBSERVACIONES_SER' => 'Observaciones Ser',
     ];
 
     /**
@@ -66,7 +62,7 @@ class EventosChild extends Component
 
     public function render(): View
     {
-        return view('livewire.eventos-child');
+        return view('livewire.servicios-child');
     }
 
     public function showDeleteForm(int $id): void
@@ -77,11 +73,11 @@ class EventosChild extends Component
 
     public function deleteItem(): void
     {
-        Evento::destroy($this->primaryKey);
+        Servicio::destroy($this->primaryKey);
         $this->confirmingItemDeletion = false;
         $this->primaryKey = '';
         $this->reset(['item']);
-        $this->emitTo('eventos', 'refresh');
+        $this->emitTo('servicios', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
     }
  
@@ -95,23 +91,21 @@ class EventosChild extends Component
     public function createItem(): void
     {
         $this->validate();
-        $item = Evento::create([
-            'NOMBRE_EVT' => $this->item['NOMBRE_EVT'] ?? '', 
-            'DESCRIPCION_EVT' => $this->item['DESCRIPCION_EVT'] ?? '', 
-            'FECHA_EVT' => $this->item['FECHA_EVT'] ?? '', 
-            'HORA_EVT' => $this->item['HORA_EVT'] ?? '', 
-            'OBSERVACIONES_EVT' => $this->item['OBSERVACIONES_EVT'] ?? '', 
-            'UBICACION_EVT' => $this->item['UBICACION_EVT'] ?? '', 
+        $item = Servicio::create([
+            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
+            'NOMBRE_SER' => $this->item['NOMBRE_SER'] ?? '', 
+            'DESCRIPCION_SER' => $this->item['DESCRIPCION_SER'] ?? '', 
+            'OBSERVACIONES_SER' => $this->item['OBSERVACIONES_SER'] ?? '', 
         ]);
         $this->confirmingItemCreation = false;
-        $this->emitTo('eventos', 'refresh');
+        $this->emitTo('servicios', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
     }
  
-    public function showEditForm(Evento $evento): void
+    public function showEditForm(Servicio $servicio): void
     {
         $this->resetErrorBag();
-        $this->item = $evento;
+        $this->item = $servicio;
         $this->confirmingItemEdit = true;
     }
 
@@ -121,8 +115,8 @@ class EventosChild extends Component
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
-        $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro actualizado correctamente');
+        $this->emitTo('servicios', 'refresh');
+        $this->emitTo('livewire-toast', 'show', 'Record Updated Successfully');
     }
 
 }

@@ -7,9 +7,9 @@ use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
 use \Illuminate\View\View;
 
-use App\Models\Provincia;
+use App\Models\Curso;
 
-class Provincias extends Component
+class Cursos extends Component
 {
     use WithPagination;
 
@@ -20,7 +20,7 @@ class Provincias extends Component
     /**
      * @var string
      */
-    public $sortBy = 'ID_PRO';
+    public $sortBy = 'ID_CUR';
 
     /**
      * @var bool
@@ -35,7 +35,7 @@ class Provincias extends Component
     /**
      * @var int
      */
-    public $per_page = 10;
+    public $per_page = 15;
 
 
     public function mount(): void
@@ -48,13 +48,18 @@ class Provincias extends Component
         $results = $this->query()
             ->when($this->q, function ($query) {
                 return $query->where(function ($query) {
-                    $query->where('NOMBRE_PRO', 'like', '%' . $this->q . '%');
+                    $query->where('ID_CUR', 'like', '%' . $this->q . '%')
+                        ->orWhere('ID_CLT', 'like', '%' . $this->q . '%')
+                        ->orWhere('NOMBRE_CUR', 'like', '%' . $this->q . '%')
+                        ->orWhere('EDAD_MINIMA_CUR', 'like', '%' . $this->q . '%')
+                        ->orWhere('CUPOS_CUR', 'like', '%' . $this->q . '%')
+                        ->orWhere('COSTO_CUR', 'like', '%' . $this->q . '%');
                 });
             })
             ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')
             ->paginate($this->per_page);
 
-        return view('livewire.provincias', [
+        return view('livewire.cursos', [
             'results' => $results
         ]);
     }
@@ -72,8 +77,13 @@ class Provincias extends Component
         $this->resetPage();
     }
 
+    public function updatingPerPage(): void
+    {
+        $this->resetPage();
+    }
+
     public function query(): Builder
     {
-        return Provincia::query();
+        return Curso::query();
     }
 }
