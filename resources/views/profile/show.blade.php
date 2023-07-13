@@ -1,12 +1,3 @@
-@extends('adminlte::page')
-
-@section('title', 'Perfil')
-
-@section('content_header')
-
-@stop
-
-@section('content')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="h4 font-weight-bold">
@@ -37,18 +28,8 @@
 
         @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
             <x-jet-section-border />
-
             @livewire('profile.delete-user-form')
         @endif
     </div>
+    @component('layouts.components.sidebar') @endcomponent
 </x-app-layout>
-
-@stop
-
-@section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
-@stop
-
-@section('js')
-
-@stop

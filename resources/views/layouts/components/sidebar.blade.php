@@ -20,15 +20,15 @@
     }
 
     #sidebar ul li a.active {
-        background: #1f2937;
-        background-color: #1f2937;
+        background: #BC799D;
+        background-color: #BC799D;
     }
 </style>
 
 
 <!-- Navbar start -->
 
-<nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-gray-700 px-4 sm:justify-between">
+<nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-primary px-4 sm:justify-between">
     <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-white hover:text-gray-200">
         <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
             stroke="currentColor" class="h-8 w-8">
@@ -40,6 +40,16 @@
         </svg>
     </button>
 
+    {{--Logo  --}}
+    <div class="p-2.5 mt-1 flex items-center">
+        <img src="" alt="" sizes="" srcset="">
+        <i class="bi bi-app-indicator px-2 py-1 rounded-md bg-blue-600"></i>
+        <h1 class="font-bold text-gray-200 text-[15px] ml-3">Analytika Women</h1>
+        <i
+          class="bi bi-x cursor-pointer ml-28 lg:hidden"
+          onclick="openSidebar()"
+        ></i>
+      </div>
     <!-- Dropdown button de usuario -->
     <div class="relative inline-block">
         <button id="dropdownButton" class="relative z-10 flex items-center py-4 text-sm text-white hover:text-gray-200">
@@ -91,7 +101,7 @@
 <div id="containerSidebar" class="z-40">
     <div class="navbar-menu relative z-40">
         <nav id="sidebar"
-            class="fixed left-0 bottom-0 flex w-1/4 -translate-x-full flex-col overflow-y-auto bg-gray-700 pt-6 pb-8 sm:max-w-xs lg:w-80">
+            class="fixed left-0 bottom-0 flex w-1/4 -translate-x-full flex-col overflow-y-auto bg-primary pt-6 pb-8 sm:max-w-xs lg:w-80">
             <div class="px-4 pb-6">
                 {{-- --}}
                 <div class="px-4 pb-6">
