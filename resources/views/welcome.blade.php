@@ -571,6 +571,9 @@
   const indicators = document.querySelectorAll(".indicator");
   let currentSlide = 0;
 
+  goToSlide(0);
+
+  // Agrega el siguiente código al final del archivo, fuera de cualquier función
   setInterval(() => {
     goToSlide((currentSlide + 1) % slides.length);
   }, 5000);
