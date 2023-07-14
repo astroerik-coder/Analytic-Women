@@ -163,7 +163,7 @@
 
   <!----------------CARRUSEL ACCIONISTAS------------------>
 
-  <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold" style="margin-left: 40px;">
+  <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold mt-5" style="margin-left: 40px;">
     SOCIAS - ACCIONISTAS
   </h1>
   <div class="flex justify-center">
