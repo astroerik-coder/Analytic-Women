@@ -589,9 +589,7 @@
   const indicators = document.querySelectorAll(".indicator");
   let currentSlide = 0;
 
-  setInterval(() => {
-    goToSlide((currentSlide + 1) % slides.length);
-  }, 5000);
+  goToSlide(0);
 
   const prevButton = document.querySelector(".button:first-child");
   const nextButton = document.querySelector(".button:last-child");
