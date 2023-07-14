@@ -6,7 +6,7 @@
 </script>
 
 
-<nav class="bg-primary text-black border-primary-200 dark:bg-primary-900">
+<nav class="bg-primary text-white border-primary-200 dark:bg-primary-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" class="flex items-center">
             <img src="{{asset('images/Analytika Women.png')}}" class="h-12 mr-2"
