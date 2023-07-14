@@ -68,7 +68,7 @@
                      dark:border-gray-700">Servicios</a>
                 </li>
                 <li>
-                    <a href="{{route('indice')}}" class="block py-2 pl-3 pr-4
+                    <a href="{{route('contactanos')}}" class="block py-2 pl-3 pr-4
                      text-gray-900 rounded 
                      hover:bg-primary
                      md:bg-primary 
@@ -78,7 +78,7 @@
                      dark:hover:bg-gray-700 
                      dark:hover:text-white 
                      md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Contactos</a>
+                     dark:border-gray-700">Contáctanos</a>
                 </li>
                 <li>
                     <a href="/register" class="

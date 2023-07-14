@@ -1,25 +1,25 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Contacto;
+use App\Models\Datoscontact;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class datoscontactController extends Controller
 {
     //
+  
     public function create(){
-    return view('indice');
+    return view('contactanos');
     }
     public function store(Request $request){
-        $contactos=new Contacto;
+        $contactos=new Datoscontact;
         $contactos->nombre=$request->input('nombre');
+        $contactos->apellidos=$request->input('apellidos');
         $contactos->email=$request->input('email');
-        $contactos->direccion=$request->input('direccion');
-        $contactos->telefono=$request->input('telefono');
         $contactos->mensaje=$request->input('mensaje');
         $contactos->save();
-        return redirect()->route('indice');
+        return redirect()->route('contactanos');
     }
 }
 
