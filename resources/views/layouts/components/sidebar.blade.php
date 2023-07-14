@@ -47,13 +47,13 @@
                 src="{{ Auth::user()->profile_photo_url }}" alt="Avatar de usuario">
             <span class="mx-1">{{ Auth::user()->name }}</span>
             <svg class="w-5 h-5 mx-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
+                <path d="M10 15.713L18.01 9.70299L16.597 8.28799L12 12.888L7.40399 8.28799L5.98999 9.70199L12 15.713Z"
                     fill="currentColor"></path>
             </svg>
         </button>
 
         <!-- Dropdown menu de usuario -->
-        <div class="absolute right-0 z-20 w-56 mt-14 -mr-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800 hidden"
+        <div class="absolute right-0 z-20 w-56 mt-2 -mr-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800 hidden"
             id="dropdownMenu">
             <a href="#"
                 class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -225,35 +225,22 @@
                 <ul class="mb-8 text-sm font-medium">
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 1</span>
+                            href="reportePagoCurso">
+                            <span class="select-none">Reporte de pago de cursos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 2</span>
+                            href="reporteCursos">
+                            <span class="select-none">Reporte de cursos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 3</span>
+                            href="reporteEmpleos">
+                            <span class="select-none">Reporte  de empleos</span>
                         </a>
                     </li>
-                    <li>
-                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 4</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="">
-                            <span class="select-none">Reporte 5</span>
-                        </a>
-                    </li>
-
                 </ul>
             </div>
         </nav>

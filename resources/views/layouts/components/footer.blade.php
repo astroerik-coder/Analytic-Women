@@ -4,7 +4,7 @@
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
                 <a href="" class="flex items-center">
-                    <img src="https://img.icons8.com/?size=512&id=HyQyTDt8OqK9&format=png" class="h-8 mr-3" alt="FlowBite Logo" />
+                    <img src="{{asset('images/Analytika Women.png')}}" class="h-12 mr-3" alt="FlowBite Logo" />
                     <span class="self-center text-2xl font-semibold primaryspace-nowrap dark:text-primary">Analytika Women</span>
                 </a>
             </div>
@@ -24,24 +24,13 @@
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-primary">Redes Sociales</h2>
-                    <ul class="text-white-600 dark:text-white-400 font-medium">
-                        <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
-                        </li>
-                        <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
-                        </li>
-                    </ul>
-                </div>
-                <div>
                     <h2 class="mb-6 text-sm font-semibold text-white-900 uppercase dark:text-primary">Encuentranos</h2>
                     <ul class="text-white-600 dark:text-white-400 font-medium">
                         <li class="mb-4 ">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                            <a><b>Matriz -</b> Quito</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <a><b>Sucursales -</b> Pujili,Guayaquill</a>
                         </li>
                     </ul>
                 </div>
