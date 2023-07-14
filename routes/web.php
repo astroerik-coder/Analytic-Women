@@ -27,9 +27,13 @@ Route::get('/',[homeController::class,'home'])->name('welcome');
 
 Route::get('/indice',[homeController::class,'indice'])->name('indice');
 Route::post('/indice',[datoscontactController::class, 'store'])->name('indice');
+<<<<<<< Updated upstream
 
 Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 
+=======
+Route::get('/servicios', [homeController::class,'servicios'])->name('servicios');
+>>>>>>> Stashed changes
 //Ruta que tiene el controller con ambas tablas 
 Route::get('/servicios', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');
 

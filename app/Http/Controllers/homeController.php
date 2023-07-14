@@ -10,8 +10,8 @@ class homeController extends Controller
     public function home(){
         return view('welcome');
     }
-    public function indice(){
-        return view('indice');
+    public function contactanos(){
+        return view('contactanos');
     }
     public function servicios(){
         return view ('servicios');

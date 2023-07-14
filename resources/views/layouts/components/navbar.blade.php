@@ -6,7 +6,7 @@
 </script>
 
 
-<nav class="bg-primary text-black border-primary-200 dark:bg-primary-900">
+<nav class="bg-primary text-white border-primary-200 dark:bg-primary-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" class="flex items-center">
             <img src="https://img.icons8.com/?size=512&id=HyQyTDt8OqK9&format=png" class="h-8 mr-3"
@@ -57,7 +57,23 @@
                      md:dark:hover:bg-transparent 
                      dark:border-gray-700">Servicios</a>
                 </li>
+<<<<<<< Updated upstream
                 <li><a href="{{route('indice')}}" title="">Contactos</a></li>
+=======
+                <li>
+                    <a href="{{route('contactanos')}}" class="block py-2 pl-3 pr-4
+                     text-gray-900 rounded 
+                     hover:bg-primary
+                     md:bg-primary 
+                    md:hover:text-secundary
+                     md:p-0 dark:text-white 
+                     md:dark:hover:text-blue-500 
+                     dark:hover:bg-gray-700 
+                     dark:hover:text-white 
+                     md:dark:hover:bg-transparent 
+                     dark:border-gray-700">Contáctanos</a>
+                </li>
+>>>>>>> Stashed changes
                 <li>
                     <a href="/register" class="
                     relative flex h-9 ml-auto 
