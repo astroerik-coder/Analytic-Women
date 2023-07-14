@@ -57,21 +57,21 @@
         </button>
 
         <!-- Dropdown menu de usuario -->
-        <div class="absolute right-0 z-20 w-56 mt-2 -mr-2 overflow-hidden bg-white rounded-md shadow-xl dark:bg-gray-800 hidden"
+        <div class="absolute right-0 z-20 w-56 mt-2 -mr-2 overflow-hidden bg-tertiary rounded-md shadow-xl dark:bg-gray-800 hidden"
             id="dropdownMenu">
             <a href="#"
-                class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                class="flex items-center p-3 text-sm text-gray-600 transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-600 dark:hover:bg-gray-700 dark:hover:text-white">
                 <img class="flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9"
                     src="{{ Auth::user()->profile_photo_url }}" alt="Usuario">
                 <div class="mx-1">
-                    <h1 class="text-sm font-semibold text-gray-700 dark:text-gray-200"> {{ Auth::user()->name }}</h1>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">{{ Auth::user()->email }}</p>
+                    <h1 class="text-sm font-semibold text-gray-100 dark:text-gray-600"> {{ Auth::user()->name }}</h1>
+                    <p class="text-sm text-gray-100 dark:text-gray-600">{{ Auth::user()->email }}</p>
                 </div>
             </a>
 
             <hr class="border-gray-200 dark:border-gray-700 ">
             <a href="{{ route('profile.show') }}"
-                class="block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-200 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                class="block px-4 py-3 text-sm text-gray-100 capitalize transition-colors duration-200 transform dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 dark:hover:text-white">
                 Configuración
             </a>
 
@@ -80,7 +80,7 @@
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <a href="#" onclick="event.preventDefault(); this.closest('form').submit();"
-                    class="block px-4 py-3 text-sm text-gray-600 hover:bg-red-400 hover:text-white capitalize transition-colors duration-200 transform dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">
+                    class="block px-4 py-3 text-sm text-gray-100 hover:bg-red-400 hover:text-white capitalize transition-colors duration-200 transform dark:text-white dark:hover:bg-gray-700 dark:hover:text-white">
                     Cerrar Sesión
                 </a>
             </form>
@@ -115,9 +115,8 @@
                 <hr>
                 <ul class="mb-8 text-sm font-medium">
                     <li>
-                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
-                            href="dashboard">
-                            <span class="select-none">Dashboard</span>
+                        <a class="flex items-center rounded mt-5 py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" href="dashboard"href="dashboard">
+                            <span class="select-none">Panel</span>
                         </a>
                     </li>
                     <li>

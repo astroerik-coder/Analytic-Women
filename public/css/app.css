@@ -3091,6 +3091,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
+:is(.dark .dark\:text-gray-600) {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
 :is(.dark .dark\:before\:bg-tertiary)::before {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
