@@ -13,11 +13,6 @@
 <body>
     <!-- Barra de navegación -->
 @component('layouts.components.navbar')@endcomponent
-<!--Formulario de contactos-->
-    <!-- Tailwind Play: https://play.tailwindcss.com/qIqvl7e7Ww  -->
-
-
-<!-- component -->
 
 <body class="bg-white">
 	<!-- Container -->
@@ -27,11 +22,11 @@
 			<div class="w-full xl:w-3/4 lg:w-11/12 flex">
 				<!-- Col -->
 				<div
-					class="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
+					class="w-full h-auto bg-white hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
 					style="background-image: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')"
 				></div>
 				<!-- Col -->
-				<div class="w-full lg:w-7/12 bg-gray-300 p-5 rounded-lg lg:rounded-l-none">
+				<div class="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
 					<h3 class="pt-4 text-2xl text-center">Contáctanos!</h3><hr><br>
 
 					<form method="post" autocomplete="off" action="contactanos">
@@ -98,7 +93,6 @@
 			</div>
 		</div>
 	</div>
- <!-- Barra del footer -->
 
  @component('layouts.components.footer') @endcomponent
    
