@@ -23,6 +23,10 @@
         background: #E4C9D7;
         background-color: #061C57;
     }
+
+    .line-height-username1 {
+	    line-height: 3.75rem;
+    }
 </style>
 
 
@@ -102,6 +106,11 @@
                       onclick="openSidebar()"
                     ></i>
                   </div>
+                <div>
+                    <div class="inline-block mb-6 rounded-full bg-secundary pr-5 h-16 line-height-username1">
+                        <img class="rounded-full float-left h-full" src="{{ Auth::user()->profile_photo_url }}"> <span class="ml-3">{{ Auth::user()->name }}</span>
+                    </div>
+                </div>
                 {{-- --}}
                 <hr>
                 <ul class="mb-8 text-sm font-medium">
@@ -115,8 +124,8 @@
                             <span class="select-none">Generador</span>
                         </a>
                     </li>
+                    <hr>
                 </ul>
-                <hr>
             </div>
             <div class="px-4 pb-6">
                 <h3 class="mb-2 text-xs font-medium uppercase text-gray-500">

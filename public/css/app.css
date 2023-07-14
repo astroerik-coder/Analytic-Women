@@ -1123,6 +1123,9 @@ select {
 .col-start-2 {
   grid-column-start: 2;
 }
+.float-left {
+  float: left;
+}
 .m-5 {
   margin: 1.25rem;
 }
@@ -1880,6 +1883,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(185 28 28 / var(--tw-bg-opacity));
 }
+.bg-secundary {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 201 215 / var(--tw-bg-opacity));
+}
 .bg-sky-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(224 242 254 / var(--tw-bg-opacity));
@@ -2072,6 +2079,9 @@ select {
 }
 .pr-4 {
   padding-right: 1rem;
+}
+.pr-5 {
+  padding-right: 1.25rem;
 }
 .pt-1 {
   padding-top: 0.25rem;
