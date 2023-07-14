@@ -573,6 +573,11 @@
 
   goToSlide(0);
 
+  // Agrega el siguiente código al final del archivo, fuera de cualquier función
+  setInterval(() => {
+    goToSlide((currentSlide + 1) % slides.length);
+  }, 5000);
+
   const prevButton = document.querySelector(".button:first-child");
   const nextButton = document.querySelector(".button:last-child");
 
