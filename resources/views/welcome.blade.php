@@ -108,7 +108,7 @@
         </svg>
       </button>
     </div>
-    <div class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
+    <div  class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
       <div class="indicators flex justify-center">
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
@@ -179,7 +179,7 @@
 
 
   <!-- component -->
-  <div class="flex min-h-screen items-center justify-center bg-black font-bold text-white">
+  <div  class="flex min-h-screen items-center justify-center bg-black font-bold text-white">
     <div class="text-center space-y-12">
       <div class="text-primary text-center text-5xl font-bold">Ejes de trabajo</div>
       <div class="text-white relative inline-grid grid-cols-1 grid-rows-1 gap-12 overflow-hidden">

@@ -71,7 +71,7 @@
                 </a>
             </div>
             <div class="flex-auto hover:w-full group">
-                <a href="/logout"
+                <a href="/register"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
                         <i class="far fa-cog text-2xl pt-1"></i><span
