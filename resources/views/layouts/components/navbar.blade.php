@@ -1,124 +1,93 @@
-<script>
-    window.addEventListener("scroll", function () {
-        var nav = document.querySelector("nav");
-        nav.classList.toggle("fixedNavbar", window.scrollY > 0);
-    });
-</script>
+<style>
+    @import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap');
 
+    .hover\:w-full:hover {
+        width: 100%;
+    }
 
-<nav class="bg-primary text-white border-primary-200 dark:bg-primary-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="" class="flex items-center">
-            <img src="{{asset('images/Analytika Women.png')}}" class="h-12 mr-2"
-                alt="Analytika Women Logo" />
-            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Analytika Women</span>
-        </a>
-        <div class="flex items-center md:order-2">
-            <button data-collapse-toggle="mobile-menu-2" type="button"
-                class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="mobile-menu-2" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                        clip-rule="evenodd"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="items-lef justify-between hidden w-full md:flex md:w-auto md:order-1" id="mobile-menu-2">
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-primary dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                <li>
-                    <a href="{{route('welcome')}}" class="block py-2 pl-3 pr-4
-                     text-gray-900 rounded 
-                     hover:bg-primary
-                     md:bg-primary 
-                    md:hover:text-secundary
-                     md:p-0 dark:text-white 
-                     md:dark:hover:text-blue-500 
-                     dark:hover:bg-gray-700 
-                     dark:hover:text-white 
-                     md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Inicio</a>
-                </li>
-                <li>
-                    <a href="#uno" class="block py-2 pl-3 pr-4
-                     text-gray-900 rounded 
-                     hover:bg-primary
-                     md:bg-primary 
-                    md:hover:text-secundary
-                     md:p-0 dark:text-white 
-                     md:dark:hover:text-blue-500 
-                     dark:hover:bg-gray-700 
-                     dark:hover:text-white 
-                     md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Nosotros</a>
-                </li>
-                <li>
-                    <a href="{{route('cursos')}}" class="block py-2 pl-3 pr-4
-                     text-gray-900 rounded 
-                     hover:bg-primary
-                     md:bg-primary 
-                    md:hover:text-secundary
-                     md:p-0 dark:text-white 
-                     md:dark:hover:text-blue-500 
-                     dark:hover:bg-gray-700 
-                     dark:hover:text-white 
-                     md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Servicios</a>
-                </li>
-                <li>
-                    <a href="{{route('contactanos')}}" class="block py-2 pl-3 pr-4
-                     text-gray-900 rounded 
-                     hover:bg-primary
-                     md:bg-primary 
-                    md:hover:text-secundary
-                     md:p-0 dark:text-white 
-                     md:dark:hover:text-blue-500 
-                     dark:hover:bg-gray-700 
-                     dark:hover:text-white 
-                     md:dark:hover:bg-transparent 
-                     dark:border-gray-700">Contáctanos</a>
-                </li>
-                <li>
-                    <a href="/register" class="
-                    relative flex h-9 ml-auto 
-                    items-center justify-center 
-                    sm:px-6 before:absolute 
-                    before:inset-0 
-                    before:rounded-full
-                    before:bg-tertiary 
-                    dark:before:bg-tertiary  before:transition 
-                    before:duration-300 
-                    hover:before:scale-105 
-                    active:duration-75 active:before:scale-95">
-                        <span class="
-                    relative text-sm 
-                    font-semibold 
-                    text-white 
-                    dark:text-gray-900">Registrarse</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/login" class="
-                    relative flex h-9 ml-auto 
-                    items-center justify-center 
-                    sm:px-6 before:absolute 
-                    before:inset-0 
-                    before:rounded-full
-                  before:bg-tertiary 
-                    dark:before:bg-tertiary  before:transition 
-                    before:duration-300 
-                    hover:before:scale-105 
-                    active:duration-75 active:before:scale-95">
-                        <span class="
-                    relative text-sm 
-                    font-semibold 
-                    text-white 
-                    dark:text-gray-900">Iniciar Sesion</span>
-                    </a>
-                </li>
-            </ul>
+    .group:hover .group-hover\:w-full {
+        width: 100%;
+    }
+
+    .group:hover .group-hover\:inline-block {
+        display: inline-block;
+    }
+
+    .group:hover .group-hover\:flex-grow {
+        flex-grow: 1;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        max-width: 600px;
+        z-index: 9999;
+        background-color: transparent;
+        color: #fff;
+        padding: 10px;
+    }
+</style>
+<nav>
+    <div class="px-7 bg-primary shadow-lg rounded-2xl mb-5">
+        <div class="flex">
+            <div class="flex-auto hover:w-full group">
+                <a href="#"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-tertiary">
+                    <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
+                        <i class="far fa-home text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Inicio</span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-auto hover:w-full group">
+                <a href="#"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
+                    <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
+                        <i class="far fa-users text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Nosotros</span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-auto hover:w-full group">
+                <a href="#"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
+                    <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
+                        <i class="far fa-search text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Buscar</span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-auto hover:w-full group">
+                <a href="#"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
+                    <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
+                        <i class="far fa-cog text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Configuración</span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-auto hover:w-full group">
+                <a href="/logout"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
+                    <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
+                        <i class="far fa-cog text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Registrarse</span>
+                    </span>
+                </a>
+            </div>
+            <div class="flex-auto hover:w-full group">
+                <a href="/login"
+                    class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
+                    <span class="block px-1 py-1 group-hover:bg-tertiary rounded-full group-hover:flex-grow">
+                        <i class="far fa-cog text-2xl pt-1"></i><span
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Iniciar Sesión</span>
+                    </span>
+                </a>
+            </div>
         </div>
     </div>
 </nav>
