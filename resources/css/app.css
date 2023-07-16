@@ -31,3 +31,11 @@
     right: 4rem;
     z-index: 9999;
 }
+
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  

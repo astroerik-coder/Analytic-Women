@@ -240,7 +240,7 @@
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="reporteCursos">
-                            <span class="select-none">Reporte de cursos</span>
+                           <span class="select-none">Reporte de cursos</span>
                         </a>
                     </li>
                     <li>
@@ -255,7 +255,6 @@
     </div>
     <div class="mx-auto lg:ml-80"></div>
 </div>
-<!-- Sidebar end -->
 
 
 <script type="text/javascript">

@@ -22,7 +22,9 @@
       background-repeat: no-repeat;
       background-position: center;
     }
+    
   </style>
+
 
 
 </head>
