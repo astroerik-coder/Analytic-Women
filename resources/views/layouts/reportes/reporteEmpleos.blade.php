@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Reporte Empleados</title>
+    <title>Reporte Empleos</title>
     <style>
         .clearfix:after {
             content: "";
@@ -156,9 +156,7 @@
                 </tr>
                 @endforeach
             </tbody>
-
         </table>
-
         <footer>
             Transformamos datos en información para la toma de desiciones.
         </footer>
