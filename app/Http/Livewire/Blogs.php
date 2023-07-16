@@ -20,7 +20,7 @@ class Blogs extends Component
     /**
      * @var string
      */
-    public $sortBy = 'id';
+    public $sortBy = 'ID_BLG';
 
     /**
      * @var bool
@@ -49,7 +49,7 @@ class Blogs extends Component
         ]);
     }
 
-    public function sortBy(string $field): void
+    public function sortBy(string $field): vo
     {
         if ($field == $this->sortBy) {
             $this->sortAsc = !$this->sortAsc;

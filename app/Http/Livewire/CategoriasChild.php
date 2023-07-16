@@ -60,13 +60,13 @@ class CategoriasChild extends Component
     {
         return view('livewire.categorias-child');
     }
-
-    public function showDeleteForm(int $id): void
+    public function showDeleteForm($ID_CAT): void
     {
         $this->confirmingItemDeletion = true;
-        $this->primaryKey = $id;
+        $this->primaryKey = $ID_CAT;
     }
-
+    
+    
     public function deleteItem(): void
     {
         Categoria::destroy($this->primaryKey);

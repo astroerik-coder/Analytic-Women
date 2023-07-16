@@ -5,6 +5,8 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use \Illuminate\View\View;
 use App\Models\Ciudade;
+use App\Models\Provincia; // Asegúrate de importar el modelo de la tabla relacional
+
 
 class CiudadesChild extends Component
 {
@@ -33,7 +35,6 @@ class CiudadesChild extends Component
      * @var array
      */
     protected $validationAttributes = [
-        'item.ID_CIU' => 'Id Ciu',
         'item.ID_PRO' => 'Id Pro',
         'item.NOMBRE_CIU' => 'Nombre Ciu',
     ];
@@ -60,7 +61,9 @@ class CiudadesChild extends Component
 
     public function render(): View
     {
-        return view('livewire.ciudades-child');
+        $provincias = Provincia::all();
+
+        return view('livewire.ciudades-child', compact('provincias'));
     }
 
     public function showDeleteForm(int $id): void
@@ -76,9 +79,9 @@ class CiudadesChild extends Component
         $this->primaryKey = '';
         $this->reset(['item']);
         $this->emitTo('ciudades', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito', ['background' => 'purple', 'color' => 'white']);
     }
- 
+
     public function showCreateForm(): void
     {
         $this->confirmingItemCreation = true;
@@ -88,17 +91,25 @@ class CiudadesChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
-        $item = Ciudade::create([
-            'ID_CIU' => $this->item['ID_CIU'] ?? '', 
-            'ID_PRO' => $this->item['ID_PRO'] ?? '', 
-            'NOMBRE_CIU' => $this->item['NOMBRE_CIU'] ?? '', 
+        $this->validate([
+            'item.ID_PRO' => 'required',
+            'item.NOMBRE_CIU' => 'required',
+        ], [
+            'item.ID_PRO.required' => 'El campo Provincia es obligatorio.',
+            'item.NOMBRE_CIU.required' => 'El campo Nombre Ciudad es obligatorio.',
         ]);
+    
+        $item = Ciudade::create([
+            'ID_PRO' => $this->item['ID_PRO'] ?? null,
+            'NOMBRE_CIU' => $this->item['NOMBRE_CIU'] ?? null,
+        ]);
+    
         $this->confirmingItemCreation = false;
         $this->emitTo('ciudades', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
- 
+    
+
     public function showEditForm(Ciudade $ciudade): void
     {
         $this->resetErrorBag();
@@ -113,7 +124,7 @@ class CiudadesChild extends Component
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('ciudades', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito', ['background' => 'purple', 'color' => 'white']);
     }
 
 }

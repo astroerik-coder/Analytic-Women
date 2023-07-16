@@ -10,7 +10,6 @@
                     <x-tall-crud-input-search />
                 </div>
                 <div class="flex">
-
                     <x-tall-crud-page-dropdown />
                 </div>
 
@@ -33,14 +32,13 @@
                     <tr>
                         <th class="px-3 py-2">
                             <div class="flex items-center">
-                                <button wire:click="sortBy('ID_CIU')">Id</button>
+                                <button wire:click="sortBy('ID_CIU')">N</button>
                                 <x-tall-crud-sort-icon sortField="ID_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Id Ciu</th>
                         <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                             <div class="flex items-center">
-                                <button wire:click="sortBy('ID_PRO')">Id Pro</button>
+                                <button wire:click="sortBy('ID_PRO')">Provincia</button>
                                 <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
@@ -56,15 +54,14 @@
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
                     @foreach($results as $result)
                     <tr class="hover:bg-violet-50 {{ ($loop->even ) ? " hover:bg-violet-100" : "" }}">
-                        <td class="px-6 py-4">{{ $result->id }}</td>
                         <td class="px-6 py-4">{{ $result->ID_CIU }}</td>
-                        <td class="px-6 py-4">{{ $result->ID_PRO }}</td>
+                        <td class="px-6 py-4">{{ $result->ID_PRO}}</td>
                         <td class="px-6 py-4">{{ $result->NOMBRE_CIU }}</td>
                         <td class="px-6 py-4">
                             <div class="flex justify-end gap-4">
                                 {{-- Editar --}}
                                 <button type="submit"
-                                    wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->id}});"
+                                    wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->ID_CIU}});"
                                     class="material-icons-round text-base">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-6 w-6 " x-tooltip="tooltip">
@@ -74,7 +71,7 @@
                                 </button>
                                 {{-- Eliminar --}}
                                 <button type="submit"
-                                    wire:click="$emitTo('ciudades-child', 'showDeleteForm', {{ $result->id}});"
+                                    wire:click="$emitTo('ciudades-child', 'showDeleteForm', {{ $result->ID_CIU}});"
                                     class="material-icons-round text-base">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-red-700"

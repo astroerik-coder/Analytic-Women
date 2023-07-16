@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Database\Eloquent\Builder;
-use \Illuminate\View\View;
+use Illuminate\View\View;
 
 use App\Models\Ciudade;
 
@@ -17,6 +17,7 @@ class Ciudades extends Component
      * @var array
      */
     protected $listeners = ['refresh' => '$refresh'];
+
     /**
      * @var string
      */
@@ -37,10 +38,9 @@ class Ciudades extends Component
      */
     public $per_page = 10;
 
-
     public function mount(): void
     {
-
+        //
     }
 
     public function render(): View
@@ -62,8 +62,10 @@ class Ciudades extends Component
 
     public function sortBy(string $field): void
     {
-        if ($field == $this->sortBy) {
+        if ($field === $this->sortBy) {
             $this->sortAsc = !$this->sortAsc;
+        } else {
+            $this->sortAsc = true;
         }
         $this->sortBy = $field;
     }
