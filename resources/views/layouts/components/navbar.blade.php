@@ -53,20 +53,20 @@
                 </a>
             </div>
             <div class="flex-auto hover:w-full group">
-                <a href="#"
+                <a href="servicio"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
                         <i class="far fa-search text-2xl pt-1"></i><span
-                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Buscar</span>
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Servicios</span>
                     </span>
                 </a>
             </div>
             <div class="flex-auto hover:w-full group">
-                <a href="#"
+                <a href="contactanos"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
                         <i class="far fa-cog text-2xl pt-1"></i><span
-                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Configuración</span>
+                            class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Contactanos</span>
                     </span>
                 </a>
             </div>
