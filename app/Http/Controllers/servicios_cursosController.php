@@ -6,11 +6,6 @@ use Dompdf\Dompdf;
 
 class servicios_cursosController extends Controller{
 
-    public function mostrarDatos(){
-        $cursos = Curso::all();
-        $servicios = Servicio::all();
-            return view('curso', compact('curso', 'servicios'));
-    }
 
     public function reporteCursos(){
         $reporteCursos = Curso::all();

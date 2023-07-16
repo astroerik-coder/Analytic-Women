@@ -27,7 +27,7 @@ Route::get('/contactanos',[homeController::class,'contactanos'])->name('contacta
 Route::post('/contactanos',[datoscontactController::class, 'store'])->name('contactanos');
 Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 //Ruta que tiene el controller con ambas tablas 
-Route::get('/servicios', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');
+Route::get('/', 'InicioController@mostrarMisionVision');
 
 //Route::get('/usuarios', [pagoCursosController::class, 'getTotalUsuarios'])->name('usuarios');
 

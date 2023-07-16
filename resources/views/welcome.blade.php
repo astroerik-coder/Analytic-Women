@@ -7,6 +7,7 @@
   <title>Inicio</title>
   <!-- Enlace al archivo CSS de Tailwind -->
   <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" rel="stylesheet" />
 
   <style>
     .bg-pink-400 {
@@ -22,10 +23,71 @@
       background-repeat: no-repeat;
       background-position: center;
     }
-    
+  </style>
+  <style>
+    @keyframes word {
+      0% {
+        transform: translateY(100%);
+      }
+
+      15% {
+        transform: translateY(-10%);
+        animation-timing-function: ease-out;
+      }
+
+      20% {
+        transform: translateY(0);
+      }
+
+      40%,
+      100% {
+        transform: translateY(-110%);
+      }
+    }
+
+    .animate-word {
+      animation: word 7s infinite;
+    }
+
+    .animate-word-delay-1 {
+      animation: word 7s infinite;
+      animation-delay: -1.4s;
+    }
+
+    .animate-word-delay-2 {
+      animation: word 7s infinite;
+      animation-delay: -2.8s;
+    }
+
+    .animate-word-delay-3 {
+      animation: word 7s infinite;
+      animation-delay: -4.2s;
+    }
+
+    .animate-word-delay-4 {
+      animation: word 7s infinite;
+      animation-delay: -5.6s;
+    }
   </style>
 
+  <style>
+    .swiper-pagination {
+      bottom: 0;
+      position: relative;
+    }
 
+    .swiper-container {
+      overflow: hidden;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: rgb(14 211 207);
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: rgb(14 211 207);
+    }
+  </style>
 
 </head>
 
@@ -110,14 +172,15 @@
         </svg>
       </button>
     </div>
-    <div  class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
+    <div
+      class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
       <div class="indicators flex justify-center">
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
       </div>
     </div>
-    
+
   </div>
 
 
@@ -130,13 +193,9 @@
               <div
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
               </div>
-              <h6 class="text-xl font-semibold">MISIÓN</h6>
+              <h6 class="text-xl font-semibold">Misión</h6>
               <p class="mt-2 mb-4 text-blueGray-500">
-                Transformar data en información mediante conceptos innovadores y ágiles, para que las organizaciones e
-                instituciones públicas y privadas, cuenten con las mejores soluciones en la toma de decisiones a nivel
-                técnico, económico, político y social; considerando enfoques de tipo intergeneracional,
-                intersectorial,
-                intercultural, ambiental, de género y movilidad.
+                {{ $informacion->first()->MISION }}
               </p>
             </div>
           </div>
@@ -148,13 +207,9 @@
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300">
                 <i class="fas fa-retweet"></i>
               </div>
-              <h6 class="text-xl font-semibold">VISIÓN</h6>
+              <h6 class="text-xl font-semibold">Visión</h6>
               <p class="mt-2 mb-4 text-blueGray-500">
-                Ser una compañía ecuatoriana referente en el ámbito de la investigación financiera, económica, social
-                y
-                política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad, buenas
-                prácticas
-                y aplicando metodologías innovadoras en la investigación y análisis de información.
+                {{ $informacion->first()->VISION }}
               </p>
             </div>
           </div>
@@ -166,11 +221,9 @@
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
                 <i class="fas fa-fingerprint"></i>
               </div>
-              <h6 class="text-xl font-semibold">CULTURA ORGANIZACIONAL</h6>
+              <h6 class="text-xl font-semibold">Cultura Organizacional</h6>
               <p id="uno" class="mt-2 mb-4 text-blueGray-500">
-                Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas
-                frente a las necesidades o requerimientos solicitados; <br> para lo cual nos apoyamos de un equipo
-                multidisciplinario de profesionales con equidad de género.
+                {{ $informacion->first()->CULTURA_ORGANIZACIONAL }}
                 <br><br><br>
               </p>
             </div>
@@ -180,14 +233,14 @@
   </section>
 
 
-  <!-- component -->
-  <div  class="flex min-h-screen items-center justify-center bg-black font-bold text-white">
+  <div class="flex min-h-screen items-center justify-center bg-black font-bold text-white">
     <div class="text-center space-y-12">
       <div class="text-primary text-center text-5xl font-bold">Ejes de trabajo</div>
       <div class="text-white relative inline-grid grid-cols-1 grid-rows-1 gap-12 overflow-hidden">
         <span class="animate-word col-span-full row-span-full">Análisis y procesamiento de datos</span>
         <span class="animate-word-delay-1 col-span-full row-span-full">Diseño, ejecución, gestión de datos</span>
-        <span class="animate-word-delay-2 col-span-full row-span-full">Elaboración de instrumentos de planificación</span>
+        <span class="animate-word-delay-2 col-span-full row-span-full">Elaboración de instrumentos de
+          planificación</span>
         <span class="animate-word-delay-3 col-span-full row-span-full">Ejecución de proyectos de consultoría</span>
         <span class="animate-word-delay-4 col-span-full row-span-full">Asesoría técnica</span>
       </div>
@@ -197,56 +250,39 @@
       </p>
     </div>
   </div>
-  
 
-  <style>
-    @keyframes word {
-      0% {
-        transform: translateY(100%);
+    <style>
+      #spin {
+    
       }
-
-      15% {
-        transform: translateY(-10%);
-        animation-timing-function: ease-out;
+      #spin:after {
+          content:"";
+          animation: spin 10s linear infinite;
       }
+      @keyframes spin {
+        0% { content: "marketing"; }
+        20% { content: "contenido"; }
+        40% { content: "ingeniería"; }
+        60% { content: "cripto"; }
+        80% { content: "consultorias"; }
+        100% { content: "negocios"; }
 
-      20% {
-        transform: translateY(0);
       }
-
-      40%,
-      100% {
-        transform: translateY(-110%);
-      }
-    }
-
-    .animate-word {
-      animation: word 7s infinite;
-    }
-
-    .animate-word-delay-1 {
-      animation: word 7s infinite;
-      animation-delay: -1.4s;
-    }
-
-    .animate-word-delay-2 {
-      animation: word 7s infinite;
-      animation-delay: -2.8s;
-    }
-
-    .animate-word-delay-3 {
-      animation: word 7s infinite;
-      animation-delay: -4.2s;
-    }
-
-    .animate-word-delay-4 {
-      animation: word 7s infinite;
-      animation-delay: -5.6s;
-    }
   </style>
 
 
-  <!----------------CARRUSEL ACCIONISTAS------------------>
+
+  <div class='flex items-center justify-center min-h-screen '>
+      <div class="bg-slate-800">
+          <div class="bg-slate-700 shadow-md  rounded rounded-xl m-16 border border-secundary shadow-xl shadow-indigo-500/50">
+              <div class="flex flex-col p-10  px-16 space-y-6 items-center text-center">
+                  <h1 class="font-light md:text-6xl text-5xl text-white tracking-wide ">Encuentra el experto en <span id="spin" class="text-transparent font-normal bg-clip-text bg-gradient-to-r from-primary to-secundary "></span> <br/> que necesitas</h1>
+                  <p class="text-gray-400 md:text-2xl text-xl px-18"> ¡Ven! parte de nuestro equipo de aliados</p>
+                  <button class="rounded-full bg-primary shadow-lg shadow-primary-500/50 text-white text-lg py-4 px-6">Visita nuestros servicios</button>
+              </div>
+          </div>
+      </div>
+  </div>
 
   <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold mt-5"
     style="margin-left: 40px;">
@@ -323,9 +359,7 @@
       </div>
     </div>
   </div>
-  <!-------------------------------------->
   <br>
-  <!-------------------------------------->
   <div class="flex justify-center">
     <div class="max-w-7xl w-full lg:flex">
       <div
@@ -359,16 +393,8 @@
       </div>
     </div>
   </div>
-  <!-----------------FIN CARRUSEL ACCIONISTAS------->
-
-
-  {{-- Users --}}
-  <!-- component -->
-  <html>
 
   <head>
-    <!-- JIT SUPPORT, for using peer-* below -->
-    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
   </head>
 
   <body>
@@ -524,35 +550,9 @@
         </div>
       </div>
     </div>
-
-
-
   </body>
 
-  </html>
 
-  <!-- component -->
-  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
-    rel="stylesheet" />
-
-  <style>
-    .swiper-pagination {
-      bottom: 0;
-      position: relative;
-    }
-
-    .swiper-container {
-      overflow: hidden;
-    }
-
-    .swiper-pagination-bullet {
-      background-color: rgb(14 211 207);
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: rgb(14 211 207);
-    }
-  </style>
   <div class="bg-no-repeat bg-cover bg-center relative"
     style="background-image: url(https://c.wallhere.com/photos/e5/53/4001x2655_px_art_artwork_church_classic_Cotopaxi_Ecuador_Edwin-1805403.jpg!d);">
     <div class="absolute bg-gradient-to-r from-gray-900 to-gray-900 opacity-75 inset-0 z-0"></div>
@@ -646,15 +646,20 @@
     </div>
   </div>
 
+
   @component('layouts.components.footer') @endcomponent
-  {{-- Scripts --}}
-  <script src="js/app.js"></script>
+
+</html>
+{{-- Scripts --}}
+
+<script src="js/app.js"></script>
 </body>
 
 </html>
 
 <script crossorigin="anonymous" defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js">
 </script>
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
 
 <script>
   const slides = document.querySelectorAll(".slide");

@@ -106,6 +106,7 @@
                       onclick="openSidebar()"
                     ></i>
                   </div>
+                  
                 <div>
                     <div class="inline-block mb-6 rounded-full bg-secundary pr-5 h-16 line-height-username1">
                         <img class="rounded-full float-left h-full" src="{{ Auth::user()->profile_photo_url }}"> <span class="ml-3">{{ Auth::user()->name }}</span>
