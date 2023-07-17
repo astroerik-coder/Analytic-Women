@@ -5,7 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use \Illuminate\View\View;
 use App\Models\Ciudade;
-use App\Models\Provincia; // Asegúrate de importar el modelo de la tabla relacional
+use App\Models\Provincia; 
 
 
 class CiudadesChild extends Component

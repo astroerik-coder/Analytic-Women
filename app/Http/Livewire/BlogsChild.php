@@ -94,7 +94,23 @@ class BlogsChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_BLG' => 'required',
+            'item.ID_CLT' => 'required',
+            'item.ID_COM' => 'required',
+            'item.ID_CAT' => 'required',
+            'item.TITULO_BLG' => 'required',
+            'item.VALORACION_BLG' => 'required',
+        ],[
+
+            'item.ID_BLG.required' => 'El campo es obligatorio',
+            'item.ID_CLT.required' => 'El campo es obligatorio',
+            'item.ID_COM.required' => 'El campo es obligatorio',
+            'item.ID_CAT.required' => 'El campo es obligatorio',
+            'item.TITULO_BLG.required' => 'El campo es obligatorio',
+            'item.VALORACION_BLG.required' => 'El campo es obligatorio',
+            ]
+    );
         $item = Blog::create([
             'ID_BLG' => $this->item['ID_BLG'] ?? '', 
             'ID_CLT' => $this->item['ID_CLT'] ?? '', 
@@ -117,7 +133,14 @@ class BlogsChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+       $this->validate([
+            'item.ID_BLG' => 'required',
+            'item.ID_CLT' => 'required',
+            'item.ID_COM' => 'required',
+            'item.ID_CAT' => 'required',
+            'item.TITULO_BLG' => 'required',
+            'item.VALORACION_BLG' => 'required',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

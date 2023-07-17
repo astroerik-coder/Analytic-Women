@@ -7,7 +7,8 @@
   <title>Inicio</title>
   <!-- Enlace al archivo CSS de Tailwind -->
   <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
-  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" rel="stylesheet" />
+  <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
+    rel="stylesheet" />
 
   <style>
     .bg-pink-400 {
@@ -88,6 +89,44 @@
       background-color: rgb(14 211 207);
     }
   </style>
+
+  <style>
+    #spin {}
+
+    #spin:after {
+      content: "";
+      animation: spin 10s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        content: "marketing";
+      }
+
+      20% {
+        content: "contenido";
+      }
+
+      40% {
+        content: "ingeniería";
+      }
+
+      60% {
+        content: "cripto";
+      }
+
+      80% {
+        content: "consultorias";
+      }
+
+      100% {
+        content: "negocios";
+      }
+
+    }
+  </style>
+
+
 
 </head>
 
@@ -251,37 +290,22 @@
     </div>
   </div>
 
-    <style>
-      #spin {
-    
-      }
-      #spin:after {
-          content:"";
-          animation: spin 10s linear infinite;
-      }
-      @keyframes spin {
-        0% { content: "marketing"; }
-        20% { content: "contenido"; }
-        40% { content: "ingeniería"; }
-        60% { content: "cripto"; }
-        80% { content: "consultorias"; }
-        100% { content: "negocios"; }
-
-      }
-  </style>
-
 
 
   <div class='flex items-center justify-center min-h-screen '>
-      <div class="bg-slate-800">
-          <div class="bg-slate-700 shadow-md  rounded rounded-xl m-16 border border-secundary shadow-xl shadow-indigo-500/50">
-              <div class="flex flex-col p-10  px-16 space-y-6 items-center text-center">
-                  <h1 class="font-light md:text-6xl text-5xl text-white tracking-wide ">Encuentra el experto en <span id="spin" class="text-transparent font-normal bg-clip-text bg-gradient-to-r from-primary to-secundary "></span> <br/> que necesitas</h1>
-                  <p class="text-gray-400 md:text-2xl text-xl px-18"> ¡Ven! parte de nuestro equipo de aliados</p>
-                  <button class="rounded-full bg-primary shadow-lg shadow-primary-500/50 text-white text-lg py-4 px-6">Visita nuestros servicios</button>
-              </div>
-          </div>
+    <div class="bg-slate-800">
+      <div
+        class="bg-slate-700 shadow-md  rounded rounded-xl m-16 border border-secundary shadow-xl shadow-indigo-500/50">
+        <div class="flex flex-col p-10  px-16 space-y-6 items-center text-center">
+          <h1 class="font-light md:text-6xl text-5xl text-white tracking-wide ">Encuentra el experto en <span id="spin"
+              class="text-transparent font-normal bg-clip-text bg-gradient-to-r from-primary to-secundary "></span>
+            <br /> que necesitas</h1>
+          <p class="text-gray-400 md:text-2xl text-xl px-18"> ¡Ven! parte de nuestro equipo de aliados</p>
+          <button class="rounded-full bg-primary shadow-lg shadow-primary-500/50 text-white text-lg py-4 px-6">Visita
+            nuestros servicios</button>
+        </div>
       </div>
+    </div>
   </div>
 
   <h1 class="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-4xl mb-4 font-bold mt-5"

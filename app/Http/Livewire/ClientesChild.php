@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use \Illuminate\View\View;
 use App\Models\Cliente;
+use App\Models\Provincia; 
 
 class ClientesChild extends Component
 {
@@ -82,7 +83,8 @@ class ClientesChild extends Component
 
     public function render(): View
     {
-        return view('livewire.clientes-child');
+        $provincias = Provincia::all();
+        return view('livewire.clientes-child', compact('provincias'));
     }
 
     public function showDeleteForm(int $id): void
@@ -110,7 +112,34 @@ class ClientesChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+                'item.ID_CLT' => 'required',
+                'item.ID_EMPR' => 'required',      
+                'item.ID_GEN'=> 'required',
+                'item.ID_PRO'=> 'required',
+                'item.ID_EMP'=> 'required',
+                'item.NOMBRE_CLT'=> 'required',
+                'item.FECHA_NACIMIENTO_CLT'=> 'required',
+                'item.TELEFONO1_CLT'=> 'required',
+                'item.EMAIL_CLT'=> 'required',
+                'item.TITULO_CLT'=> 'required',
+                'item.ROL_CLT'=> 'required',
+                'item.EXPERIENCIA_CLT'=> 'required',
+            ],[
+                'item.ID_CLT.required' =>'El campo ID Cliente es obligatorio',
+                'item.ID_EMPR.required'=> 'El campo es obligatorio',
+                'item.ID_GEN.required'=>'El campo es obligatorio',
+                'item.ID_PRO.required'=>'El campo es obligatorio',
+                'item.ID_EMP.required'=>'El campo es obligatorio',
+                'item.NOMBRE_CLT.required'=>'El campo es obligatorio',
+                'item.FECHA_NACIMIENTO_CLT.required'=>'El campo es obligatorio',
+                'item.TELEFONO1_CLT.required'=>'El campo es obligatorio',
+                'item.EMAIL_CLT.required'=>'El campo es obligatorio',
+                'item.TITULO_CLT.required'=>'El campo es obligatorio',
+                'item.ROL_CLT.required'=>'El campo es obligatorio',
+                'item.EXPERIENCIA_CLT.required'=>'El campo es obligatorio',
+            ]);
+
         $item = Cliente::create([
             'ID_CLT' => $this->item['ID_CLT'] ?? '', 
             'ID_EMPR' => $this->item['ID_EMPR'] ?? '', 
@@ -127,6 +156,7 @@ class ClientesChild extends Component
             'EXPERIENCIA_CLT' => $this->item['EXPERIENCIA_CLT'] ?? '', 
             'FOTO_CLT' => $this->item['FOTO_CLT'] ?? '', 
         ]);
+
         $this->confirmingItemCreation = false;
         $this->emitTo('clientes', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
@@ -141,7 +171,34 @@ class ClientesChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate(
+            [
+                'item.ID_CLT' => 'required',
+                'item.ID_EMPR' => 'required',      
+                'item.ID_GEN'=> 'required',
+                'item.ID_PRO'=> 'required',
+                'item.ID_EMP'=> 'required',
+                'item.NOMBRE_CLT'=> 'required',
+                'item.FECHA_NACIMIENTO_CLT'=> 'required',
+                'item.TELEFONO1_CLT'=> 'required',
+                'item.EMAIL_CLT'=> 'required',
+                'item.TITULO_CLT'=> 'required',
+                'item.ROL_CLT'=> 'required',
+                'item.EXPERIENCIA_CLT'=> 'required',
+            ],[
+                'item.ID_CLT.required' =>'El campo ID Cliente es obligatorio',
+                'item.ID_EMPR.required'=> 'El campo es obligatorio',
+                'item.ID_GEN.required'=>'El campo es obligatorio',
+                'item.ID_PRO.required'=>'El campo es obligatorio',
+                'item.ID_EMP.required'=>'El campo es obligatorio',
+                'item.NOMBRE_CLT.required'=>'El campo es obligatorio',
+                'item.FECHA_NACIMIENTO_CLT.required'=>'El campo es obligatorio',
+                'item.TELEFONO1_CLT.required'=>'El campo es obligatorio',
+                'item.EMAIL_CLT.required'=>'El campo es obligatorio',
+                'item.TITULO_CLT.required'=>'El campo es obligatorio',
+                'item.ROL_CLT.required'=>'El campo es obligatorio',
+                'item.EXPERIENCIA_CLT.required'=>'El campo es obligatorio',
+            ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

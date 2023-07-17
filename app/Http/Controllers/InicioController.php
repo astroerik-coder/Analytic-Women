@@ -15,4 +15,6 @@ class InicioController extends Controller
         return view('welcome', compact('informacion'));
     }
 
+
+
 }
