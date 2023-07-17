@@ -44,7 +44,7 @@
                         </th>
                         <th scope="col" class="px-6 py-4 font-medium text-gray-900">
                             <div class="flex items-center">
-                                <button wire:click="sortBy('NOMBRE_CIU')">Nombre</button>
+                                <button wire:click="sortBy('NOMBRE_CIU')">NombreS</button>
                                 <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
