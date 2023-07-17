@@ -119,7 +119,13 @@ class CiudadesChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_PRO' => 'required',
+            'item.NOMBRE_CIU' => 'required',
+        ], [
+            'item.ID_PRO.required' => 'El campo Provincia es obligatorio.',
+            'item.NOMBRE_CIU.required' => 'El campo Nombre Ciudad es obligatorio.',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

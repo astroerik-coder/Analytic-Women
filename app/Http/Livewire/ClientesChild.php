@@ -141,20 +141,20 @@ class ClientesChild extends Component
             ]);
 
         $item = Cliente::create([
-            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
-            'ID_EMPR' => $this->item['ID_EMPR'] ?? '', 
-            'ID_GEN' => $this->item['ID_GEN'] ?? '', 
-            'ID_PRO' => $this->item['ID_PRO'] ?? '', 
-            'ID_EMP' => $this->item['ID_EMP'] ?? '', 
-            'NOMBRE_CLT' => $this->item['NOMBRE_CLT'] ?? '', 
-            'FECHA_NACIMIENTO_CLT' => $this->item['FECHA_NACIMIENTO_CLT'] ?? '', 
-            'TELEFONO1_CLT' => $this->item['TELEFONO1_CLT'] ?? '', 
-            'TELEFONO2_CLT' => $this->item['TELEFONO2_CLT'] ?? '', 
-            'EMAIL_CLT' => $this->item['EMAIL_CLT'] ?? '', 
-            'TITULO_CLT' => $this->item['TITULO_CLT'] ?? '', 
-            'ROL_CLT' => $this->item['ROL_CLT'] ?? '', 
-            'EXPERIENCIA_CLT' => $this->item['EXPERIENCIA_CLT'] ?? '', 
-            'FOTO_CLT' => $this->item['FOTO_CLT'] ?? '', 
+            'ID_CLT' => $this->item['ID_CLT'] ?? null, 
+            'ID_EMPR' => $this->item['ID_EMPR'] ?? null, 
+            'ID_GEN' => $this->item['ID_GEN'] ?? null, 
+            'ID_PRO' => $this->item['ID_PRO'] ?? null, 
+            'ID_EMP' => $this->item['ID_EMP'] ?? null, 
+            'NOMBRE_CLT' => $this->item['NOMBRE_CLT'] ?? null, 
+            'FECHA_NACIMIENTO_CLT' => $this->item['FECHA_NACIMIENTO_CLT'] ?? null, 
+            'TELEFONO1_CLT' => $this->item['TELEFONO1_CLT'] ?? null, 
+            'TELEFONO2_CLT' => $this->item['TELEFONO2_CLT'] ?? null, 
+            'EMAIL_CLT' => $this->item['EMAIL_CLT'] ?? null, 
+            'TITULO_CLT' => $this->item['TITULO_CLT'] ?? null, 
+            'ROL_CLT' => $this->item['ROL_CLT'] ?? null, 
+            'EXPERIENCIA_CLT' => $this->item['EXPERIENCIA_CLT'] ?? null, 
+            'FOTO_CLT' => $this->item['FOTO_CLT'] ?? null, 
         ]);
 
         $this->confirmingItemCreation = false;
