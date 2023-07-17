@@ -42,8 +42,8 @@
                                 <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4">
-                            <div class="flex items-center px-6 py-4">
+                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                            <div class="flex items-center">
                                 <button wire:click="sortBy('NOMBRE_CIU')">Nombre</button>
                                 <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
