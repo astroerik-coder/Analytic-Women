@@ -94,7 +94,21 @@ class EventosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.NOMBRE_EVT' => 'required',
+            'item.DESCRIPCION_EVT' => 'required',
+            'item.FECHA_EVT' => 'required',
+            'item.HORA_EVT' => 'required',
+            'item.OBSERVACIONES_EVT' => 'required',
+            'item.UBICACION_EVT' => 'required',
+        ],[
+            'item.NOMBRE_EVT.require'=> 'El campo es necesario',
+            'item.DESCRIPCION_EVT.require'=> 'El campo es necesario',
+            'item.FECHA_EVT.require'=> 'El campo es necesario',
+            'item.HORA_EVT.require'=> 'El campo es necesario',
+            'item.OBSERVACIONES_EVT.require' => 'El campo es necesario',
+            'item.UBICACION_EVT.require'=> 'El campo es necesario',
+        ]);
         $item = Evento::create([
             'NOMBRE_EVT' => $this->item['NOMBRE_EVT'] ?? '', 
             'DESCRIPCION_EVT' => $this->item['DESCRIPCION_EVT'] ?? '', 
@@ -117,7 +131,21 @@ class EventosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.NOMBRE_EVT' => 'required',
+            'item.DESCRIPCION_EVT' => 'required',
+            'item.FECHA_EVT' => 'required',
+            'item.HORA_EVT' => 'required',
+            'item.OBSERVACIONES_EVT' => 'required',
+            'item.UBICACION_EVT' => 'required',
+        ],[
+            'item.NOMBRE_EVT.require'=> 'El campo es necesario',
+            'item.DESCRIPCION_EVT.require'=> 'El campo es necesario',
+            'item.FECHA_EVT.require'=> 'El campo es necesario',
+            'item.HORA_EVT.require'=> 'El campo es necesario',
+            'item.OBSERVACIONES_EVT.require' => 'El campo es necesario',
+            'item.UBICACION_EVT.require'=> 'El campo es necesario',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

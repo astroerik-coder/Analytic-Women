@@ -2,11 +2,11 @@
 
     <x-tall-crud-confirmation-dialog wire:model="confirmingItemDeletion">
         <x-slot name="title">
-            Delete Record
+            Eliminar registro
         </x-slot>
 
         <x-slot name="content">
-            Are you sure you want to Delete Record?
+            ¿Estás seguro de que quieres eliminar el registro?
         </x-slot>
 
         <x-slot name="footer">
@@ -17,7 +17,7 @@
 
     <x-tall-crud-dialog-modal wire:model="confirmingItemCreation">
         <x-slot name="title">
-            Add Record
+            Agregar registro
         </x-slot>
 
         <x-slot name="content">
@@ -26,11 +26,18 @@
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_BLG" />
                 @error('item.ID_BLG') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
+
             <div class="mt-4">
-                <x-tall-crud-label>Id Clt</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CLT" />
+                <x-tall-crud-label>Cliente</x-tall-crud-label>
+                <x-tall-crud-select class="block mt-1 w-1/4" wire:model.defer="item.ID_CLT">
+                    <option value="">Seleccione</option>
+                    @foreach ($clientes as $cliente)
+                        <option value="{{ $cliente->ID_CLT }}">{{ $cliente->NOMBRE_CLT }}</option>
+                    @endforeach
+                </x-tall-crud-select>
                 @error('item.ID_CLT') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
+            
             <div class="mt-4">
                 <x-tall-crud-label>Id Com</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_COM" />
@@ -61,7 +68,7 @@
 
     <x-tall-crud-dialog-modal wire:model="confirmingItemEdit">
         <x-slot name="title">
-            Edit Record
+            Editar registro
         </x-slot>
 
         <x-slot name="content">

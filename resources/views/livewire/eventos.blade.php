@@ -28,29 +28,21 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
                 wire:loading.class.delay="opacity-50">
                 <thead class="bg-gray-5">
-                    <tr>
-                        <th class="px-3 py-2">
-                            <div class="flex items-center">
-                                <button wire:click="sortBy('ID_EVT')" class="text-gray-900">Id</button>
-                                <x-tall-crud-sort-icon sortField="ID_EVT" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                            </div>
-                        </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Nombre</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Descripcion</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Fecha</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Hora</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Observaciones</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Ubicacion</th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</th>
+                    <tr class="px-6 py-4 font-medium text-white bg-primary">
+                        <th scope="col" class="px-6 py-4">Id</th>
+                        <th scope="col" class="px-6 py-4">Nombre</th>
+                        <th scope="col" class="px-6 py-4">Descripción</th>
+                        <th scope="col" class="px-6 py-4">Fecha</th>
+                        <th scope="col" class="px-6 py-4">Hora</th>
+                        <th scope="col" class="px-6 py-4">Observaciones</th>
+                        <th scope="col" class="px-6 py-4">Ubicación</th>
+                        <th scope="col" class="px-6 py-4">Acciones</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
-                    @php
-                    $numero = 1;
-                    @endphp
                     @foreach($results as $result)
-                    <tr class="hover:bg-violet-50 ">
-                        <td class="px-6 py-4">{{ $numero }}</td> @php $numero++;@endphp
+                    <tr class="hover:bg-violet-50">
+                        <td class="px-6 py-4">{{ $result->ID_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->NOMBRE_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->DESCRIPCION_EVT }}</td>
                         <td class="px-6 py-4">{{ $result->FECHA_EVT }}</td>

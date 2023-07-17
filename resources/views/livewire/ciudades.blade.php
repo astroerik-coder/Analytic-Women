@@ -29,26 +29,26 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
                 wire:loading.class.delay="opacity-50">
                 <thead class="bg-gray-5">
-                    <tr>
-                        <th class="px-3 py-2">
+                    <tr class="px-6 py-4 font-medium text-white bg-primary">
+                        <th class="px-3 py-2 px-6 py-4">
                             <div class="flex items-center">
                                 <button wire:click="sortBy('ID_CIU')">N</button>
                                 <x-tall-crud-sort-icon sortField="ID_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                            <div class="flex items-center">
+                        <th scope="col" class="px-6 py-4">
+                            <div class="flex items-center px-6 py-4">
                                 <button wire:click="sortBy('ID_PRO')">Provincia</button>
                                 <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">
-                            <div class="flex items-center">
+                        <th scope="col" class="px-6 py-4">
+                            <div class="flex items-center px-6 py-4">
                                 <button wire:click="sortBy('NOMBRE_CIU')">Nombre</button>
                                 <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</th>
+                        <th scope="col" class="px-6 py-4">Acciones</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
@@ -58,7 +58,7 @@
                         <td class="px-6 py-4">{{ $result->ID_PRO}}</td>
                         <td class="px-6 py-4">{{ $result->NOMBRE_CIU }}</td>
                         <td class="px-6 py-4">
-                            <div class="flex justify-end gap-4">
+                            <div class="flex justify-center gap-4">
                                 {{-- Editar --}}
                                 <button type="submit"
                                     wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->ID_CIU}});"
