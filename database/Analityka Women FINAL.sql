@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-07-2023 a las 00:52:47
+-- Tiempo de generación: 04-08-2023 a las 14:15:40
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -168,12 +168,14 @@ CREATE TABLE `comentarios` (
 --
 
 CREATE TABLE `contactanos` (
-  `id` int(50) NOT NULL,
-  `nombre` varchar(100) NOT NULL,
-  `apellidos` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `mensaje` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(191) NOT NULL,
+  `apellidos` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `mensaje` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -238,6 +240,23 @@ INSERT INTO `cursos` (`ID_CUR`, `ID_CLT`, `NOMBRE_CUR`, `DESCRIPCION_CUR`, `PUBL
 (18, 2, 'Curso de M', 'Aprende a utilizar Facebook para promover tu negocio y llegar a más clientes', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-facebook', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
 (19, 2, 'Curso de F', 'Aprende a capturar los momentos más especiales de una boda', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-fotografia-bodas', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
 (20, 1, 'Curso de D', 'Aprende a crear aplicaciones móviles para Android y iOS', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-desarrollo-aplicaciones-moviles', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datoscontact`
+--
+
+CREATE TABLE `datoscontact` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `nombre` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `direccion` varchar(191) NOT NULL,
+  `telefono` varchar(191) NOT NULL,
+  `mensaje` varchar(191) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -336,7 +355,7 @@ INSERT INTO `eventos` (`ID_EVT`, `NOMBRE_EVT`, `DESCRIPCION_EVT`, `FECHA_EVT`, `
 
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
+  `uuid` varchar(191) NOT NULL,
   `connection` text NOT NULL,
   `queue` text NOT NULL,
   `payload` longtext NOT NULL,
@@ -397,7 +416,7 @@ CREATE TABLE `informaciones` (
 
 CREATE TABLE `migrations` (
   `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
+  `migration` varchar(191) NOT NULL,
   `batch` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -408,10 +427,12 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2019_08_19_000000_create_failed_jobs_table', 1),
-(4, '2014_10_12_200000_add_two_factor_columns_to_users_table', 2),
-(5, '2023_07_11_044830_create_sessions_table', 2),
-(6, '2019_12_14_000001_create_personal_access_tokens_table', 3);
+(3, '2014_10_12_200000_add_two_factor_columns_to_users_table', 1),
+(4, '2019_08_19_000000_create_failed_jobs_table', 1),
+(5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(6, '2023_06_10_031033_create_sessions_table', 1),
+(7, '2023_06_22_021629_datoscontact', 1),
+(8, '2023_07_14_011435_contactanos', 1);
 
 -- --------------------------------------------------------
 
@@ -463,8 +484,8 @@ CREATE TABLE `pagos` (
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `token` varchar(191) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -476,9 +497,9 @@ CREATE TABLE `password_resets` (
 
 CREATE TABLE `personal_access_tokens` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_type` varchar(191) NOT NULL,
   `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
   `token` varchar(64) NOT NULL,
   `abilities` text DEFAULT NULL,
   `last_used_at` timestamp NULL DEFAULT NULL,
@@ -587,7 +608,7 @@ INSERT INTO `servicios` (`ID_SER`, `ID_CLT`, `NOMBRE_SER`, `DESCRIPCION_SER`, `O
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) NOT NULL,
+  `id` varchar(191) NOT NULL,
   `user_id` bigint(20) UNSIGNED DEFAULT NULL,
   `ip_address` varchar(45) DEFAULT NULL,
   `user_agent` text DEFAULT NULL,
@@ -600,7 +621,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('r2f0kg6CwJvL1QferfoinEBweIzLgy23WN0MzEBw', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiS0JVQ0FXdEIyM1VMWHBnem12MkVnNVk1NEZ0aUkyY1RnQXRuNEJraCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jaXVkYWRlcz9wYWdlPTIiO31zOjU6ImxvZ2luIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJDVUQ3Y2UldRTzVyd1NXbUNnOUVBOU9zUTBpMDZXSjVxYnJIN0Q4aEVCVU82TXBBUDc5UEEuIjt9', 1689546255);
+('r2f0kg6CwJvL1QferfoinEBweIzLgy23WN0MzEBw', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiS0JVQ0FXdEIyM1VMWHBnem12MkVnNVk1NEZ0aUkyY1RnQXRuNEJraCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jaXVkYWRlcz9wYWdlPTIiO31zOjU6ImxvZ2luIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJDVUQ3Y2UldRTzVyd1NXbUNnOUVBOU9zUTBpMDZXSjVxYnJIN0Q4aEVCVU82TXBBUDc5UEEuIjt9', 1689546255),
+('rI0ZbdAlBM9itRCWCdgxJbZAYpQnUu9M6WDv17Ah', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMmRhUHREOENlUU4zbzRXaG9LY2Z5eWtSeHBRZk8wQmhieG84MWFZUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMyOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvY2F0ZWdvcmlhcyI7fXM6NToibG9naW4iO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkNVRDdjZSV1FPNXJ3U1dtQ2c5RUE5T3NRMGkwNldKNXFickg3RDhoRUJVTzZNcEFQNzlQQS4iO30=', 1690210131);
 
 -- --------------------------------------------------------
 
@@ -610,14 +632,16 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `users` (
   `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `name` varchar(191) NOT NULL,
+  `email` varchar(191) NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
+  `password` varchar(191) NOT NULL,
   `two_factor_secret` text DEFAULT NULL,
   `two_factor_recovery_codes` text DEFAULT NULL,
   `two_factor_confirmed_at` timestamp NULL DEFAULT NULL,
   `remember_token` varchar(100) DEFAULT NULL,
+  `current_team_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `profile_photo_path` varchar(2048) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -626,9 +650,9 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$ZEWRATwfOtE.0DjW29RiRePBt0tZPZ75ThDcnWMBk38czCzO1okB2', NULL, NULL, NULL, 'DAixipD8IiBOud10tUiWiiBYnqCmKRemI8nHfAsLld3exMf8tHTNy6uMOLLL', '2023-07-11 09:00:23', '2023-07-11 09:00:23'),
-(2, 'erik', 'dani008molina@gmail.com', NULL, '$2y$10$5TCv6RWQO5rwSWmCg9EA9OsQ0i06WJ5qbrH7D8hEBUO6MpAP79PA.', 'eyJpdiI6Iit1eXZTdmVMWG50Z1BDWlR5NnZETUE9PSIsInZhbHVlIjoiUDR6c21ZaHFlTnhQbmI4T21aN2FxeVFtQWN0ek9XV3I0QmZrVDJBTE4yOD0iLCJtYWMiOiJjY2RiMDdlNzZjMGFjMWJlMjA2OTVjYTQ1MmIxMjM1MDc2NzU0MThkMTg2YTMzNDJlNGZkNDhiOGFlNDFjMGI2IiwidGFnIjoiIn0=', 'eyJpdiI6IllHUUlpcTZzRVBvZjVXdHlwVTFIZHc9PSIsInZhbHVlIjoiMm1FbCtHbTEyd3RURFJBak40RXR2VkRrRXRTNjM2Y2loczFTMXlaWGZoQmlBSHRCVnJlQ252a2I5dURpRHdKL3lXVWRTR1dIUVNpUmRXRHJnSXNtTGc0cFBxSGFwTHJ1QmpxVGVBNW94VXExdERsN3M3alNDMFVmKzA3T0xQUnU5RU5rK3BiUkxuL0trekRheDlBOUxzb3hnQ09PZkwwcUpRYXFXUWNaRjV6TTQ1eFRMRllhQVVudFhWcEpJd0o0Wk1kd3YvMzNkM0FnQjFvd1B6V3Y1YXlOMWpBR0FaRDZmZi9JUjdlcmM0Z0taUXBOcUdRdWxFZXc1SmhhYmtONVFJb29ERlFmNHg0cTFXU04xUmhSK3c9PSIsIm1hYyI6IjM0MWRmN2E5MWI3MjZmZWMxYTUwNjEyYmI0NWRhYzA1MTNkMjNkNTIzN2FkMzM4MGQyNTFmZGJhN2I5NWQ2MWIiLCJ0YWciOiIifQ==', '2023-07-14 03:59:07', 'p2bchX5u7nYQaYxjRs9sb1u8BBXmvvcR8viP909TxwVpR7sOe3fke0H8q1lN', '2023-07-14 03:22:37', '2023-07-14 03:59:07');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'admin@gmail.com', NULL, '$2y$10$ZEWRATwfOtE.0DjW29RiRePBt0tZPZ75ThDcnWMBk38czCzO1okB2', NULL, NULL, NULL, 'DAixipD8IiBOud10tUiWiiBYnqCmKRemI8nHfAsLld3exMf8tHTNy6uMOLLL', NULL, NULL, '2023-07-11 09:00:23', '2023-07-11 09:00:23'),
+(2, 'erik', 'dani008molina@gmail.com', NULL, '$2y$10$5TCv6RWQO5rwSWmCg9EA9OsQ0i06WJ5qbrH7D8hEBUO6MpAP79PA.', 'eyJpdiI6Iit1eXZTdmVMWG50Z1BDWlR5NnZETUE9PSIsInZhbHVlIjoiUDR6c21ZaHFlTnhQbmI4T21aN2FxeVFtQWN0ek9XV3I0QmZrVDJBTE4yOD0iLCJtYWMiOiJjY2RiMDdlNzZjMGFjMWJlMjA2OTVjYTQ1MmIxMjM1MDc2NzU0MThkMTg2YTMzNDJlNGZkNDhiOGFlNDFjMGI2IiwidGFnIjoiIn0=', 'eyJpdiI6IllHUUlpcTZzRVBvZjVXdHlwVTFIZHc9PSIsInZhbHVlIjoiMm1FbCtHbTEyd3RURFJBak40RXR2VkRrRXRTNjM2Y2loczFTMXlaWGZoQmlBSHRCVnJlQ252a2I5dURpRHdKL3lXVWRTR1dIUVNpUmRXRHJnSXNtTGc0cFBxSGFwTHJ1QmpxVGVBNW94VXExdERsN3M3alNDMFVmKzA3T0xQUnU5RU5rK3BiUkxuL0trekRheDlBOUxzb3hnQ09PZkwwcUpRYXFXUWNaRjV6TTQ1eFRMRllhQVVudFhWcEpJd0o0Wk1kd3YvMzNkM0FnQjFvd1B6V3Y1YXlOMWpBR0FaRDZmZi9JUjdlcmM0Z0taUXBOcUdRdWxFZXc1SmhhYmtONVFJb29ERlFmNHg0cTFXU04xUmhSK3c9PSIsIm1hYyI6IjM0MWRmN2E5MWI3MjZmZWMxYTUwNjEyYmI0NWRhYzA1MTNkMjNkNTIzN2FkMzM4MGQyNTFmZGJhN2I5NWQ2MWIiLCJ0YWciOiIifQ==', '2023-07-14 03:59:07', 'p2bchX5u7nYQaYxjRs9sb1u8BBXmvvcR8viP909TxwVpR7sOe3fke0H8q1lN', NULL, NULL, '2023-07-14 03:22:37', '2023-07-14 03:59:07');
 
 --
 -- Índices para tablas volcadas
@@ -673,35 +697,16 @@ ALTER TABLE `comentarios`
   ADD PRIMARY KEY (`ID_COM`);
 
 --
--- Indices de la tabla `contactos`
+-- Indices de la tabla `contactanos`
 --
-ALTER TABLE `contactos`
-  ADD PRIMARY KEY (`ID_CONT`);
+ALTER TABLE `contactanos`
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `cursos`
+-- Indices de la tabla `datoscontact`
 --
-ALTER TABLE `cursos`
-  ADD PRIMARY KEY (`ID_CUR`),
-  ADD KEY `FK_RELATIONSHIP_10` (`ID_CLT`);
-
---
--- Indices de la tabla `empleos`
---
-ALTER TABLE `empleos`
-  ADD PRIMARY KEY (`ID_EMP`);
-
---
--- Indices de la tabla `empresas`
---
-ALTER TABLE `empresas`
-  ADD PRIMARY KEY (`ID_EMPR`);
-
---
--- Indices de la tabla `eventos`
---
-ALTER TABLE `eventos`
-  ADD PRIMARY KEY (`ID_EVT`);
+ALTER TABLE `datoscontact`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `failed_jobs`
@@ -711,32 +716,10 @@ ALTER TABLE `failed_jobs`
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
 
 --
--- Indices de la tabla `generos`
---
-ALTER TABLE `generos`
-  ADD PRIMARY KEY (`ID_GEN`);
-
---
--- Indices de la tabla `informaciones`
---
-ALTER TABLE `informaciones`
-  ADD PRIMARY KEY (`ID_INF`),
-  ADD KEY `FK_RELATIONSHIP_13` (`ID_CONT`),
-  ADD KEY `FK_RELATIONSHIP_14` (`ID_RDS`);
-
---
 -- Indices de la tabla `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `pagos`
---
-ALTER TABLE `pagos`
-  ADD PRIMARY KEY (`ID_PAG`),
-  ADD KEY `FK_RELATIONSHIP_15` (`ID_EMP`),
-  ADD KEY `FK_RELATIONSHIP_16` (`ID_CUR`);
 
 --
 -- Indices de la tabla `password_resets`
@@ -751,25 +734,6 @@ ALTER TABLE `personal_access_tokens`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `personal_access_tokens_token_unique` (`token`),
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
-
---
--- Indices de la tabla `provincias`
---
-ALTER TABLE `provincias`
-  ADD PRIMARY KEY (`ID_PRO`);
-
---
--- Indices de la tabla `redes`
---
-ALTER TABLE `redes`
-  ADD PRIMARY KEY (`ID_RDS`);
-
---
--- Indices de la tabla `servicios`
---
-ALTER TABLE `servicios`
-  ADD PRIMARY KEY (`ID_SER`),
-  ADD KEY `FK_RELATIONSHIP_5` (`ID_CLT`);
 
 --
 -- Indices de la tabla `sessions`
@@ -791,10 +755,16 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `ciudades`
+-- AUTO_INCREMENT de la tabla `contactanos`
 --
-ALTER TABLE `ciudades`
-  MODIFY `ID_CIU` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+ALTER TABLE `contactanos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `datoscontact`
+--
+ALTER TABLE `datoscontact`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -806,7 +776,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
@@ -818,60 +788,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `blogs`
---
-ALTER TABLE `blogs`
-  ADD CONSTRAINT `FK_RELATIONSHIP_1` FOREIGN KEY (`ID_COM`) REFERENCES `comentarios` (`ID_COM`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_11` FOREIGN KEY (`ID_CLT`) REFERENCES `clientes` (`ID_CLT`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_2` FOREIGN KEY (`ID_CAT`) REFERENCES `categorias` (`ID_CAT`);
-
---
--- Filtros para la tabla `ciudades`
---
-ALTER TABLE `ciudades`
-  ADD CONSTRAINT `FK_RELATIONSHIP_6` FOREIGN KEY (`ID_PRO`) REFERENCES `provincias` (`ID_PRO`);
-
---
--- Filtros para la tabla `clientes`
---
-ALTER TABLE `clientes`
-  ADD CONSTRAINT `FK_RELATIONSHIP_12` FOREIGN KEY (`ID_EMPR`) REFERENCES `empresas` (`ID_EMPR`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_4` FOREIGN KEY (`ID_GEN`) REFERENCES `generos` (`ID_GEN`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_7` FOREIGN KEY (`ID_PRO`) REFERENCES `provincias` (`ID_PRO`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_8` FOREIGN KEY (`ID_EMP`) REFERENCES `empleos` (`ID_EMP`);
-
---
--- Filtros para la tabla `cursos`
---
-ALTER TABLE `cursos`
-  ADD CONSTRAINT `FK_RELATIONSHIP_10` FOREIGN KEY (`ID_CLT`) REFERENCES `clientes` (`ID_CLT`);
-
---
--- Filtros para la tabla `informaciones`
---
-ALTER TABLE `informaciones`
-  ADD CONSTRAINT `FK_RELATIONSHIP_13` FOREIGN KEY (`ID_CONT`) REFERENCES `contactos` (`ID_CONT`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_14` FOREIGN KEY (`ID_RDS`) REFERENCES `redes` (`ID_RDS`);
-
---
--- Filtros para la tabla `pagos`
---
-ALTER TABLE `pagos`
-  ADD CONSTRAINT `FK_RELATIONSHIP_15` FOREIGN KEY (`ID_EMP`) REFERENCES `empleos` (`ID_EMP`),
-  ADD CONSTRAINT `FK_RELATIONSHIP_16` FOREIGN KEY (`ID_CUR`) REFERENCES `cursos` (`ID_CUR`);
-
---
--- Filtros para la tabla `servicios`
---
-ALTER TABLE `servicios`
-  ADD CONSTRAINT `FK_RELATIONSHIP_5` FOREIGN KEY (`ID_CLT`) REFERENCES `clientes` (`ID_CLT`);
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
