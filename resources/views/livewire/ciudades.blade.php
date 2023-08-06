@@ -29,36 +29,36 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
                 wire:loading.class.delay="opacity-50">
                 <thead class="bg-gray-5">
-                    <tr>
-                        <th class="px-3 py-2">
+                    <tr class="px-6 py-4 font-medium text-white bg-primary">
+                        <th scope="col" class="px-6 py-4">
                             <div class="flex items-center">
                                 <button wire:click="sortBy('ID_CIU')">N</button>
                                 <x-tall-crud-sort-icon sortField="ID_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                        <th scope="col" class="px-6 py-4 font-medium">
                             <div class="flex items-center">
                                 <button wire:click="sortBy('ID_PRO')">Provincia</button>
                                 <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">
+                        <th scope="col" class="px-6 py-4 font-medium">
                             <div class="flex items-center">
                                 <button wire:click="sortBy('NOMBRE_CIU')">Nombre</button>
                                 <x-tall-crud-sort-icon sortField="NOMBRE_CIU" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <th scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</th>
+                        <th scope="col" class="px-6 py-4 font-medium">Acciones</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
                     @foreach($results as $result)
                     <tr class="hover:bg-violet-50 {{ ($loop->even ) ? " hover:bg-violet-100" : "" }}">
                         <td class="px-6 py-4">{{ $result->ID_CIU }}</td>
-                        <td class="px-6 py-4">{{ $result->ID_PRO}}</td>
+                        <td class="px-6 py-4">{{ $result->provincia->NOMBRE_PRO }}</td>
                         <td class="px-6 py-4">{{ $result->NOMBRE_CIU }}</td>
                         <td class="px-6 py-4">
-                            <div class="flex justify-end gap-4">
+                            <div class="flex justify-center gap-4">
                                 {{-- Editar --}}
                                 <button type="submit"
                                     wire:click="$emitTo('ciudades-child', 'showEditForm', {{ $result->ID_CIU}});"

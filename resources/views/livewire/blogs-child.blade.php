@@ -1,5 +1,4 @@
 <div>
-
     <x-tall-crud-confirmation-dialog wire:model="confirmingItemDeletion">
         <x-slot name="title">
             Eliminar registro
