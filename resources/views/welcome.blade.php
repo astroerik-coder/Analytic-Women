@@ -244,7 +244,6 @@
             <div class="px-4 py-5 flex-auto">
               <div
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-purple-300">
-                <i class="fas fa-retweet"></i>
               </div>
               <h6 class="text-xl font-semibold">Visión</h6>
               <p class="mt-2 mb-4 text-blueGray-500">
@@ -258,7 +257,6 @@
             <div class="px-4 py-5 flex-auto">
               <div
                 class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-pink-400">
-                <i class="fas fa-fingerprint"></i>
               </div>
               <h6 class="text-xl font-semibold">Cultura Organizacional</h6>
               <p id="uno" class="mt-2 mb-4 text-blueGray-500">
