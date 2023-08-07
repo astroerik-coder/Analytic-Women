@@ -65,7 +65,7 @@
                 <a href="contactanos"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
-                        <i class="far fa-cog text-2xl pt-1"></i><span
+                        <i class="far fa-solid fa-comments text-2xl pt-1"></i><span
                             class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Contactanos</span>
                     </span>
                 </a>
@@ -74,7 +74,7 @@
                 <a href="/register"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
-                        <i class="far fa-cog text-2xl pt-1"></i><span
+                        <i class="far fa-solid fa-address-card text-2xl pt-1"></i><span
                             class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Registrarse</span>
                     </span>
                 </a>
@@ -83,7 +83,7 @@
                 <a href="/login"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-white">
                     <span class="block px-1 py-1 group-hover:bg-tertiary rounded-full group-hover:flex-grow">
-                        <i class="far fa-cog text-2xl pt-1"></i><span
+                        <i class="far fa-solid fa-user text-2xl pt-1"></i><span
                             class="hidden group-hover:inline-block ml-3 align-bottom pb-1">Iniciar Sesión</span>
                     </span>
                 </a>
