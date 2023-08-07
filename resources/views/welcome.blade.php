@@ -207,13 +207,13 @@
         class="button bg-primary bg-opacity-50 text-white w-10 h-10 flex items-center justify-center transition duration-300 hover:bg-opacity-70">
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
+            stroke-linejoin="round" id="uno"/>
         </svg>
       </button>
     </div>
     <div
       class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
-      <div class="indicators flex justify-center">
+      <div class="indicators flex justify-center" >
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
         <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>

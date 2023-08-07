@@ -30,15 +30,15 @@
             @foreach ($servicios as $servicio)
             <div class="w-full md:w-1/2 xl:w-1/3 px-4">
                 <div class="bg-white rounded-lg overflow-hidden mb-10">
-                    <img src="{{$servicio->imagen_ser}}" alt="image" class="w-full" />
+                    <img src="{{$servicio->OBSERVACIONES_SER}}" alt="image" class="w-full" />
                     <div class="p-8 sm:p-9 md:p-7 xl:p-9 text-center">
                         <h3>
                             <a href="javascript:void(0)" class="font-semibold text-dark text-xl sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px] mb-4 block hover:text-primary">
-                                {{$servicio->nombre_ser}}
+                                {{$servicio->NOMBRE_SER}}
                             </a>
                         </h3>
                         <p class="text-base text-body-color leading-relaxed mb-7">
-                            {{ $servicio->descripcion_ser}}
+                            {{ $servicio->DESCRIPCION_SER}}
                         </p>
                     </div>
                 </div>
@@ -70,12 +70,12 @@
           <!-- this is full editable area -->
           <div class="main flex w-full p-8"> 
             <div class="sub w-4/8 my-auto">
-              <img class="w-full p-8" src="{{$curso->imagen_curso}}" alt="">
+              <img class="w-full p-8" src="{{$curso->IMAGEN_CUR}}" alt="">
             </div>
             <div class="sub w-full my-auto">
-              <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4"> {{$curso->nombre_curso}}</h1>
-              <p class="text-lg mb-4"> {{ $curso->descripcion_curso}}</p>
-              <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">${{ $curso->precio_curso}}</h1>
+              <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4"> {{$curso->NOMBRE_CUR}}</h1>
+              <p class="text-lg mb-4"> {{ $curso->DESCRIPCION_CUR}}</p>
+              <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">${{ $curso->COSTO_CUR}}</h1>
               <button type="button" title="Start buying" class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
                  <span class="block text-white font-semibold">
                     Inscribete
