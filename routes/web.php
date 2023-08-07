@@ -46,13 +46,13 @@ Route::get('/contactanos',[homeController::class,'contactanos'])->name('contacta
 Route::post('/contactanos',[datoscontactController::class, 'store'])->name('contactanos');
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre']) && $_POST['apellidos']) {
     // Aquí procesas los datos del formulario y realizas el registro en la base de datos
     // Mostrar mensaje de éxito
     echo '<p><div class="mensaje">Su mensaje se ha guardado con éxito!!</div></p>';
     echo '<p>Volviendo a la página principal: <span id="countdown">5</span></p>';
     echo '<script>';
-    echo 'var seconds = (5);';
+    echo 'var seconds = 5;';
     echo 'var countdown = setInterval(function() {';
     echo '    seconds--;';
     echo '    document.getElementById("countdown").textContent = seconds;';

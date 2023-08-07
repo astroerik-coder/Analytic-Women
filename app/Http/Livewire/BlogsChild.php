@@ -84,7 +84,7 @@ class BlogsChild extends Component
         $this->emitTo('blogs', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
- 
+
     public function showCreateForm(): void
     {
         $this->confirmingItemCreation = true;
@@ -94,36 +94,38 @@ class BlogsChild extends Component
 
     public function createItem(): void
     {
-        $this->validate([
-            'item.ID_BLG' => 'required',
-            'item.ID_CLT' => 'required',
-            'item.ID_COM' => 'required',
-            'item.ID_CAT' => 'required',
-            'item.TITULO_BLG' => 'required',
-            'item.VALORACION_BLG' => 'required',
-        ],[
+        $this->validate(
+            [
+                'item.ID_BLG' => 'required',
+                'item.ID_CLT' => 'required',
+                'item.ID_COM' => 'required',
+                'item.ID_CAT' => 'required',
+                'item.TITULO_BLG' => 'required',
+                'item.VALORACION_BLG' => 'required',
+            ],
+            [
 
-            'item.ID_BLG.required' => 'El campo es obligatorio',
-            'item.ID_CLT.required' => 'El campo es obligatorio',
-            'item.ID_COM.required' => 'El campo es obligatorio',
-            'item.ID_CAT.required' => 'El campo es obligatorio',
-            'item.TITULO_BLG.required' => 'El campo es obligatorio',
-            'item.VALORACION_BLG.required' => 'El campo es obligatorio',
+                'item.ID_BLG.required' => 'El campo es obligatorio',
+                'item.ID_CLT.required' => 'El campo es obligatorio',
+                'item.ID_COM.required' => 'El campo es obligatorio',
+                'item.ID_CAT.required' => 'El campo es obligatorio',
+                'item.TITULO_BLG.required' => 'El campo es obligatorio',
+                'item.VALORACION_BLG.required' => 'El campo es obligatorio',
             ]
-    );
+        );
         $item = Blog::create([
-            'ID_BLG' => $this->item['ID_BLG'] ?? '', 
-            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
-            'ID_COM' => $this->item['ID_COM'] ?? '', 
-            'ID_CAT' => $this->item['ID_CAT'] ?? '', 
-            'TITULO_BLG' => $this->item['TITULO_BLG'] ?? '', 
-            'VALORACION_BLG' => $this->item['VALORACION_BLG'] ?? '', 
+            'ID_BLG' => $this->item['ID_BLG'] ?? null,
+            'ID_CLT' => $this->item['ID_CLT'] ?? null,
+            'ID_COM' => $this->item['ID_COM'] ?? null,
+            'ID_CAT' => $this->item['ID_CAT'] ?? null,
+            'TITULO_BLG' => $this->item['TITULO_BLG'] ?? null,
+            'VALORACION_BLG' => $this->item['VALORACION_BLG'] ?? null,
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('blogs', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
- 
+
     public function showEditForm(Blog $blog): void
     {
         $this->resetErrorBag();
@@ -133,14 +135,25 @@ class BlogsChild extends Component
 
     public function editItem(): void
     {
-       $this->validate([
-            'item.ID_BLG' => 'required',
-            'item.ID_CLT' => 'required',
-            'item.ID_COM' => 'required',
-            'item.ID_CAT' => 'required',
-            'item.TITULO_BLG' => 'required',
-            'item.VALORACION_BLG' => 'required',
-        ]);
+        $this->validate(
+            [
+                'item.ID_BLG' => 'required',
+                'item.ID_CLT' => 'required',
+                'item.ID_COM' => 'required',
+                'item.ID_CAT' => 'required',
+                'item.TITULO_BLG' => 'required',
+                'item.VALORACION_BLG' => 'required',
+            ],
+            [
+
+                'item.ID_BLG.required' => 'El campo es obligatorio',
+                'item.ID_CLT.required' => 'El campo es obligatorio',
+                'item.ID_COM.required' => 'El campo es obligatorio',
+                'item.ID_CAT.required' => 'El campo es obligatorio',
+                'item.TITULO_BLG.required' => 'El campo es obligatorio',
+                'item.VALORACION_BLG.required' => 'El campo es obligatorio',
+            ]
+        );
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

@@ -28,19 +28,20 @@
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
                 wire:loading.class.delay="opacity-50">
                 <thead class="bg-gray-5">
-                    <tr>
+                    <tr class="px-6 py-4 font-medium text-white bg-primary">
+
                         <th class="px-3 py-2">
                             <div class="flex items-center">
-                                <button wire:click="sortBy('ID_PRO')" class="text-gray-900">Id</button>
+                                <button wire:click="sortBy('ID_PRO')">Id</button>
                                 <x-tall-crud-sort-icon sortField="ID_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </th>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">
+                        <td scope="col" class="px-6 py-4 font-medium ">
                             <div class="flex items-center">
                                 <button wire:click="sortBy('NOMBRE_PRO')">Nombre</button>
                                 <x-tall-crud-sort-icon sortField="NOMBRE_PRO" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</td>
+                        <td scope="col" class="px-6 py-4 font-medium ">Acciones</td>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">

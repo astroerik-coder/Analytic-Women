@@ -41,11 +41,14 @@ class Blogs extends Component
 
     public function render(): View
     {
-        $results = $this->query() ->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')->paginate($this->per_page);
-        return view('livewire.blogs', ['results' => $results]);
+        $clientes = Cliente::all();
+        $results = $this->query()->orderBy($this->sortBy, $this->sortAsc ? 'ASC' : 'DESC')->paginate($this->per_page);
+
+        return view('livewire.blogs-child', ['results' => $results, 'clientes' => $clientes]);
     }
 
-    public function sortBy(string $field): vo
+
+    public function sortBy(string $field) 
     {
         if ($field == $this->sortBy) {
             $this->sortAsc = !$this->sortAsc;

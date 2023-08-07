@@ -9,7 +9,9 @@ class Rede extends Model
 {
 	use HasFactory;
 	
-    public $timestamps = true;
+    protected $primaryKey = 'ID_RDS';
+
+    public $timestamps = false;
 
     protected $table = 'redes';
 
