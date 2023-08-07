@@ -35,7 +35,7 @@
     <div class="px-7 bg-primary shadow-lg rounded-2xl mb-5">
         <div class="flex">
             <div class="flex-auto hover:w-full group">
-                <a href="#"
+                <a href="/"
                     class="flex items-center justify-center text-center mx-auto px-4 py-2 group-hover:w-full text-tertiary">
                     <span class="block px-1 py-1 group-hover:bg-primary rounded-full group-hover:flex-grow">
                         <i class="far fa-home text-2xl pt-1"></i><span

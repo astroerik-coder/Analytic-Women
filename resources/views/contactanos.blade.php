@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
+    <title>Contáctanos</title>
     <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
     <!-- Enlace al archivo CSS de Tailwind -->
     <link href="http://127.0.0.1:8000/css/app.css" rel="stylesheet">
@@ -89,13 +89,14 @@
 							</button>
 						</div>
 					</form>
+					
 				</div>
 			</div>
 		</div>
 	</div>
 
  @component('layouts.components.footer') @endcomponent
-   
+
 </body>
 
 </html>
