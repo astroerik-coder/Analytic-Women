@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .mensaje {
-            background-color: #dff0d8;
-            border: 1px solid #d6e9c6;
-            color: #3c763d;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style>
-    
-</head>
-<body>
-  
-
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -27,7 +8,6 @@ use App\Http\Controllers\reportesController;
 use App\Http\Controllers\pagoCursosController;
 use App\Http\Controllers\empleoReporteController;
 use Illuminate\Support\Facades\View;
-
 
 
 /*
@@ -44,27 +24,6 @@ use Illuminate\Support\Facades\View;
 Route::get('/',[homeController::class,'home'])->name('welcome');
 Route::get('/contactanos',[homeController::class,'contactanos'])->name('contactanos');
 Route::post('/contactanos',[datoscontactController::class, 'store'])->name('contactanos');
-
-
-if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre']) && isset($_POST['apellidos'])) {
-    // Aquí procesas los datos del formulario y realizas el registro en la base de datos
-    // Mostrar mensaje de éxito
-    echo '<p><div class="mensaje">Su mensaje se ha guardado con éxito!!</div></p>';
-    echo '<p>Volviendo a la página principal: <span id="countdown">5</span></p>';
-    echo '<script>';
-    echo 'var seconds = 5;';
-    echo 'var countdown = setInterval(function() {';
-    echo '    seconds--;';
-    echo '    document.getElementById("countdown").textContent = seconds;';
-    echo '    if (seconds <= 0) {';
-    echo '        clearInterval(countdown);';
-    echo '        window.location.href = "/contactanos";';
-    echo '    }';
-    echo '}, 1000);';
-    echo '</script>';
-    header("refresh:5;url=/contactanos");
-    exit;
-}
 
 Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 //Ruta que tiene el controller con ambas tablas 
@@ -110,6 +69,3 @@ Route::middleware([
     Route::get('/reporteEmpleos', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
 
 });
-?>
-</body>
-</html>
