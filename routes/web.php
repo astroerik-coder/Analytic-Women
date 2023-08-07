@@ -46,7 +46,7 @@ Route::get('/contactanos',[homeController::class,'contactanos'])->name('contacta
 Route::post('/contactanos',[datoscontactController::class, 'store'])->name('contactanos');
 
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre']) && $_POST['apellidos']) {
+if (isset($_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nombre']) && isset($_POST['apellidos'])) {
     // Aquí procesas los datos del formulario y realizas el registro en la base de datos
     // Mostrar mensaje de éxito
     echo '<p><div class="mensaje">Su mensaje se ha guardado con éxito!!</div></p>';
