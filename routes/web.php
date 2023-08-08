@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ClienteReporteController;
+use App\Http\Controllers\ComentariosController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\datoscontactController;
 use App\Http\Controllers\homeController;
@@ -7,6 +9,8 @@ use App\Http\Controllers\servicios_cursosController;
 use App\Http\Controllers\reportesController;
 use App\Http\Controllers\pagoCursosController;
 use App\Http\Controllers\empleoReporteController;
+use App\Http\Controllers\reporteCliente;
+use App\Http\Controllers\reporteComentarios;
 use Illuminate\Support\Facades\View;
 
 
@@ -69,5 +73,9 @@ Route::middleware([
     Route::get('/reporteCursos', [servicios_cursosController::class, 'reporteCursos'])->name('reporteCursos');
     //Ruta del reporte de empleos
     Route::get('/reporteEmpleos', [empleoReporteController::class, 'reporteEmpleo'])->name('reporteEmpleos');
+    //Ruta del reporte de clientes
+    Route::get('/reporteCliente', [ClienteReporteController::class, 'reporteCliente'])->name('reporteCliente');
+    //Ruta del reporte de clientes
+    Route::get('/reporteComentarios',[ComentariosController::class, 'reporteComentario'])->name('reporteCliente');
 
 });

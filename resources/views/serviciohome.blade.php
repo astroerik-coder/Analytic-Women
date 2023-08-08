@@ -168,3 +168,7 @@
   
     // run G.load() if new data loaded with ajax
   </script>
+
+  
+ @component('layouts.components.footer') @endcomponent
+   

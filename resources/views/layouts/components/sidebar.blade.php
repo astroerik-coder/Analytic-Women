@@ -250,6 +250,18 @@
                             <span class="select-none">Reporte  de empleos</span>
                         </a>
                     </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="reporteCliente">
+                            <span class="select-none">Reporte  de Clientes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="reporteComentarios">
+                            <span class="select-none">Reporte  de Comentarios</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>
