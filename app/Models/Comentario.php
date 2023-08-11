@@ -11,7 +11,7 @@ class Comentario extends Model
 
     protected $primaryKey = 'ID_COM';
 
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $table = 'comentarios';
 

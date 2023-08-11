@@ -11,8 +11,7 @@ class Contacto extends Model
 	
     protected $primaryKey = 'ID_CONT';
 
-
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $table = 'contactos';
 

@@ -20,7 +20,7 @@ class Comentarios extends Component
     /**
      * @var string
      */
-    public $sortBy = 'id';
+    public $sortBy = 'ID_COM';
 
     /**
      * @var bool

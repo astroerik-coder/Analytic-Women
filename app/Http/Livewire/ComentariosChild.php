@@ -24,7 +24,6 @@ class ComentariosChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.ID_COM' => '',
         'item.CONTENIDO_COM' => '',
         'item.FECHA_PUBLICACION_COM' => '',
         'item.REVISION_COM' => '',
@@ -34,7 +33,6 @@ class ComentariosChild extends Component
      * @var array
      */
     protected $validationAttributes = [
-        'item.ID_COM' => 'Id Com',
         'item.CONTENIDO_COM' => 'Contenido Com',
         'item.FECHA_PUBLICACION_COM' => 'Fecha Publicacion Com',
         'item.REVISION_COM' => 'Revision Com',
@@ -80,7 +78,7 @@ class ComentariosChild extends Component
         $this->emitTo('comentarios', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
- 
+
     public function showCreateForm(): void
     {
         $this->confirmingItemCreation = true;
@@ -90,18 +88,26 @@ class ComentariosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.CONTENIDO_COM' => 'required',
+            'item.FECHA_PUBLICACION_COM' => 'required',
+            'item.REVISION_COM' => 'required',
+        ], [
+            'item.CONTENIDO_COM.required' => 'El campo es necesario',
+            'item.FECHA_PUBLICACION_COM.required' => 'El campo es necesario',
+            'item.REVISION_COM.required' => 'El campo es necesario',
+        ]);
         $item = Comentario::create([
-            'ID_COM' => $this->item['ID_COM'] ?? '', 
-            'CONTENIDO_COM' => $this->item['CONTENIDO_COM'] ?? '', 
-            'FECHA_PUBLICACION_COM' => $this->item['FECHA_PUBLICACION_COM'] ?? '', 
-            'REVISION_COM' => $this->item['REVISION_COM'] ?? '', 
+            'ID_COM' => $this->item['ID_COM'] ?? null,
+            'CONTENIDO_COM' => $this->item['CONTENIDO_COM'] ?? null,
+            'FECHA_PUBLICACION_COM' => $this->item['FECHA_PUBLICACION_COM'] ?? null,
+            'REVISION_COM' => $this->item['REVISION_COM'] ?? null,
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('comentarios', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
- 
+
     public function showEditForm(Comentario $comentario): void
     {
         $this->resetErrorBag();
@@ -111,12 +117,25 @@ class ComentariosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.CONTENIDO_COM' => 'required',
+            'item.FECHA_PUBLICACION_COM' => 'required',
+            'item.REVISION_COM' => 'required',
+        ], [
+            'item.CONTENIDO_COM.required' => 'El campo es necesario',
+            'item.FECHA_PUBLICACION_COM.required' => 'El campo es necesario',
+            'item.REVISION_COM.required' => 'El campo es necesario',
+        ]);
+        $item = Comentario::create([
+            'ID_COM' => $this->item['ID_COM'] ?? null,
+            'CONTENIDO_COM' => $this->item['CONTENIDO_COM'] ?? null,
+            'FECHA_PUBLICACION_COM' => $this->item['FECHA_PUBLICACION_COM'] ?? null,
+            'REVISION_COM' => $this->item['REVISION_COM'] ?? null,
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('comentarios', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
-
 }

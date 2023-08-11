@@ -119,7 +119,7 @@ class EventosChild extends Component
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
     public function showEditForm(Evento $evento): void
@@ -146,11 +146,12 @@ class EventosChild extends Component
             'item.OBSERVACIONES_EVT.require' => 'El campo es necesario',
             'item.UBICACION_EVT.require'=> 'El campo es necesario',
         ]);
+        
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('eventos', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Registro actualizado correctamente');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 
 }
