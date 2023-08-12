@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-08-2023 a las 14:15:40
+-- Tiempo de generación: 12-08-2023 a las 17:58:03
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Versión de PHP: 8.1.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `prueba`
+-- Base de datos: `prueba1`
 --
 
 -- --------------------------------------------------------
@@ -161,6 +161,23 @@ CREATE TABLE `comentarios` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Volcado de datos para la tabla `comentarios`
+--
+
+INSERT INTO `comentarios` (`ID_COM`, `CONTENIDO_COM`, `FECHA_PUBLICACION_COM`, `REVISION_COM`, `created_at`, `updated_at`) VALUES
+(0, 'El servicio de liderazgo ofrecido por esta empresa demuestra un enfoque comprometido en el desarrollo personal y profesional', '2023-08-08', 0, NULL, NULL),
+(1, 'Excelente artículo. Muy informativo.', '2023-08-08', 1, NULL, NULL),
+(2, 'Gracias por compartir esta información.', '2023-08-07', 2, NULL, NULL),
+(3, 'Necesitaba esta guía. ¡Genial!', '2023-08-06', 3, NULL, NULL),
+(4, 'Tengo algunas preguntas. ¿Pueden ayudarme?', '2023-08-05', 4, NULL, NULL),
+(5, 'Me gustaría ver más ejemplos prácticos.', '2023-08-04', 5, NULL, NULL),
+(6, 'Buena información, pero necesita más detalles.', '2023-08-03', 6, NULL, NULL),
+(7, 'Esperando ansiosamente más contenido.', '2023-08-02', 7, NULL, NULL),
+(8, 'Este artículo necesita una revisión profunda.', '2023-08-01', 8, NULL, NULL),
+(9, 'Interesante perspectiva. Me hizo pensar.', '2023-07-31', 9, NULL, NULL),
+(10, 'Gracias por el esfuerzo en brindar esta información.', '2023-07-30', 10, NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -205,6 +222,7 @@ CREATE TABLE `cursos` (
   `ID_CLT` int(11) DEFAULT NULL,
   `NOMBRE_CUR` varchar(100) DEFAULT NULL,
   `DESCRIPCION_CUR` varchar(1024) DEFAULT NULL,
+  `IMAGEN_CUR` varchar(300) NOT NULL,
   `PUBLICO_CUR` varchar(50) DEFAULT NULL,
   `EDAD_MINIMA_CUR` varchar(10) DEFAULT NULL,
   `EDAD_MAXIMA_CUR` varchar(10) DEFAULT NULL,
@@ -219,27 +237,27 @@ CREATE TABLE `cursos` (
 -- Volcado de datos para la tabla `cursos`
 --
 
-INSERT INTO `cursos` (`ID_CUR`, `ID_CLT`, `NOMBRE_CUR`, `DESCRIPCION_CUR`, `PUBLICO_CUR`, `EDAD_MINIMA_CUR`, `EDAD_MAXIMA_CUR`, `LINK_CUR`, `CUPOS_CUR`, `COSTO_CUR`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Curso de M', 'Aprende estrategias de marketing digital para promover tu negocio en línea', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-digital', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(2, 2, 'Curso de I', 'Mejora tus habilidades de conversación y comprensión del idioma inglés', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-ingles-avanzado', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(3, 1, 'Curso de P', 'Aprende a desarrollar aplicaciones web utilizando diferentes tecnologías', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-programacion-web', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(4, 3, 'Curso de F', 'Domina las técnicas de la fotografía digital y crea imágenes impresionantes', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-digital', 15, 250, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(5, 4, 'Curso de C', 'Descubre los secretos de la cocina internacional y prepara deliciosos platos', 'Público en general', '3', NULL, 'https://www.ejemplo.com/curso-cocina-internacional', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(6, 5, 'Curso de M', 'Aprende a utilizar las redes sociales como herramienta de marketing efectiva', 'Público en general', '5', NULL, 'https://www.ejemplo.com/curso-marketing-redes-sociales', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(7, 5, 'Curso de Y', 'Practica yoga y aprende técnicas de meditación para mejorar tu bienestar', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-yoga-meditacion', 30, 120, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(8, 1, 'Curso de F', 'Aprende a capturar la belleza de los paisajes en tus fotografías', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-paisajes', 20, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(9, 2, 'Curso de M', 'Descubre cómo generar ingresos a través del marketing de afiliados', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-afiliados', 25, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(10, 3, 'Curso de R', 'Aprende a elaborar postres creativos y decorativos', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-reposteria-creativa', 20, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(11, 1, 'Curso de F', 'Aprende a capturar expresiones y emociones en fotografías de retratos', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-retratos', 15, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(12, 2, 'Curso de D', 'Potencia tus habilidades personales y alcanza tus metas', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-desarrollo-personal', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(13, 1, 'Curso de M', 'Aprende a utilizar Instagram para promover tu marca o negocio', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-instagram', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(14, 3, 'Curso de A', 'Explora la creatividad a través del arte abstracto y desarrolla tu estilo propio', 'Público en general', '4', NULL, 'https://www.ejemplo.com/curso-arte-abstracto', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(15, 4, 'Curso de M', 'Aprende a crear y distribuir contenido de calidad para atraer audiencia', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-contenidos', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(16, 3, 'Curso de F', 'Captura la belleza de la naturaleza a través de la fotografía', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-naturaleza', 20, 160, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(17, 3, 'Curso de D', 'Aprende a crear diseños de moda y desarrolla tu propio estilo', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-diseno-moda', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(18, 2, 'Curso de M', 'Aprende a utilizar Facebook para promover tu negocio y llegar a más clientes', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-facebook', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(19, 2, 'Curso de F', 'Aprende a capturar los momentos más especiales de una boda', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-fotografia-bodas', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
-(20, 1, 'Curso de D', 'Aprende a crear aplicaciones móviles para Android y iOS', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-desarrollo-aplicaciones-moviles', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00');
+INSERT INTO `cursos` (`ID_CUR`, `ID_CLT`, `NOMBRE_CUR`, `DESCRIPCION_CUR`, `IMAGEN_CUR`, `PUBLICO_CUR`, `EDAD_MINIMA_CUR`, `EDAD_MAXIMA_CUR`, `LINK_CUR`, `CUPOS_CUR`, `COSTO_CUR`, `created_at`, `updated_at`) VALUES
+(1, 1, 'Curso de M', 'Aprende estrategias de marketing digital para promover tu negocio en línea', 'https://media.istockphoto.com/id/160993363/es/foto/retrato-de-confianza-mujer-de-negocios-con-equipo-de-negocios-personas-en-el-fondo.jpg?s=1024x1024&w=is&k=20&c=o3LLcHdT5AzSB6ry8QiGVNzDiCBX5T9n6Mzdm1Zns2c=', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-digital', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(2, 2, 'Curso de I', 'Mejora tus habilidades de conversación y comprensión del idioma inglés', 'https://media.istockphoto.com/id/653876434/es/foto/hermosa-ni%C3%B1a-con-robot-en-la-escuela.jpg?s=1024x1024&w=is&k=20&c=WZeH9otqQ4y7vh6TXz2xirMCd_FnLmwBNFR6_hw94U4=', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-ingles-avanzado', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(3, 1, 'Curso de P', 'Aprende a desarrollar aplicaciones web utilizando diferentes tecnologías', 'https://media.istockphoto.com/id/1198565184/es/foto/desarrollo-de-programadores-desarrollo-dise%C3%B1o-de-sitios-web-y-tecnolog%C3%ADas-de-codificaci%C3%B3n.jpg?s=1024x1024&w=is&k=20&c=78POlop6MKqGQefXITGfgwZbwjJFaIpoV4rka7YKOOc=', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-programacion-web', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(4, 3, 'Curso de F', 'Domina las técnicas de la fotografía digital y crea imágenes impresionantes', 'https://media.istockphoto.com/id/1161246760/es/vector/planificaci%C3%B3n-de-estrategias-de-la-empresa-an%C3%A1lisis-de-datos-empresariales-concepto.jpg?s=1024x1024&w=is&k=20&c=C0JfzEgVguiXPvtjRLE0OCiJ1vDoVg6Zqq5h0jBganM=', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-digital', 15, 250, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(5, 4, 'Curso de C', 'Descubre los secretos de la cocina internacional y prepara deliciosos platos', 'https://images.pexels.com/photos/3785693/pexels-photo-3785693.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '3', NULL, 'https://www.ejemplo.com/curso-cocina-internacional', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(6, 5, 'Curso de M', 'Aprende a utilizar las redes sociales como herramienta de marketing efectiva', 'https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '5', NULL, 'https://www.ejemplo.com/curso-marketing-redes-sociales', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(7, 5, 'Curso de Y', 'Practica yoga y aprende técnicas de meditación para mejorar tu bienestar', 'https://images.pexels.com/photos/3094230/pexels-photo-3094230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-yoga-meditacion', 30, 120, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(8, 1, 'Curso de F', 'Aprende a capturar la belleza de los paisajes en tus fotografías', 'https://images.pexels.com/photos/4169899/pexels-photo-4169899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-paisajes', 20, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(9, 2, 'Curso de M', 'Descubre cómo generar ingresos a través del marketing de afiliados', 'https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-afiliados', 25, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(10, 3, 'Curso de R', 'Aprende a elaborar postres creativos y decorativos', 'https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-reposteria-creativa', 20, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(11, 1, 'Curso de F', 'Aprende a capturar expresiones y emociones en fotografías de retratos', 'https://images.pexels.com/photos/14469512/pexels-photo-14469512.jpeg?auto=compress&cs=tinysrgb&w=600', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-retratos', 15, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(12, 2, 'Curso de D', 'Potencia tus habilidades personales y alcanza tus metas', 'https://images.pexels.com/photos/3763871/pexels-photo-3763871.jpeg?auto=compress&cs=tinysrgb&w=600', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-desarrollo-personal', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(13, 1, 'Curso de M', 'Aprende a utilizar Instagram para promover tu marca o negocio', 'https://images.pexels.com/photos/6963585/pexels-photo-6963585.jpeg?auto=compress&cs=tinysrgb&w=600', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-instagram', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(14, 3, 'Curso de A', 'Explora la creatividad a través del arte abstracto y desarrolla tu estilo propio', 'https://images.pexels.com/photos/1269968/pexels-photo-1269968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '4', NULL, 'https://www.ejemplo.com/curso-arte-abstracto', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(15, 4, 'Curso de M', 'Aprende a crear y distribuir contenido de calidad para atraer audiencia', 'https://images.pexels.com/photos/6953870/pexels-photo-6953870.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-contenidos', 25, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(16, 3, 'Curso de F', 'Captura la belleza de la naturaleza a través de la fotografía', 'https://images.pexels.com/photos/4101555/pexels-photo-4101555.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-fotografia-naturaleza', 20, 160, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(17, 3, 'Curso de D', 'Aprende a crear diseños de moda y desarrolla tu propio estilo', 'https://images.pexels.com/photos/8386668/pexels-photo-8386668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '16', NULL, 'https://www.ejemplo.com/curso-diseno-moda', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(18, 2, 'Curso de M', 'Aprende a utilizar Facebook para promover tu negocio y llegar a más clientes', 'https://images.pexels.com/photos/607812/pexels-photo-607812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-marketing-facebook', 30, 150, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(19, 2, 'Curso de F', 'Aprende a capturar los momentos más especiales de una boda', 'https://images.pexels.com/photos/17623384/pexels-photo-17623384/free-photo-of-mujer-flores-ramo-de-flores-retrato.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-fotografia-bodas', 20, 180, '2023-07-11 14:00:00', '2023-07-11 14:00:00'),
+(20, 1, 'Curso de D', 'Aprende a crear aplicaciones móviles para Android y iOS', 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1', 'Público en general', '18', NULL, 'https://www.ejemplo.com/curso-desarrollo-aplicaciones-moviles', 25, 200, '2023-07-11 14:00:00', '2023-07-11 14:00:00');
 
 -- --------------------------------------------------------
 
@@ -407,6 +425,13 @@ CREATE TABLE `informaciones` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `informaciones`
+--
+
+INSERT INTO `informaciones` (`ID_INF`, `ID_RDS`, `ID_CONT`, `MISION`, `VISION`, `CULTURA_ORGANIZACIONAL`, `created_at`, `updated_at`) VALUES
+(0, NULL, NULL, 'Transformar data en información mediante conceptos innovadores y ágiles, para que las organizaciones e instituciones públicas y privadas, cuenten con las mejores soluciones en la toma de decisiones a nivel técnico, económico, político y social; considerando enfoques de tipo intergeneracional, intersectorial, intercultural, ambiental, de género y movilidad.', 'Ser una compañía ecuatoriana referente en el ámbito de la investigación financiera, económica, social y política, aportando al bienestar y desarrollo humano, cumpliendo estándares de calidad, buenas prácticas y aplicando metodologías innovadoras en la investigación y análisis de información', 'Nuestra empresa promueve la cultura de la integridad personal, para proponer las mejores alternativas frente a las necesidades o requerimientos solicitados; para lo cual nos apoyamos de un equipo multidisciplinario de profesionales con equidad de género.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -621,8 +646,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('r2f0kg6CwJvL1QferfoinEBweIzLgy23WN0MzEBw', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiS0JVQ0FXdEIyM1VMWHBnem12MkVnNVk1NEZ0aUkyY1RnQXRuNEJraCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jaXVkYWRlcz9wYWdlPTIiO31zOjU6ImxvZ2luIjthOjA6e31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToyO3M6MjE6InBhc3N3b3JkX2hhc2hfc2FuY3R1bSI7czo2MDoiJDJ5JDEwJDVUQ3Y2UldRTzVyd1NXbUNnOUVBOU9zUTBpMDZXSjVxYnJIN0Q4aEVCVU82TXBBUDc5UEEuIjt9', 1689546255),
-('rI0ZbdAlBM9itRCWCdgxJbZAYpQnUu9M6WDv17Ah', 2, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMmRhUHREOENlUU4zbzRXaG9LY2Z5eWtSeHBRZk8wQmhieG84MWFZUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjMyOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvY2F0ZWdvcmlhcyI7fXM6NToibG9naW4iO2E6MDp7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkNVRDdjZSV1FPNXJ3U1dtQ2c5RUE5T3NRMGkwNldKNXFickg3RDhoRUJVTzZNcEFQNzlQQS4iO30=', 1690210131);
+('2bfMyTeMdFGquwgWJ9DkDd3rp3aPk9gNEOguG4ws', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoia216NmFtb01DZFEzT0NrYko5YTY2SmJYVzluU0F5aHg0eXFVYkhXaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1691855775),
+('Xscs3I95K91fAy62dzO7pMSUv8ZI5TdkX4d8hOgg', 14, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidFNtc0taTW4xdTEwRDE5cnJBTHJYWEhveWRrRXNSOHR0STd1YVptMiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jcnVkIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTQ7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkMHFNUmJtZGdDNEhXZzcuY3JwaFVVZS93V3l6aWRpb0p6LkIwSC5GdzFqU0hFN3ZPMC8vb0siO30=', 1691538948);
 
 -- --------------------------------------------------------
 
@@ -652,7 +677,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
 (1, 'admin', 'admin@gmail.com', NULL, '$2y$10$ZEWRATwfOtE.0DjW29RiRePBt0tZPZ75ThDcnWMBk38czCzO1okB2', NULL, NULL, NULL, 'DAixipD8IiBOud10tUiWiiBYnqCmKRemI8nHfAsLld3exMf8tHTNy6uMOLLL', NULL, NULL, '2023-07-11 09:00:23', '2023-07-11 09:00:23'),
-(2, 'erik', 'dani008molina@gmail.com', NULL, '$2y$10$5TCv6RWQO5rwSWmCg9EA9OsQ0i06WJ5qbrH7D8hEBUO6MpAP79PA.', 'eyJpdiI6Iit1eXZTdmVMWG50Z1BDWlR5NnZETUE9PSIsInZhbHVlIjoiUDR6c21ZaHFlTnhQbmI4T21aN2FxeVFtQWN0ek9XV3I0QmZrVDJBTE4yOD0iLCJtYWMiOiJjY2RiMDdlNzZjMGFjMWJlMjA2OTVjYTQ1MmIxMjM1MDc2NzU0MThkMTg2YTMzNDJlNGZkNDhiOGFlNDFjMGI2IiwidGFnIjoiIn0=', 'eyJpdiI6IllHUUlpcTZzRVBvZjVXdHlwVTFIZHc9PSIsInZhbHVlIjoiMm1FbCtHbTEyd3RURFJBak40RXR2VkRrRXRTNjM2Y2loczFTMXlaWGZoQmlBSHRCVnJlQ252a2I5dURpRHdKL3lXVWRTR1dIUVNpUmRXRHJnSXNtTGc0cFBxSGFwTHJ1QmpxVGVBNW94VXExdERsN3M3alNDMFVmKzA3T0xQUnU5RU5rK3BiUkxuL0trekRheDlBOUxzb3hnQ09PZkwwcUpRYXFXUWNaRjV6TTQ1eFRMRllhQVVudFhWcEpJd0o0Wk1kd3YvMzNkM0FnQjFvd1B6V3Y1YXlOMWpBR0FaRDZmZi9JUjdlcmM0Z0taUXBOcUdRdWxFZXc1SmhhYmtONVFJb29ERlFmNHg0cTFXU04xUmhSK3c9PSIsIm1hYyI6IjM0MWRmN2E5MWI3MjZmZWMxYTUwNjEyYmI0NWRhYzA1MTNkMjNkNTIzN2FkMzM4MGQyNTFmZGJhN2I5NWQ2MWIiLCJ0YWciOiIifQ==', '2023-07-14 03:59:07', 'p2bchX5u7nYQaYxjRs9sb1u8BBXmvvcR8viP909TxwVpR7sOe3fke0H8q1lN', NULL, NULL, '2023-07-14 03:22:37', '2023-07-14 03:59:07');
+(2, 'erik', 'dani008molina@gmail.com', NULL, '$2y$10$5TCv6RWQO5rwSWmCg9EA9OsQ0i06WJ5qbrH7D8hEBUO6MpAP79PA.', 'eyJpdiI6Iit1eXZTdmVMWG50Z1BDWlR5NnZETUE9PSIsInZhbHVlIjoiUDR6c21ZaHFlTnhQbmI4T21aN2FxeVFtQWN0ek9XV3I0QmZrVDJBTE4yOD0iLCJtYWMiOiJjY2RiMDdlNzZjMGFjMWJlMjA2OTVjYTQ1MmIxMjM1MDc2NzU0MThkMTg2YTMzNDJlNGZkNDhiOGFlNDFjMGI2IiwidGFnIjoiIn0=', 'eyJpdiI6IllHUUlpcTZzRVBvZjVXdHlwVTFIZHc9PSIsInZhbHVlIjoiMm1FbCtHbTEyd3RURFJBak40RXR2VkRrRXRTNjM2Y2loczFTMXlaWGZoQmlBSHRCVnJlQ252a2I5dURpRHdKL3lXVWRTR1dIUVNpUmRXRHJnSXNtTGc0cFBxSGFwTHJ1QmpxVGVBNW94VXExdERsN3M3alNDMFVmKzA3T0xQUnU5RU5rK3BiUkxuL0trekRheDlBOUxzb3hnQ09PZkwwcUpRYXFXUWNaRjV6TTQ1eFRMRllhQVVudFhWcEpJd0o0Wk1kd3YvMzNkM0FnQjFvd1B6V3Y1YXlOMWpBR0FaRDZmZi9JUjdlcmM0Z0taUXBOcUdRdWxFZXc1SmhhYmtONVFJb29ERlFmNHg0cTFXU04xUmhSK3c9PSIsIm1hYyI6IjM0MWRmN2E5MWI3MjZmZWMxYTUwNjEyYmI0NWRhYzA1MTNkMjNkNTIzN2FkMzM4MGQyNTFmZGJhN2I5NWQ2MWIiLCJ0YWciOiIifQ==', '2023-07-14 03:59:07', 'p2bchX5u7nYQaYxjRs9sb1u8BBXmvvcR8viP909TxwVpR7sOe3fke0H8q1lN', NULL, NULL, '2023-07-14 03:22:37', '2023-07-14 03:59:07'),
+(14, 'Esteban', 'pavonesteban15@gmail.com', NULL, '$2y$10$0qMRbmdgC4HWg7.crphUUe/wWyzidioJz.B0H.Fw1jSHE7vO0//oK', NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-09 03:38:31', '2023-08-09 03:38:31');
 
 --
 -- Índices para tablas volcadas
@@ -788,7 +814,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

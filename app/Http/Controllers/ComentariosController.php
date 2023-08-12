@@ -1,21 +1,15 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\Curso;
-use App\Models\Servicio;
+use App\Models\Comentario;
 use Dompdf\Dompdf;
 
-class servicios_cursosController extends Controller{
+class ComentariosController extends Controller{
 
-    public function mostrarDatos(){
-        $cursos = Curso::all();
-        $servicios = Servicio::all();
-            return view('serviciohome', compact('cursos', 'servicios'));
-        }
-
-    public function reporteCursos(){
-        $reporteCursos = Curso::all();
+    public function reporteComentario(){
+        $reporteComentario=Comentario::all();
         $dompdf = new Dompdf();
-        $html = view('layouts.reportes.reporteCursos', compact('reporteCursos'))->render();
+        $html = view('layouts.reportes.reporteComentarios', compact('reporteComentario'))->render();
+
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A3', 'portrait'); // Establece el tamaño del papel y la orientación
         $dompdf->render();
