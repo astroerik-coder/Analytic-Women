@@ -20,7 +20,7 @@ class Pagos extends Component
     /**
      * @var string
      */
-    public $sortBy = 'id';
+    public $sortBy = 'ID_PAG';
 
     /**
      * @var bool

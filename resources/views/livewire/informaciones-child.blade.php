@@ -22,12 +22,7 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Inf</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_INF" />
-                @error('item.ID_INF') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
-                <x-tall-crud-label>Id Rds</x-tall-crud-label>
+                <x-tall-crud-label>Redes Sociales</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_RDS" />
                 @error('item.ID_RDS') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
@@ -37,12 +32,12 @@
                 @error('item.ID_CONT') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Mision</x-tall-crud-label>
+                <x-tall-crud-label>Misión</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.MISION" />
                 @error('item.MISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Vision</x-tall-crud-label>
+                <x-tall-crud-label>Visión</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.VISION" />
                 @error('item.VISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
@@ -66,17 +61,12 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Inf</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_INF" />
-                @error('item.ID_INF') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
-                <x-tall-crud-label>Id Rds</x-tall-crud-label>
+                <x-tall-crud-label>Redes Sociales</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_RDS" />
                 @error('item.ID_RDS') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Id Cont</x-tall-crud-label>
+                <x-tall-crud-label>Contenido</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_CONT" />
                 @error('item.ID_CONT') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>

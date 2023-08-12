@@ -20,12 +20,12 @@ class Informaciones extends Component
     /**
      * @var string
      */
-    public $sortBy = 'id';
+    public $sortBy = 'ID_INF';
 
     /**
      * @var bool
      */
-    public $sortAsc = true;
+    public $sortAsc = false;
 
     /**
      * @var int

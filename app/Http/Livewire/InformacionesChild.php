@@ -24,7 +24,6 @@ class InformacionesChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.ID_INF' => '',
         'item.ID_RDS' => '',
         'item.ID_CONT' => '',
         'item.MISION' => '',
@@ -36,7 +35,6 @@ class InformacionesChild extends Component
      * @var array
      */
     protected $validationAttributes = [
-        'item.ID_INF' => 'Id Inf',
         'item.ID_RDS' => 'Id Rds',
         'item.ID_CONT' => 'Id Cont',
         'item.MISION' => 'Mision',
@@ -96,7 +94,6 @@ class InformacionesChild extends Component
     {
         $this->validate();
         $item = Informacione::create([
-            'ID_INF' => $this->item['ID_INF'] ?? '', 
             'ID_RDS' => $this->item['ID_RDS'] ?? '', 
             'ID_CONT' => $this->item['ID_CONT'] ?? '', 
             'MISION' => $this->item['MISION'] ?? '', 
