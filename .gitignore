@@ -16,3 +16,4 @@ yarn-error.log
 /pulic
 .env
 composer.lock
+.env
