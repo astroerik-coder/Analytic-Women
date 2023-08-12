@@ -9,7 +9,9 @@ class Servicio extends Model
 {
 	use HasFactory;
 	
-    public $timestamps = true;
+    protected $primaryKey = 'ID_SER';
+
+    public $timestamps = false;
 
     protected $table = 'servicios';
 

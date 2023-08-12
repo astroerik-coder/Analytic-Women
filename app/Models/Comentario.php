@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -8,13 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Comentario extends Model
 {
 	use HasFactory;
-	
-    public $timestamps = true;
+
+    protected $primaryKey = 'ID_COM';
+
+    public $timestamps = false;
 
     protected $table = 'comentarios';
 
     protected $fillable = ['ID_COM','CONTENIDO_COM','FECHA_PUBLICACION_COM','REVISION_COM'];
-	
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -22,5 +24,5 @@ class Comentario extends Model
     {
         return $this->hasMany('App\Models\Blog', 'ID_COM', 'ID_COM');
     }
-    
+
 }

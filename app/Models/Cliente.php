@@ -9,6 +9,8 @@ class Cliente extends Model
 {
 	use HasFactory;
 	
+    protected $primaryKey = 'ID_CLI';
+
     public $timestamps = false;
 
     protected $table = 'clientes';

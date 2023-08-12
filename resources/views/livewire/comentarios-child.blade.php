@@ -22,22 +22,17 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Com</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_COM" />
-                @error('item.ID_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
-                <x-tall-crud-label>Contenido Com</x-tall-crud-label>
+                <x-tall-crud-label>Contenido</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.CONTENIDO_COM" />
                 @error('item.CONTENIDO_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Fecha Publicacion Com</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.FECHA_PUBLICACION_COM" />
+                <x-tall-crud-label>Fecha Publicacion</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="date" wire:model.defer="item.FECHA_PUBLICACION_COM" />
                 @error('item.FECHA_PUBLICACION_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Revision Com</x-tall-crud-label>
+                <x-tall-crud-label>Revision</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.REVISION_COM" />
                 @error('item.REVISION_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
@@ -56,18 +51,13 @@
 
         <x-slot name="content">
             <div class="mt-4">
-                <x-tall-crud-label>Id Com</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.ID_COM" />
-                @error('item.ID_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
-            </div>
-            <div class="mt-4">
-                <x-tall-crud-label>Contenido Com</x-tall-crud-label>
+                <x-tall-crud-label>Contenido</x-tall-crud-label>
                 <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.CONTENIDO_COM" />
                 @error('item.CONTENIDO_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
-                <x-tall-crud-label>Fecha Publicacion Com</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.FECHA_PUBLICACION_COM" />
+                <x-tall-crud-label>Fecha Publicacion</x-tall-crud-label>
+                <x-tall-crud-input class="block mt-1 w-1/2" type="date" wire:model.defer="item.FECHA_PUBLICACION_COM" />
                 @error('item.FECHA_PUBLICACION_COM') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">

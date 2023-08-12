@@ -20,7 +20,7 @@ class Contactos extends Component
     /**
      * @var string
      */
-    public $sortBy = 'id';
+    public $sortBy = 'ID_CONT';
 
     /**
      * @var bool

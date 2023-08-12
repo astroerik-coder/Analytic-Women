@@ -14,7 +14,6 @@ use App\Http\Controllers\reporteComentarios;
 use Illuminate\Support\Facades\View;
 
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +28,7 @@ use Illuminate\Support\Facades\View;
 Route::get('/',[homeController::class,'home'])->name('welcome');
 Route::get('/contactanos',[homeController::class,'contactanos'])->name('contactanos');
 Route::post('/contactanos',[datoscontactController::class, 'store'])->name('contactanos');
+
 Route::get('/servicios', [homeController::class,'cursos'])->name('cursos');
 Route::get('/servicio', [homeController::class,'homeservicio'])->name('homeservicio');
 Route::get('/servicio', [servicios_cursosController::class,'mostrarDatos'])->name('cursos');

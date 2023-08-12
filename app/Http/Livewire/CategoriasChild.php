@@ -58,8 +58,12 @@ class CategoriasChild extends Component
 
     public function render(): View
     {
-        return view('livewire.categorias-child');
+        $results = Categoria::all();
+    
+        return view('livewire.categorias-child')->with('results', $results);
     }
+    
+
     public function showDeleteForm($ID_CAT): void
     {
         $this->confirmingItemDeletion = true;
@@ -86,10 +90,13 @@ class CategoriasChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.NOMBRE_CAT' => 'required',
+        ],[
+            'item.NOMBRE_CAT.required' => 'El campo es obligatorio',
+        ]);
         $item = Categoria::create([
-            'ID_CAT' => $this->item['ID_CAT'] ?? '', 
-            'NOMBRE_CAT' => $this->item['NOMBRE_CAT'] ?? '', 
+            'NOMBRE_CAT' => $this->item['NOMBRE_CAT'] ?? null, 
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('categorias', 'refresh');
@@ -105,7 +112,11 @@ class CategoriasChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.NOMBRE_CAT' => 'required',
+        ],[
+            'item.NOMBRE_CAT.required' => 'El campo es obligatorio',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

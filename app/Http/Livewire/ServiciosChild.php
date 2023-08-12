@@ -90,7 +90,17 @@ class ServiciosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_CLT' => 'require',
+            'item.NOMBRE_SER' => 'require',
+            'item.DESCRIPCION_SER' => 'require',
+            'item.OBSERVACIONES_SER' => 'require',
+        ],[
+            'item.ID_CLT.required' =>'El campo es obligatorio.',
+            'item.NOMBRE_SER.required' =>'El campo es obligatorio.',
+            'item.DESCRIPCION_SER.required' =>'El campo es obligatorio.',
+            'item.OBSERVACIONES_SER.required' =>'El campo es obligatorio.',
+        ]);
         $item = Servicio::create([
             'ID_CLT' => $this->item['ID_CLT'] ?? '', 
             'NOMBRE_SER' => $this->item['NOMBRE_SER'] ?? '', 
@@ -111,7 +121,17 @@ class ServiciosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_CLT' => 'require',
+            'item.NOMBRE_SER' => 'require',
+            'item.DESCRIPCION_SER' => 'require',
+            'item.OBSERVACIONES_SER' => 'require',
+        ],[
+            'item.ID_CLT.required' =>'El campo es obligatorio.',
+            'item.NOMBRE_SER.required' =>'El campo es obligatorio.',
+            'item.DESCRIPCION_SER.required' =>'El campo es obligatorio.',
+            'item.OBSERVACIONES_SER.required' =>'El campo es obligatorio.',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

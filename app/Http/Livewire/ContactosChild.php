@@ -24,7 +24,6 @@ class ContactosChild extends Component
      * @var array
      */
     protected $rules = [
-        'item.ID_CONT' => '',
         'item.NOMBRE_CONT' => '',
         'item.TELEFONO1_CONT' => '',
         'item.TELEFONO2_CONT' => '',
@@ -36,7 +35,6 @@ class ContactosChild extends Component
      * @var array
      */
     protected $validationAttributes = [
-        'item.ID_CONT' => 'Id Cont',
         'item.NOMBRE_CONT' => 'Nombre Cont',
         'item.TELEFONO1_CONT' => 'Telefono1 Cont',
         'item.TELEFONO2_CONT' => 'Telefono2 Cont',
@@ -94,14 +92,27 @@ class ContactosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate(
+            [
+                'item.NOMBRE_CONT' => 'required',
+                'item.TELEFONO1_CONT' => 'required',
+                'item.TELEFONO2_CONT' => 'required',
+                'item.EMAIL1_CONT' => 'required',
+            ],[
+                'item.NOMBRE_CONT.require' => 'El campo es necesario',    
+                'item.TELEFONO1_CONT.require' => 'El campo es necesario',
+                'item.TELEFONO2_CONT.require' => 'El campo es necesario',
+                'item.EMAIL1_CONT.require' => 'El campo es necesario',
+                'item.EMAIL2_CONT.require' => 'El campo es necesario',
+            ]
+        );
+        
         $item = Contacto::create([
-            'ID_CONT' => $this->item['ID_CONT'] ?? '', 
-            'NOMBRE_CONT' => $this->item['NOMBRE_CONT'] ?? '', 
-            'TELEFONO1_CONT' => $this->item['TELEFONO1_CONT'] ?? '', 
-            'TELEFONO2_CONT' => $this->item['TELEFONO2_CONT'] ?? '', 
-            'EMAIL1_CONT' => $this->item['EMAIL1_CONT'] ?? '', 
-            'EMAIL2_CONT' => $this->item['EMAIL2_CONT'] ?? '', 
+            'ID_CONT' => $this->item['ID_CONT'] ?? null,                  
+            'NOMBRE_CONT' => $this->item['NOMBRE_CONT'] ?? null, 
+            'TELEFONO1_CONT' => $this->item['TELEFONO1_CONT'] ?? null, 
+            'TELEFONO2_CONT' => $this->item['TELEFONO2_CONT'] ?? null, 
+            'EMAIL1_CONT' => $this->item['EMAIL1_CONT'] ?? null, 
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('contactos', 'refresh');
@@ -117,7 +128,19 @@ class ContactosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate(
+            [
+                'item.NOMBRE_CONT' => 'required',
+                'item.TELEFONO1_CONT' => 'required',
+                'item.TELEFONO2_CONT' => 'required',
+                'item.EMAIL1_CONT' => 'required',
+            ],[
+                'item.NOMBRE_CONT' => 'El campo es necesario',    
+                'item.TELEFONO1_CONT' => 'El campo es necesario',
+                'item.TELEFONO2_CONT' => 'El campo es necesario',
+                'item.EMAIL1_CONT' => 'El campo es necesario',
+            ]
+        );
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
