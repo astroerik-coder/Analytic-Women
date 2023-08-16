@@ -1,0 +1,149 @@
+@import url(https://pro.fontawesome.com/releases/v5.10.0/css/all.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&display=swap");
+
+.hover\:w-full:hover {
+    width: 100%;
+}
+
+.group:hover .group-hover\:w-full {
+    width: 100%;
+}
+
+.group:hover .group-hover\:inline-block {
+    display: inline-block;
+}
+
+.group:hover .group-hover\:flex-grow {
+    flex-grow: 1;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 600px;
+    z-index: 9999;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+}
+
+/* Other */
+
+.bg-pink-400 {
+    background-image: url("images/favicon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-purple-300 {
+    background-image: url("images/favicon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes word {
+    0% {
+        transform: translateY(100%);
+    }
+
+    15% {
+        transform: translateY(-10%);
+        animation-timing-function: ease-out;
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40%,
+    100% {
+        transform: translateY(-110%);
+    }
+}
+
+.animate-word {
+    animation: word 7s infinite;
+}
+
+.animate-word-delay-1 {
+    animation: word 7s infinite;
+    animation-delay: -1.4s;
+}
+
+.animate-word-delay-2 {
+    animation: word 7s infinite;
+    animation-delay: -2.8s;
+}
+
+.animate-word-delay-3 {
+    animation: word 7s infinite;
+    animation-delay: -4.2s;
+}
+
+.animate-word-delay-4 {
+    animation: word 7s infinite;
+    animation-delay: -5.6s;
+}
+
+.swiper-pagination {
+    bottom: 0;
+    position: relative;
+}
+
+.swiper-container {
+    overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgb(14 211 207);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: rgb(14 211 207);
+}
+
+#spin {
+}
+
+#spin:after {
+    content: "";
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        content: "marketing";
+    }
+
+    20% {
+        content: "contenido";
+    }
+
+    40% {
+        content: "ingeniería";
+    }
+
+    60% {
+        content: "cripto";
+    }
+
+    80% {
+        content: "consultorias";
+    }
+
+    100% {
+        content: "negocios";
+    }
+}
+
+.platform {
+    position: relative;
+    transition: right 0.3s;
+}
+
+.body {
+    background-color: white !important;
+}

@@ -1,37 +1,8 @@
-<style>
-    ul.breadcrumb li+li::before {
-        content: "\276F";
-        padding-left: 8px;
-        padding-right: 4px;
-        color: inherit;
-    }
+<link href="{{ asset( 'css/dashboard.css' ) }}" rel="stylesheet">
+<link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css" rel="stylesheet" />
 
-    ul.breadcrumb li span {
-        opacity: 60%;
-    }
-
-    #sidebar {
-        -webkit-transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
-        transition: all 300ms cubic-bezier(0, 0.77, 0.58, 1);
-    }
-
-    #sidebar.show {
-        transform: translateX(0);
-    }
-
-    #sidebar ul li a.active {
-        background: #E4C9D7;
-        background-color: #061C57;
-    }
-
-    .line-height-username1 {
-	    line-height: 3.75rem;
-    }
-</style>
-
-
-<!-- Navbar start -->
-
+{{-- Barra de navegacion --}}
 <nav id="navbar" class="fixed top-0 z-40 flex w-full flex-row justify-end bg-tertiary px-4 sm:justify-between">
     <button id="btnSidebarToggler" type="button" class="py-4 text-2xl text-white hover:text-gray-200">
         <svg id="navClosed" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -74,9 +45,7 @@
                 class="block px-4 py-3 text-sm text-gray-100 capitalize transition-colors duration-200 transform dark:text-gray-100 hover:bg-gray-600 dark:hover:bg-gray-700 dark:hover:text-white">
                 Configuración
             </a>
-
             <hr class="border-gray-200 dark:border-gray-700 ">
-
             <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <a href="#" onclick="event.preventDefault(); this.closest('form').submit();"
@@ -101,22 +70,21 @@
                 <div class="p-2.5 mt-1 flex items-center">
                     <img src="{{ asset('images/Analytika Women.png') }}" width="64px" height="64px">
                     <h1 class="font-bold text-gray-200 text-[15px] ml-3">Analytika Women</h1>
-                    <i
-                      class="bi bi-x cursor-pointer ml-28 lg:hidden"
-                      onclick="openSidebar()"
-                    ></i>
-                  </div>
-                  
+                    <i class="bi bi-x cursor-pointer ml-28 lg:hidden" onclick="openSidebar()"></i>
+                </div>
+
                 <div>
                     <div class="inline-block mb-6 rounded-full bg-secundary pr-5 h-16 line-height-username1">
-                        <img class="rounded-full float-left h-full" src="{{ Auth::user()->profile_photo_url }}"> <span class="ml-3">{{ Auth::user()->name }}</span>
+                        <img class="rounded-full float-left h-full" src="{{ Auth::user()->profile_photo_url }}"> <span
+                            class="ml-3">{{ Auth::user()->name }}</span>
                     </div>
                 </div>
                 {{-- --}}
                 <hr>
                 <ul class="mb-8 text-sm font-medium">
                     <li>
-                        <a class="flex items-center rounded mt-5 py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600" href="dashboard"href="dashboard">
+                        <a class="flex items-center rounded mt-5 py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
+                            href="dashboard">
                             <span class="select-none">Panel</span>
                         </a>
                     </li>
@@ -241,25 +209,25 @@
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="reporteCursos">
-                           <span class="select-none">Reporte de cursos</span>
+                            <span class="select-none">Reporte de cursos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="reporteEmpleos">
-                            <span class="select-none">Reporte  de empleos</span>
+                            <span class="select-none">Reporte de empleos</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="reporteCliente">
-                            <span class="select-none">Reporte  de Clientes</span>
+                            <span class="select-none">Reporte de Clientes</span>
                         </a>
                     </li>
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="reporteComentarios">
-                            <span class="select-none">Reporte  de Comentarios</span>
+                            <span class="select-none">Reporte de Comentarios</span>
                         </a>
                     </li>
                 </ul>
@@ -269,34 +237,9 @@
     <div class="mx-auto lg:ml-80"></div>
 </div>
 
-
-<script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", () => {
-        const btnSidebarToggler = document.getElementById("btnSidebarToggler");
-        const navClosed = document.getElementById("navClosed");
-        const navOpen = document.getElementById("navOpen");
-        const dropdownButton = document.getElementById('dropdownButton');
-        const dropdownMenu = document.getElementById('dropdownMenu');
-
-        btnSidebarToggler.addEventListener("click", (e) => {
-            e.preventDefault();
-            sidebar.classList.toggle("show");
-            navClosed.classList.toggle("hidden");
-            navOpen.classList.toggle("hidden");
-        });
-
-        sidebar.style.top = parseInt(navbar.clientHeight) - 1 + "px";
-
-        function toggleDropdownMenu() {
-            dropdownMenu.classList.toggle('hidden');
-        }
-
-        dropdownButton.addEventListener('click', toggleDropdownMenu);
-
-        window.addEventListener('click', function (event) {
-            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                dropdownMenu.classList.add('hidden');
-            }
-        });
-    });
-</script>
+{{-- Scripts --}}
+<script src="{{ asset( 'js/dashboard.js' ) }}"></script>
+<script crossorigin="anonymous" defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"></script>
+<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+<script src="https://kit.fontawesome.com/2655b6ac6f.js" crossorigin="anonymous"></script>

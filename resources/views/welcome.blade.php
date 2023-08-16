@@ -5,224 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Inicio</title>
-  <!-- Enlace al archivo CSS de Tailwind -->
   <link href="{{ asset( 'css/app.css' ) }}" rel="stylesheet">
+  <link href="{{ asset( 'css/index.css' ) }}" rel="stylesheet">
   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
     rel="stylesheet" />
-
-  <style>
-    .bg-pink-400 {
-      background-image: url("images/favicon.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  </style>
-
-  <style>
-    .bg-purple-300 {
-      background-image: url("images/favicon.png");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  </style>
-  <style>
-    @keyframes word {
-      0% {
-        transform: translateY(100%);
-      }
-
-      15% {
-        transform: translateY(-10%);
-        animation-timing-function: ease-out;
-      }
-
-      20% {
-        transform: translateY(0);
-      }
-
-      40%,
-      100% {
-        transform: translateY(-110%);
-      }
-    }
-
-    .animate-word {
-      animation: word 7s infinite;
-    }
-
-    .animate-word-delay-1 {
-      animation: word 7s infinite;
-      animation-delay: -1.4s;
-    }
-
-    .animate-word-delay-2 {
-      animation: word 7s infinite;
-      animation-delay: -2.8s;
-    }
-
-    .animate-word-delay-3 {
-      animation: word 7s infinite;
-      animation-delay: -4.2s;
-    }
-
-    .animate-word-delay-4 {
-      animation: word 7s infinite;
-      animation-delay: -5.6s;
-    }
-  </style>
-
-  <style>
-    .swiper-pagination {
-      bottom: 0;
-      position: relative;
-    }
-
-    .swiper-container {
-      overflow: hidden;
-    }
-
-    .swiper-pagination-bullet {
-      background-color: rgb(14 211 207);
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: rgb(14 211 207);
-    }
-  </style>
-
-  <style>
-    #spin {}
-
-    #spin:after {
-      content: "";
-      animation: spin 10s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        content: "marketing";
-      }
-
-      20% {
-        content: "contenido";
-      }
-
-      40% {
-        content: "ingeniería";
-      }
-
-      60% {
-        content: "cripto";
-      }
-
-      80% {
-        content: "consultorias";
-      }
-
-      100% {
-        content: "negocios";
-      }
-
-    }
-  </style>
-
-
-
 </head>
 
 <body class="bg-gray-100">
 
   <!-- Barra de navegación -->
   @component('layouts.components.navbar')@endcomponent
-
-  <!-- Botón flotante de WhatsApp -->
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
   <div class="elfsight-app-a5a494fe-d988-4033-9547-82423d43b7f0"></div>
-
-  <div class="slider relative w-full h-screen overflow-hidden">
-    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
-      style="background-image: url('https://images.unsplash.com/photo-1674574124649-778f9afc0e9c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
-      <div
-        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-        <div class="flex flex-col items-center">
-          <h2 class="text-3xl font-bold"
-            style="position: absolute; top: 50%; transform: translate(-50%, -50%); left: 50%;">¿Quiénes somos?</h2>
-          <p class="text-center" style="position: absolute; top: 60%; transform: translate(-50%, -50%); left: 50%;">
-            Somos una empresa conformada por
-            un grupo multidisciplinario de mujeres
-            profesionales de diferentes provincias
-            del país, con una trayectoria
-            importante de trabajo y experiencia en
-            empresas públicas y privadas; tenemos
-            un recorrido amplio de trabajo social
-            con grupos de atención prioritaria.
-            Somos multifacéticas y creemos que la
-            mujer está preparada para hacer que
-            las cosas sucedan.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
-      style="background-image: url('https://images.unsplash.com/photo-1504194921103-f8b80cadd5e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
-      <div
-        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-        <div class="flex flex-col items-center">
-          <h2 class="text-3xl font-bold"
-            style="position: absolute; top: 50%; transform: translate(-50%, -50%); left: 50%;">Servicios de asesoría y
-            consultoría empresarial e institucional</h2>
-          <p class="text-center" style="position: absolute; top: 60%; transform: translate(-50%, -50%); left: 50%;">
-            De acuerdo a los requerimientos de nuestros clientes, como la elaboración de estudios de factibilidad
-            financiera de los proyectos.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="slide absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-0 transition-opacity duration-500"
-      style="background-image: url('https://images.unsplash.com/photo-1573167627769-e201a7ddf409?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80')">
-      <div
-        class="overlay absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-        <div class="flex flex-col items-center">
-          <h2 class="text-3xl font-bold"
-            style="position: absolute; top: 50%; transform: translate(-50%, -50%); left: 50%;">Ejes de trabajo</h2>
-          <p class="text-center" style="position: absolute; top: 60%; transform: translate(-50%, -50%); left: 50%;">
-            Contamos con un equipo multidisciplinario preparado para desarrollar capacitaciones de acuerdo a las
-            necesidades de instituciones en el sector público, privado y ONG, según las áreas de actividad de la
-            institución
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="button-container absolute top-1/2 left-0 transform -translate-y-1/2 w-full flex justify-between z-10">
-      <button
-        class="button bg-primary bg-opacity-50 text-white w-10 h-10 flex items-center justify-center transition duration-300 hover:bg-opacity-70">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-      </button>
-      <button
-        class="button bg-primary bg-opacity-50 text-white w-10 h-10 flex items-center justify-center transition duration-300 hover:bg-opacity-70">
-        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" id="uno"/>
-        </svg>
-      </button>
-    </div>
-    <div
-      class="indicators-container absolute bottom-5 left-1/2 transform -translate-x-1/2 w-full max-w-2xl overflow-x-auto">
-      <div class="indicators flex justify-center" >
-        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
-        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
-        <div class="indicator w-4 h-4 rounded-full bg-white bg-opacity-50 mx-1 transition duration-300"></div>
-      </div>
-    </div>
-
-  </div>
-
-
+  @component("layouts.carrousel")@endcomponent
+  {{-- Nosotros --}}
   <section class="bg-blueGray-200 -mt-24">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap">
@@ -269,26 +64,25 @@
       </div>
   </section>
 
-
   <div class="flex min-h-screen items-center justify-center bg-black font-bold text-white">
     <div class="text-center space-y-12">
       <div class="text-primary text-center text-5xl font-bold">Ejes de trabajo</div>
       <div class="text-white relative inline-grid grid-cols-1 grid-rows-1 gap-12 overflow-hidden">
-        <span class="animate-word col-span-full row-span-full">Análisis y procesamiento de datos</span>
-        <span class="animate-word-delay-1 col-span-full row-span-full">Diseño, ejecución, gestión de datos</span>
-        <span class="animate-word-delay-2 col-span-full row-span-full">Elaboración de instrumentos de
+        <span class="text-4xl animate-word col-span-full row-span-full">Análisis y procesamiento de datos</span>
+        <span class="text-4xl animate-word-delay-1 col-span-full row-span-full">Diseño, ejecución, gestión de
+          datos</span>
+        <span class="text-4xl animate-word-delay-2 col-span-full row-span-full">Elaboración de instrumentos de
           planificación</span>
-        <span class="animate-word-delay-3 col-span-full row-span-full">Ejecución de proyectos de consultoría</span>
-        <span class="animate-word-delay-4 col-span-full row-span-full">Asesoría técnica</span>
+        <span class="text-4xl animate-word-delay-3 col-span-full row-span-full">Ejecución de proyectos de
+          consultoría</span>
+        <span class="text-4xl animate-word-delay-4 col-span-full row-span-full">Asesoría técnica</span>
       </div>
       <p class="text-white">
         <a href="/login" class="hover:text-primary hover:underline">Regístrate</a> para conocer más acerca de nosotros
-        <a class="underline" href="/contactanos">Contáctanos</a>
+        <a class="underline hover:text-primary  " href="/contactanos">Contáctanos</a>
       </p>
     </div>
   </div>
-
-
 
   <div class='flex items-center justify-center min-h-screen '>
     <div class="bg-slate-800">
@@ -297,7 +91,8 @@
         <div class="flex flex-col p-10  px-16 space-y-6 items-center text-center">
           <h1 class="font-light md:text-6xl text-5xl text-white tracking-wide ">Encuentra el experto en <span id="spin"
               class="text-transparent font-normal bg-clip-text bg-gradient-to-r from-primary to-secundary "></span>
-            <br /> que necesitas</h1>
+            <br /> que necesitas
+          </h1>
           <p class="text-gray-400 md:text-2xl text-xl px-18"> ¡Ven! parte de nuestro equipo de aliados</p>
           <button class="rounded-full bg-primary shadow-lg shadow-primary-500/50 text-white text-lg py-4 px-6">Visita
             nuestros servicios</button>
@@ -351,9 +146,7 @@
     </div>
   </div>
 
-  <!-------------------------------------->
   <br>
-  <!-------------------------------------->
   <div class="flex justify-center">
     <div class="max-w-7xl w-full lg:flex flex-row-reverse">
       <div
@@ -416,163 +209,156 @@
     </div>
   </div>
 
-  <head>
-  </head>
-
-  <body>
-    <div class="min-h-screen bg-gray-100 p-3 relative">
-      <div class="w-128 mx-auto" style="scroll-snap-type: x mandatory;">
-        <h1 class="text-center font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mt-5">
-          Equipo de aliados estrategicos
-        </h1>
-        <!-- first -->
-        <div class="">
-          <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
-          <!-- content #1 -->
-          <div
-            class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
-            <div class="flex justify-center">
-              <img class="rounded-t-lg w-96 h-64"
-                src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
-                alt="" />
-            </div>
-            <div class="py-4 px-8">
-              <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
-                Abg. Patricia de Guzmán Valdivieso, Msc
-              </h1>
-              <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                Abogada por la Pontificia Universidad Católica del Ecuador. Máster en
-                Política por The University of Manchester en el Reino Unido. Vicepresidente
-                de International Youth Democratic Union. Ex Subsecretaria de
-                Gobernabilidad en el Ministerio de Gobierno de Guillermo Lasso. Asesora de
-                bancada en la Asamblea Nacional del PSC. Asesora del Alcalde de Quito.
-                Defensora Pública Penal. Consultora y capacitadora político jurídica, a nivel
-                nacional e internacional. Formadora de jóvenes.
-              </p>
-            </div>
-            <!-- controls -->
-            <div class="absolute top-1/2 w-full flex justify-between z-20">
-              <label for="carousel-3"
-                class="inline-block text-primary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-              <label for="carousel-2"
-                class="inline-block text-primary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-            </div>
+  <div class="min-h-screen bg-gray-100 p-3 relative">
+    <div class="w-128 mx-auto" style="scroll-snap-type: x mandatory;">
+      <h1 class="text-center font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900 mt-5">
+        Equipo de aliados estrategicos
+      </h1>
+      <div>
+        <input class="sr-only peer" type="radio" name="carousel" id="carousel-1" checked />
+        <div
+          class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+          <div class="flex justify-center">
+            <img class="rounded-t-lg w-96 h-64"
+              src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
+              alt="" />
+          </div>
+          <div class="py-4 px-8">
+            <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+              Abg. Patricia de Guzmán Valdivieso, Msc
+            </h1>
+            <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+              Abogada por la Pontificia Universidad Católica del Ecuador. Máster en
+              Política por The University of Manchester en el Reino Unido. Vicepresidente
+              de International Youth Democratic Union. Ex Subsecretaria de
+              Gobernabilidad en el Ministerio de Gobierno de Guillermo Lasso. Asesora de
+              bancada en la Asamblea Nacional del PSC. Asesora del Alcalde de Quito.
+              Defensora Pública Penal. Consultora y capacitadora político jurídica, a nivel
+              nacional e internacional. Formadora de jóvenes.
+            </p>
+          </div>
+          <!-- controls -->
+          <div class="absolute top-1/2 w-full flex justify-between z-20">
+            <label for="carousel-3"
+              class="inline-block text-primary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+            <label for="carousel-2"
+              class="inline-block text-primary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
           </div>
         </div>
-        <!-- second -->
-        <div class="">
-          <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
-          <!-- content #2 -->
-          <div
-            class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
-            <div class="flex justify-center">
-              <img class="rounded-t-lg w-96 h-64"
-                src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
-                alt="" />
-            </div>
-            <div class="py-4 px-8">
-              <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
-                Ing. Silvia Erazo, Msc.
-              </h1>
-              <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                Estudios en Ingeniería Comercial mención Recursos Humanos en la Universidad
-                Estatal de Milagro, Maestría en Administración Pública, Capacitadora
-                Independiente avalada por el Ministerio de Trabajo en Contratación Pública y
-                Gestión de Bodegas y Manejo de Inventarios, Certificación por Competencias
-                en Administración, Certificación por Competencias en Formador de
-                Formadores. Posee conocimientos y experiencia en Contratación Pública,
-                Gestión Administrativa, Levantamiento de Información para establecer Flujo de
-                Procesos. Experiencia con más de 10 años en instituciones públicas,
-                cumpliendo funciones en jefaturas de mandos medios en área Administrativa y
-                Financiera.
-              </p>
-            </div>
-            <!-- controls -->
-            <div class="absolute top-1/2 w-full flex justify-between z-20">
-              <label for="carousel-1"
-                class="inline-block text-quaternary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-              <label for="carousel-3"
-                class="inline-block text-quaternary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-            </div>
+      </div>
+      <!-- second -->
+      <div class="">
+        <input class="sr-only peer" type="radio" name="carousel" id="carousel-2" />
+        <!-- content #2 -->
+        <div
+          class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+          <div class="flex justify-center">
+            <img class="rounded-t-lg w-96 h-64"
+              src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
+              alt="" />
+          </div>
+          <div class="py-4 px-8">
+            <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+              Ing. Silvia Erazo, Msc.
+            </h1>
+            <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+              Estudios en Ingeniería Comercial mención Recursos Humanos en la Universidad
+              Estatal de Milagro, Maestría en Administración Pública, Capacitadora
+              Independiente avalada por el Ministerio de Trabajo en Contratación Pública y
+              Gestión de Bodegas y Manejo de Inventarios, Certificación por Competencias
+              en Administración, Certificación por Competencias en Formador de
+              Formadores. Posee conocimientos y experiencia en Contratación Pública,
+              Gestión Administrativa, Levantamiento de Información para establecer Flujo de
+              Procesos. Experiencia con más de 10 años en instituciones públicas,
+              cumpliendo funciones en jefaturas de mandos medios en área Administrativa y
+              Financiera.
+            </p>
+          </div>
+          <!-- controls -->
+          <div class="absolute top-1/2 w-full flex justify-between z-20">
+            <label for="carousel-1"
+              class="inline-block text-quaternary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+            <label for="carousel-3"
+              class="inline-block text-quaternary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
           </div>
         </div>
-        <!-- three -->
-        <div class="">
-          <input class="sr-only peer" type="radio" name="carousel" id="carousel-3" />
-          <!-- content #3 -->
-          <div
-            class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
-            <div class="flex justify-center">
-              <img class="rounded-t-lg w-96 h-64"
-                src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
-                alt="" />
-            </div>
-            <div class="py-4 px-8">
-              <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
-                Ing. Juan Carlos Avilés Aguirre, Msc.
-              </h1>
-              <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
-                Ingeniero Ambiental, con maestr;iua en Salud, Seguridad y Ambiente. Realizó
-                Especialización en Rellenos Sanitarios, infraestructura vial con enfoque de
-                Cambio climático y Construcción Sostenible (2021-2022).
-                Director Nacional de Gestión Socio Ambiental del Ministerio de Transportes y
-                Obras Públicas, 2022. Durante el período 2019-2021 fue Secretario de
-                Ambiente del Municipio del Distrito Metropolitano de Quito, espacio en el cual
-                permitió aprobar el Plan de acción Climático Quito PACQ 2020.
-                Presidente Alianza Profesionales Ambientales del Ecuador. Socio fundador J3M
-                energía solar 2019. Presidente del Comité Consultivo de la carrera de
-                Ingeniería Ambiental de la UDLA 2021 -2023. Fundador Colegio de Ingenieros
-                Ambientales del Ecuador. Consultor Ambiental calificado desde el año 2008
-              </p>
-            </div>
-            <!-- controls -->
-            <div class="absolute top-1/2 w-full flex justify-between z-20">
-              <label for="carousel-2"
-                class="inline-block text-tertiary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-              <label for="carousel-1"
-                class="inline-block text-tertiary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                    clip-rule="evenodd" />
-                </svg>
-              </label>
-            </div>
+      </div>
+      <!-- three -->
+      <div class="">
+        <input class="sr-only peer" type="radio" name="carousel" id="carousel-3" />
+        <!-- content #3 -->
+        <div
+          class="w-150 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow-lg transition-all duration-300 opacity-0 peer-checked:opacity-100 peer-checked:z-10 z-0">
+          <div class="flex justify-center">
+            <img class="rounded-t-lg w-96 h-64"
+              src="https://images.unsplash.com/photo-1628788835388-415ee2fa9576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=384&q=80"
+              alt="" />
+          </div>
+          <div class="py-4 px-8">
+            <h1 class="hover:cursor-pointer mt-2 text-gray-900 font-bold text-2xl tracking-tight">
+              Ing. Juan Carlos Avilés Aguirre, Msc.
+            </h1>
+            <p class="hover:cursor-pointer py-3 text-gray-600 leading-6">
+              Ingeniero Ambiental, con maestr;iua en Salud, Seguridad y Ambiente. Realizó
+              Especialización en Rellenos Sanitarios, infraestructura vial con enfoque de
+              Cambio climático y Construcción Sostenible (2021-2022).
+              Director Nacional de Gestión Socio Ambiental del Ministerio de Transportes y
+              Obras Públicas, 2022. Durante el período 2019-2021 fue Secretario de
+              Ambiente del Municipio del Distrito Metropolitano de Quito, espacio en el cual
+              permitió aprobar el Plan de acción Climático Quito PACQ 2020.
+              Presidente Alianza Profesionales Ambientales del Ecuador. Socio fundador J3M
+              energía solar 2019. Presidente del Comité Consultivo de la carrera de
+              Ingeniería Ambiental de la UDLA 2021 -2023. Fundador Colegio de Ingenieros
+              Ambientales del Ecuador. Consultor Ambiental calificado desde el año 2008
+            </p>
+          </div>
+          <!-- controls -->
+          <div class="absolute top-1/2 w-full flex justify-between z-20">
+            <label for="carousel-2"
+              class="inline-block text-tertiary cursor-pointer -translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm.707-10.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L9.414 11H13a1 1 0 100-2H9.414l1.293-1.293z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
+            <label for="carousel-1"
+              class="inline-block text-tertiary cursor-pointer translate-x-5 bg-white rounded-full shadow-md active:translate-y-0.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </label>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
 
 
   <div class="bg-no-repeat bg-cover bg-center relative"
@@ -667,82 +453,18 @@
       </div>
     </div>
   </div>
-
-
+  @component("layouts.contact")@endcomponent
   @component('layouts.components.footer') @endcomponent
 
-</html>
-{{-- Scripts --}}
 
-<script src="js/app.js"></script>
+  {{-- Scripts --}}
+  <script src="{{ asset( 'js/app.js' ) }}"></script>
+  <script src="{{ asset( 'js/index.js' ) }}"></script>
+  <script crossorigin="anonymous" defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js">
+  </script>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+  <script src="https://kit.fontawesome.com/2655b6ac6f.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-<script crossorigin="anonymous" defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js">
-</script>
-<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
-
-<script>
-  const slides = document.querySelectorAll(".slide");
-  const indicators = document.querySelectorAll(".indicator");
-  let currentSlide = 0;
-
-  goToSlide(0);
-
-  // Agrega el siguiente código al final del archivo, fuera de cualquier función
-  setInterval(() => {
-    goToSlide((currentSlide + 1) % slides.length);
-  }, 5000);
-
-  const prevButton = document.querySelector(".button:first-child");
-  const nextButton = document.querySelector(".button:last-child");
-
-  prevButton.addEventListener("click", () => {
-    goToSlide((currentSlide - 1 + slides.length) % slides.length);
-  });
-
-  nextButton.addEventListener("click", () => {
-    goToSlide((currentSlide + 1) % slides.length);
-  });
-
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener("click", () => {
-      goToSlide(index);
-    });
-  });
-
-  function goToSlide(index) {
-    slides[currentSlide].classList.remove("opacity-100");
-    indicators[currentSlide].classList.remove("bg-white");
-    currentSlide = index;
-    slides[currentSlide].classList.add("opacity-100");
-    indicators[currentSlide].classList.add("bg-white");
-  }
-
-  document.addEventListener("DOMContentLoaded", function () {
-    new Swiper(".swiper-container", {
-      loop: true,
-      slidesPerView: 1,
-      spaceBetween: 8,
-      autoplay: {
-        delay: 8000,
-      },
-
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-
-      breakpoints: {
-        640: {
-          slidesPerView: 1.5,
-        },
-
-        1024: {
-          slidesPerView: 1,
-        },
-      },
-    });
-  });
-</script>

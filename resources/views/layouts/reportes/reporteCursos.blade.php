@@ -115,9 +115,7 @@
 
 <body>
     <header class="clearfix">
-        <div id="logo">
-            <img src="Ana">
-        </div>
+
         <div id="company">
             <h1 class="name">Analytika Women</h1>
             <div class="address">Matriz - Quito</div>

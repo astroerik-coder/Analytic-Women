@@ -51,25 +51,28 @@
         }
 
         .table-container {
-    text-align: center; /* Centra horizontalmente el contenido */
-    margin: 0 auto; /* Centra verticalmente el contenido */
-    width: 100%; /* Asegura que la tabla ocupe todo el ancho del contenedor */
-}
+            text-align: center;
+            /* Centra horizontalmente el contenido */
+            margin: 0 auto;
+            /* Centra verticalmente el contenido */
+            width: 100%;
+            /* Asegura que la tabla ocupe todo el ancho del contenedor */
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    margin-bottom: 20px;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-bottom: 20px;
+        }
 
-table th,
-table td {
-    padding: 20px;
-    background: #EEEEEE;
-    text-align: center;
-    border-bottom: 1px solid #FFFFFF;
-}
+        table th,
+        table td {
+            padding: 20px;
+            background: #EEEEEE;
+            text-align: center;
+            border-bottom: 1px solid #FFFFFF;
+        }
 
         table th {
             white-space: nowrap;
@@ -121,9 +124,7 @@ table td {
 
 <body>
     <header class="clearfix">
-        <div id="logo">
-            <img src="Ana">
-        </div>
+
         <div id="company">
             <h1 class="name">Analytika Women</h1>
             <div class="address">Matriz - Quito</div>
@@ -135,31 +136,32 @@ table td {
         </div>
     </header>
     <main>
-        <div class="table-container"> <!-- Agregado: contenedor de la tabla -->
-        <h2>Reporte de clientes</h2>
-        <table border="0" cellspacing="0" cellpadding="0">
-            <tr>
-                <th class="no">N.</th>
-                <th class="no">Nombre</th>
-                <th class="no">Fecha de nacimiento</th>
-                <th class="no">Teléfono</th>
-                <th class="no">Correo electrónico</th>
-                <th class="no">Título</th>
-                <th class="no">Experiencia</th>
-            </tr>
-            @foreach ($reporteCliente as $cliente)
-            <tr>
-                <td>{{ $cliente->ID_CLT }}</td>
-                <td>{{ $cliente->NOMBRE_CLT }}</td>
-                <td>{{ $cliente->FECHA_NACIMIENTO_CLT }}</td>
-                <td>{{ $cliente->TELEFONO1_CLT}}</td>
-                <td>{{ $cliente->EMAIL_CLT}}</td>
-                <td>{{ $cliente->TITULO_CLT }}</td>
-                <td>${{ $cliente->EXPERIENCIA_CLT }}</td>
-            </tr>
-            @endforeach
-        </table>
-    </div>
+        <div class="table-container">
+            <!-- Agregado: contenedor de la tabla -->
+            <h2>Reporte de clientes</h2>
+            <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th class="no">N.</th>
+                    <th class="no">Nombre</th>
+                    <th class="no">Fecha de nacimiento</th>
+                    <th class="no">Teléfono</th>
+                    <th class="no">Correo electrónico</th>
+                    <th class="no">Título</th>
+                    <th class="no">Experiencia</th>
+                </tr>
+                @foreach ($reporteCliente as $cliente)
+                <tr>
+                    <td>{{ $cliente->ID_CLT }}</td>
+                    <td>{{ $cliente->NOMBRE_CLT }}</td>
+                    <td>{{ $cliente->FECHA_NACIMIENTO_CLT }}</td>
+                    <td>{{ $cliente->TELEFONO1_CLT}}</td>
+                    <td>{{ $cliente->EMAIL_CLT}}</td>
+                    <td>{{ $cliente->TITULO_CLT }}</td>
+                    <td>${{ $cliente->EXPERIENCIA_CLT }}</td>
+                </tr>
+                @endforeach
+            </table>
+        </div>
     </main>
     <footer>
         Transformamos datos en información para la toma de desiciones.

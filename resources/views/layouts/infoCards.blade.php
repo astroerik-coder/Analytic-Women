@@ -1,4 +1,3 @@
-<!--  -->
 <div class="flex items-center min-h-50 bg-white text-gray-800">
     <div class="p-4 w-full">
         <div class="grid grid-cols-12 gap-4">
@@ -10,12 +9,14 @@
                             xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
-                           </path>
+                            </path>
                         </svg>
                     </div>
                     <div class="flex flex-col flex-grow ml-4">
                         <div class="text-sm text-gray-500">Usuarios</div>
-                        <div class="font-bold text-lg"><?php echo app('App\Http\Controllers\UserController')->getTotalUsuarios(); ?></div>
+                        <div class="font-bold text-lg">
+                            <?php echo app('App\Http\Controllers\UserController')->getTotalUsuarios(); ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -417,7 +418,7 @@
 
 </div>
 <!-- component -->
- <div class="h-screen flex flex-col gap-4 items-center justify-center bg-white">
+<div class="h-screen flex flex-col gap-4 items-center justify-center bg-white">
 
     <!-- Card 1 -->
     <a href="#" class="w-[30rem] border-2 border-b-4 border-gray-200 rounded-xl hover:bg-gray-50">
@@ -488,30 +489,36 @@
 
     </a>
 
-</div> 
+</div>
 
 <!-- component -->
 <div class="mx-auto bg-gray-700 h-screen flex items-center justify-center px-8">
     <div class="flex flex-col w-full bg-white rounded shadow-lg sm:w-3/4 md:w-1/2 lg:w-3/5">
-      <div class="w-full h-64 bg-top bg-cover rounded-t" style="background-image: url(https://www.si.com/.image/t_share/MTY4MTkyMjczODM4OTc0ODQ5/cfp-trophy-deitschjpg.jpg)"></div>
-      <div class="flex flex-col w-full md:flex-row">
-          <div class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
-              <div class="md:text-3xl">Jan</div>
-              <div class="md:text-6xl">13</div>
-              <div class="md:text-xl">7 pm</div>
-          </div>
-          <div class="p-4 font-normal text-gray-800 md:w-3/4">
-              <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">2020 National Championship</h1>
-              <p class="leading-normal">The College Football Playoff (CFP) determines the national champion of the top division of college football. The format fits within the academic calendar and preserves the sport’s unique and compelling regular season.</p>
-              <div class="flex flex-row items-center mt-4 text-gray-700">
-                  <div class="w-1/2">
-                      Mercedes-Benz Superdome
-                  </div>
-                  <div class="w-1/2 flex justify-end">
-                      <img src="https://collegefootballplayoff.com/images/section_logo.png" alt="" class="w-8">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  </div>
+        <div class="w-full h-64 bg-top bg-cover rounded-t"
+            style="background-image: url(https://www.si.com/.image/t_share/MTY4MTkyMjczODM4OTc0ODQ5/cfp-trophy-deitschjpg.jpg)">
+        </div>
+        <div class="flex flex-col w-full md:flex-row">
+            <div
+                class="flex flex-row justify-around p-4 font-bold leading-none text-gray-800 uppercase bg-gray-400 rounded md:flex-col md:items-center md:justify-center md:w-1/4">
+                <div class="md:text-3xl">Jan</div>
+                <div class="md:text-6xl">13</div>
+                <div class="md:text-xl">7 pm</div>
+            </div>
+            <div class="p-4 font-normal text-gray-800 md:w-3/4">
+                <h1 class="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-800">2020 National Championship
+                </h1>
+                <p class="leading-normal">The College Football Playoff (CFP) determines the national champion of the top
+                    division of college football. The format fits within the academic calendar and preserves the sport’s
+                    unique and compelling regular season.</p>
+                <div class="flex flex-row items-center mt-4 text-gray-700">
+                    <div class="w-1/2">
+                        Mercedes-Benz Superdome
+                    </div>
+                    <div class="w-1/2 flex justify-end">
+                        <img src="https://collegefootballplayoff.com/images/section_logo.png" alt="" class="w-8">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

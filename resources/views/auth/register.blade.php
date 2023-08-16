@@ -64,9 +64,9 @@
                 </x-jet-button>
             </div>
 
-           
 
-            <div class="mt-4">
+
+            {{-- <div class="mt-4">
                 <!-- Button -->
                 <button type='button'
                     class='flex break-inside bg-white text-black border-2 border-black rounded-3xl px-6 py-3 mb-4 w-full dark:bg-slate-800 dark:text-white'>
@@ -94,8 +94,7 @@
                         </div>
                     </div>
                 </button>
-            </div>
-
+            </div>--}}
         </form>
     </x-jet-authentication-card>
 </x-guest-layout>
