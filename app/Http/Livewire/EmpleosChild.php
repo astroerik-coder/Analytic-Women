@@ -96,7 +96,23 @@ class EmpleosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_EMP' => 'require',
+            'item.NOMBRE_EMP' => 'require',
+            'item.DESCRIPCION_EMP' => 'require',
+            'item.MODALIDAD_EMP' => 'require',
+            'item.HORARIO_EMP' => 'require',
+            'item.FECHA_PUBLICACION_EMP' => 'require',
+            'item.EXPERIENCIA_EMP' => 'require',
+        ],[
+            'item.ID_EMP.required' => 'El campo es obligatorio',
+            'item.NOMBRE_EMP.required' => 'El campo es obligatorio',
+            'item.DESCRIPCION_EMP.required' => 'El campo es obligatorio',
+            'item.MODALIDAD_EMP.required' => 'El campo es obligatorio',
+            'item.HORARIO_EMP.required' => 'El campo es obligatorio',
+            'item.FECHA_PUBLICACION_EMP.required' => 'El campo es obligatorio',
+            'item.EXPERIENCIA_EMP.required' => 'El campo es obligatorio',
+        ]);
         $item = Empleo::create([
             'ID_EMP' => $this->item['ID_EMP'] ?? '', 
             'NOMBRE_EMP' => $this->item['NOMBRE_EMP'] ?? '', 
@@ -120,7 +136,23 @@ class EmpleosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_EMP' => 'require',
+            'item.NOMBRE_EMP' => 'require',
+            'item.DESCRIPCION_EMP' => 'require',
+            'item.MODALIDAD_EMP' => 'require',
+            'item.HORARIO_EMP' => 'require',
+            'item.FECHA_PUBLICACION_EMP' => 'require',
+            'item.EXPERIENCIA_EMP' => 'require',
+        ],[
+            'item.ID_EMP.required' => 'El campo es obligatorio',
+            'item.NOMBRE_EMP.required' => 'El campo es obligatorio',
+            'item.DESCRIPCION_EMP.required' => 'El campo es obligatorio',
+            'item.MODALIDAD_EMP.required' => 'El campo es obligatorio',
+            'item.HORARIO_EMP.required' => 'El campo es obligatorio',
+            'item.FECHA_PUBLICACION_EMP.required' => 'El campo es obligatorio',
+            'item.EXPERIENCIA_EMP.required' => 'El campo es obligatorio',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

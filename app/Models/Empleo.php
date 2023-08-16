@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Empleo extends Model
 {
 	use HasFactory;
-	
-    public $timestamps = true;
+    protected $primaryKey = 'ID_EMP';
+
+    public $timestamps = false;
 
     protected $table = 'empleos';
 

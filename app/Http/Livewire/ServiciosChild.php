@@ -78,7 +78,7 @@ class ServiciosChild extends Component
         $this->primaryKey = '';
         $this->reset(['item']);
         $this->emitTo('servicios', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Deleted Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
  
     public function showCreateForm(): void
@@ -102,14 +102,14 @@ class ServiciosChild extends Component
             'item.OBSERVACIONES_SER.required' =>'El campo es obligatorio.',
         ]);
         $item = Servicio::create([
-            'ID_CLT' => $this->item['ID_CLT'] ?? '', 
-            'NOMBRE_SER' => $this->item['NOMBRE_SER'] ?? '', 
-            'DESCRIPCION_SER' => $this->item['DESCRIPCION_SER'] ?? '', 
-            'OBSERVACIONES_SER' => $this->item['OBSERVACIONES_SER'] ?? '', 
+            'ID_CLT' => $this->item['ID_CLT'] ?? null, 
+            'NOMBRE_SER' => $this->item['NOMBRE_SER'] ?? null, 
+            'DESCRIPCION_SER' => $this->item['DESCRIPCION_SER'] ?? null, 
+            'OBSERVACIONES_SER' => $this->item['OBSERVACIONES_SER'] ?? null, 
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('servicios', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Added Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
  
     public function showEditForm(Servicio $servicio): void
@@ -136,7 +136,7 @@ class ServiciosChild extends Component
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('servicios', 'refresh');
-        $this->emitTo('livewire-toast', 'show', 'Record Updated Successfully');
+        $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
 
 }

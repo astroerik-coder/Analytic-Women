@@ -82,7 +82,7 @@ class InformacionesChild extends Component
         $this->emitTo('informaciones', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro eliminado con éxito');
     }
- 
+
     public function showCreateForm(): void
     {
         $this->confirmingItemCreation = true;
@@ -92,19 +92,31 @@ class InformacionesChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_RDS' => 'required',
+            'item.ID_CONT' => 'required',
+            'item.MISION' => 'required',
+            'item.VISION' => 'required',
+            'item.CULTURA_ORGANIZACIONAL' => 'required',
+        ], [
+            'item.ID_RDS.required' => 'El campo es obligatorio',
+            'item.ID_CONT.required' => 'El campo es obligatorio',
+            'item.MISION.required' => 'El campo es obligatorio',
+            'item.VISION.required' => 'El campo es obligatorio',
+            'item.CULTURA_ORGANIZACIONAL.required' => 'El campo es obligatorio',
+        ]);
         $item = Informacione::create([
-            'ID_RDS' => $this->item['ID_RDS'] ?? '', 
-            'ID_CONT' => $this->item['ID_CONT'] ?? '', 
-            'MISION' => $this->item['MISION'] ?? '', 
-            'VISION' => $this->item['VISION'] ?? '', 
-            'CULTURA_ORGANIZACIONAL' => $this->item['CULTURA_ORGANIZACIONAL'] ?? '', 
+            'ID_RDS' => $this->item['ID_RDS'] ?? null,
+            'ID_CONT' => $this->item['ID_CONT'] ?? null,
+            'MISION' => $this->item['MISION'] ?? null,
+            'VISION' => $this->item['VISION'] ?? null,
+            'CULTURA_ORGANIZACIONAL' => $this->item['CULTURA_ORGANIZACIONAL'] ?? null,
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('informaciones', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro agregado con éxito');
     }
- 
+
     public function showEditForm(Informacione $informacione): void
     {
         $this->resetErrorBag();
@@ -114,12 +126,23 @@ class InformacionesChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_RDS' => 'required',
+            'item.ID_CONT' => 'required',
+            'item.MISION' => 'required',
+            'item.VISION' => 'required',
+            'item.CULTURA_ORGANIZACIONAL' => 'required',
+        ], [
+            'item.ID_RDS.required' => 'El campo es obligatorio',
+            'item.ID_CONT.required' => 'El campo es obligatorio',
+            'item.MISION.required' => 'El campo es obligatorio',
+            'item.VISION.required' => 'El campo es obligatorio',
+            'item.CULTURA_ORGANIZACIONAL.required' => 'El campo es obligatorio',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';
         $this->emitTo('informaciones', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro actualizado con éxito');
     }
-
 }

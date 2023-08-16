@@ -9,7 +9,9 @@ class Curso extends Model
 {
 	use HasFactory;
 	
-    public $timestamps = true;
+    protected $primaryKey = 'ID_CUR';
+
+    public $timestamps = false;
 
     protected $table = 'cursos';
 

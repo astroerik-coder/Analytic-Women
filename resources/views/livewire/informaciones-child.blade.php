@@ -2,11 +2,11 @@
 
     <x-tall-crud-confirmation-dialog wire:model="confirmingItemDeletion">
         <x-slot name="title">
-            Delete Record
+            Eliminar Registro
         </x-slot>
 
         <x-slot name="content">
-            Are you sure you want to Delete Record?
+            ¿Estas seguro de eliminar el registro?
         </x-slot>
 
         <x-slot name="footer">
@@ -17,7 +17,7 @@
 
     <x-tall-crud-dialog-modal wire:model="confirmingItemCreation">
         <x-slot name="title">
-            Add Record
+            Agregar Registro
         </x-slot>
 
         <x-slot name="content">
@@ -33,17 +33,17 @@
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Misión</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.MISION" />
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.MISION" />
                 @error('item.MISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Visión</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.VISION" />
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.VISION" />
                 @error('item.VISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Cultura Organizacional</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.CULTURA_ORGANIZACIONAL" />
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.CULTURA_ORGANIZACIONAL" />
                 @error('item.CULTURA_ORGANIZACIONAL') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
@@ -72,18 +72,18 @@
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Mision</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.MISION" />
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.MISION" />
                 @error('item.MISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Vision</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.VISION" />
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.VISION" />
                 @error('item.VISION') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
             <div class="mt-4">
                 <x-tall-crud-label>Cultura Organizacional</x-tall-crud-label>
-                <x-tall-crud-input class="block mt-1 w-1/2" type="text" wire:model.defer="item.CULTURA_ORGANIZACIONAL" />
-                @error('item.CULTURA_ORGANIZACIONAL') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
+                <x-tall-crud-input class="block mt-1 w-full" type="text" wire:model.defer="item.CULTURA_ORGANIZACIONAL" />
+                 @error('item.CULTURA_ORGANIZACIONAL') <x-tall-crud-error-message>{{$message}}</x-tall-crud-error-message> @enderror
             </div>
         </x-slot>
 

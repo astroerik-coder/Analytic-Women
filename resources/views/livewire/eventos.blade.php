@@ -79,7 +79,6 @@
                 </tbody>
             </table>
         </div>
-
         @livewire('eventos-child')
         @livewire('livewire-toast')
     </div>

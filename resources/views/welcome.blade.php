@@ -9,6 +9,7 @@
   <link href="{{ asset( 'css/index.css' ) }}" rel="stylesheet">
   <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.css"
     rel="stylesheet" />
+    <link rel="shortcut icon" href="{{ asset( 'images/Analytika Women.png' ) }}">
 </head>
 
 <body class="bg-gray-100">

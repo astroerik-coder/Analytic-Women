@@ -9,7 +9,8 @@ class Pago extends Model
 {
 	use HasFactory;
 	
-    public $timestamps = true;
+    protected $primaryKey = 'ID_PAG';
+    public $timestamps = false;
 
     protected $table = 'pagos';
 

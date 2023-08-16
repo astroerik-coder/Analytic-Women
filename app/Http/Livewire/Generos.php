@@ -20,6 +20,8 @@ class Generos extends Component
     /**
      * @var string
      */
+
+     
     public $sortBy = 'ID_GEN';
 
     /**

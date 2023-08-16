@@ -30,31 +30,25 @@
             wire:loading.class.delay="opacity-50">
             <thead class="bg-gray-5">
                 <tr class="px-6 py-4 font-medium text-white bg-primary">
-                    <td scope="col" class="px-6 py-4">
-                        <div class="flex items-center">
-                            <button wire:click="sortBy('id')">Id</button>
-                            <x-tall-crud-sort-icon sortField="id" :sort-by="$sortBy" :sort-asc="$sortAsc" />
-                        </div>
-                    </td>
-                    <td scope="col" class="px-6 py-4">Id Inf</td>
-                    <td scope="col" class="px-6 py-4">Id Rds</td>
-                    <td scope="col" class="px-6 py-4">Id Cont</td>
-                    <td scope="col" class="px-6 py-4">Mision</td>
-                    <td scope="col" class="px-6 py-4">Vision</td>
+                    <td scope="col" class="px-6 py-4">Id</td>
+                    <td scope="col" class="px-6 py-4">Red Social</td>
+                    <td scope="col" class="px-6 py-4">Contacto</td>
+                    <td scope="col" class="px-6 py-4">Misión</td>
+                    <td scope="col" class="px-6 py-4">Visión</td>
                     <td scope="col" class="px-6 py-4">Cultura Organizacional</td>
                     <td scope="col" class="px-6 py-4">Acciones</td>
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
                 @foreach($results as $result)
-                <tr class="hover:bg-blue-300 {{ ($loop->even ) ? " bg-blue-100" : "" }}">
-                    <td class="px-6 py-4">{{ $result->ID_INF }}</td>
-                    <td class="px-6 py-4">{{ $result->ID_RDS }}</td>
-                    <td class="px-6 py-4">{{ $result->ID_CONT }}</td>
-                    <td class="px-6 py-4">{{ $result->MISION }}</td>
-                    <td class="px-6 py-4">{{ $result->VISION }}</td>
-                    <td class="px-6 py-4">{{ $result->CULTURA_ORGANIZACIONAL }}</td>
-                    <td class="px-6 py-4">
+                <tr class="hover:bg-violet-50">
+                    <td scope="col" class="px-6 py-4">{{ $result->ID_INF }}</td>
+                    <td scope="col" class="px-6 py-4">{{ $result->ID_RDS }}</td>
+                    <td scope="col" class="px-6 py-4">{{ $result->ID_CONT }}</td>
+                    <td scope="col" class="px-6 py-4">{{ $result->MISION }}</td>
+                    <td scope="col" class="px-6 py-4">{{ $result->VISION }}</td>
+                    <td scope="col" class="px-6 py-4">{{ $result->CULTURA_ORGANIZACIONAL }}</td>
+                    <td scope="col" class="px-6 py-4">
                         <div class="flex justify-center gap-4">
                             {{-- Editar --}}
                             <button type="submit"
@@ -84,8 +78,6 @@
             </tbody>
         </table>
     </div>
-
-
     @livewire('informaciones-child')
     @livewire('livewire-toast')
     </div>

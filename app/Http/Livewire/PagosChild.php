@@ -96,15 +96,31 @@ class PagosChild extends Component
 
     public function createItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_EMP' => 'required',
+            'item.ID_CUR' => 'required',
+            'item.ID_PAG' => 'required',
+            'item.NOMBRE_PAG' => 'required',
+            'item.METODO_PAG' => 'required',
+            'item.FECHA_PAG' => 'required',
+            'item.MONTO_PAG' => 'required',
+        ],[
+            'item.ID_EMP.required' => 'El campo es obligatorio',
+            'item.ID_CUR.required' => 'El campo es obligatorio',
+            'item.ID_PAG.required' => 'El campo es obligatorio',
+            'item.NOMBRE_PAG.required' => 'El campo es obligatorio',
+            'item.METODO_PAG.required' => 'El campo es obligatorio',
+            'item.FECHA_PAG.required' => 'El campo es obligatorio',
+            'item.MONTO_PAG.required' => 'El campo es obligatorio',
+        ]);
         $item = Pago::create([
-            'ID_EMP' => $this->item['ID_EMP'] ?? '', 
-            'ID_CUR' => $this->item['ID_CUR'] ?? '', 
-            'ID_PAG' => $this->item['ID_PAG'] ?? '', 
-            'NOMBRE_PAG' => $this->item['NOMBRE_PAG'] ?? '', 
-            'METODO_PAG' => $this->item['METODO_PAG'] ?? '', 
-            'FECHA_PAG' => $this->item['FECHA_PAG'] ?? '', 
-            'MONTO_PAG' => $this->item['MONTO_PAG'] ?? '', 
+            'ID_EMP' => $this->item['ID_EMP'] ??  null,
+            'ID_CUR' => $this->item['ID_CUR'] ??  null,
+            'ID_PAG' => $this->item['ID_PAG'] ??  null ,
+            'NOMBRE_PAG' => $this->item['NOMBRE_PAG'] ?? null, 
+            'METODO_PAG' => $this->item['METODO_PAG'] ?? null, 
+            'FECHA_PAG' => $this->item['FECHA_PAG'] ??  null,
+            'MONTO_PAG' => $this->item['MONTO_PAG'] ??  null,
         ]);
         $this->confirmingItemCreation = false;
         $this->emitTo('pagos', 'refresh');
@@ -120,7 +136,23 @@ class PagosChild extends Component
 
     public function editItem(): void
     {
-        $this->validate();
+        $this->validate([
+            'item.ID_EMP' => 'required',
+            'item.ID_CUR' => 'required',
+            'item.ID_PAG' => 'required',
+            'item.NOMBRE_PAG' => 'required',
+            'item.METODO_PAG' => 'required',
+            'item.FECHA_PAG' => 'required',
+            'item.MONTO_PAG' => 'required',
+        ],[
+            'item.ID_EMP.required' => 'El campo es obligatorio',
+            'item.ID_CUR.required' => 'El campo es obligatorio',
+            'item.ID_PAG.required' => 'El campo es obligatorio',
+            'item.NOMBRE_PAG.required' => 'El campo es obligatorio',
+            'item.METODO_PAG.required' => 'El campo es obligatorio',
+            'item.FECHA_PAG.required' => 'El campo es obligatorio',
+            'item.MONTO_PAG.required' => 'El campo es obligatorio',
+        ]);
         $this->item->save();
         $this->confirmingItemEdit = false;
         $this->primaryKey = '';

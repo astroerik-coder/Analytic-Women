@@ -9,6 +9,8 @@ class Genero extends Model
 {
 	use HasFactory;
 	
+    protected $primaryKey = 'ID_GEN';
+
     public $timestamps = true;
 
     protected $table = 'generos';
