@@ -49,7 +49,7 @@ Route::middleware([
 
     //CRUD
     Route::get('/crud', function () {return view('crud');})->name('crud');
-    Route::get('/blogs', function () {  return view('layouts.components.tables.blogs'); })->name('blogs');
+    //Route::get('/blogs', function () {  return view('layouts.components.tables.blogs'); })->name('blogs');
     Route::get('/categorias', function () {return view('layouts.components.tables.categorias'); })->name('categorias');
     Route::get('/ciudades', function () {return view('layouts.components.tables.ciudades'); })->name('ciudades');
     Route::get('/clientes', function () { return view('layouts.components.tables.clientes');})->name('clientes');

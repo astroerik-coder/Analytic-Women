@@ -160,5 +160,4 @@ class BlogsChild extends Component
         $this->emitTo('blogs', 'refresh');
         $this->emitTo('livewire-toast', 'show', 'Registro actualizado  con éxito');
     }
-
 }

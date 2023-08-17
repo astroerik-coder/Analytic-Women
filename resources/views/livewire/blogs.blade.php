@@ -37,20 +37,19 @@
                                 <x-tall-crud-sort-icon sortField="ID_BLG" :sort-by="$sortBy" :sort-asc="$sortAsc" />
                             </div>
                         </td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Clt</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Com</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Id Cat</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Titulo</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Valoracion</td>
-                        <td scope="col" class="px-6 py-4 font-medium text-gray-900">Acciones</td>
+                        <td scope="col" class="px-6 py-4">Id</td>
+                        <td scope="col" class="px-6 py-4">Cliente</td>
+                        <td scope="col" class="px-6 py-4">Comentario</td>
+                        <td scope="col" class="px-6 py-4">Categoria</td>
+                        <td scope="col" class="px-6 py-4">Titulo</td>
+                        <td scope="col" class="px-6 py-4">Valoracion</td>
+                        <td scope="col" class="px-6 py-4">Acciones</td>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
                     @foreach($results as $result)
                     <tr class="hover:bg-violet-50 {{ ($loop->even ) ? " bg-violet-100" : "" }}">
 
-                        <td class="px-6 py-4">{{ $result->id }}</td>
                         <td class="px-6 py-4">{{ $result->ID_BLG }}</td>
                         <td class="px-6 py-4">{{ $result->ID_CLT }}</td>
                         <td class="px-6 py-4">{{ $result->ID_COM }}</td>

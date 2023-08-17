@@ -42,47 +42,41 @@
   </section>
   <br><br><br><br>
 
-  <div class="gallery rounded mx-auto m-5 bg-white mt-5" style="width:1000px;">
-    <div class="top flex p-2 border-b select-none">
-      <div class="heading text-gray-800 w-full pl-3 font-semibold my-auto"></div>
-      <div class="buttons ml-auto flex text-gray-600 mr-1">
-        <svg action="prev" class="w-7 rounded-l-lg p-1 cursor-pointer border-r-0" xmlns="http://www.w3.org/2000/svg"
-          fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path action="prev" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-        </svg>
-        <svg action="next" class="w-7 rounded-r-lg p-1 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path action="next" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M14 5l7 7m0 0l-7 7m7-7H3" />
-        </svg>
-      </div>
-    </div>
-    <div class="content-area w-full h-120 overflow-hidden">
-      <div class="platform shadow-xl h-full flex">
-        @foreach ($cursos as $curso)
-        <div class="each-frame border-box flex-none h-full" title="Cursos">
-          <div class="main flex w-full p-8">
-            <div class="sub w-4/8 my-auto">
-              <img class="w-full p-8" src="{{$curso->IMAGEN_CUR}}" alt="">
+  { @foreach ($cursos as $curso)
+
+  <div class="min-w-screen min-h-screen bg-primary flex items-center p-5 lg:p-10 overflow-hidden relative">
+    <div class="w-full max-w-6xl rounded bg-white shadow-xl p-10 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+      <div class="md:flex items-center -mx-10">
+        <div class="w-full md:w-1/2 px-10 mb-10 md:mb-0">
+          <div class="relative">
+            <img src="{{$curso->first()->IMAGEN_CUR}}" class="w-full relative z-10" alt="">
+            <div class="border-4 border-tertiary absolute top-10 bottom-10 left-10 right-10 z-0"></div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 px-10">
+          <div class="mb-10">
+            <h1 class="font-bold uppercase text-2xl mb-5">{{$curso->first()->NOMBRE_CUR}}</h1>
+            <p class="text-sm">{{ $curso->first()->DESCRIPCION_CUR}}</p>
+          </div>
+          <div>
+            <div class="inline-block align-bottom mr-5">
+              <span class="text-2xl leading-none align-baseline">$</span>
+              <span class="font-bold text-5xl leading-none align-baseline">{{ $curso->first()->COSTO_CUR}}</span>
+              <span class="text-2xl leading-none align-baseline">.00</span>
             </div>
-            <div class="sub w-full my-auto">
-              <h1 class="text-4xl text-blue-500 font-bold md:text-5xl mb-4"> {{$curso->NOMBRE_CUR}}</h1>
-              <p class="text-lg mb-4"> {{ $curso->DESCRIPCION_CUR}}</p>
-              <h1 class="text-4xl text-gray-700 font-bold md:text-3xl mb-4">${{ $curso->COSTO_CUR}}</h1>
-              <button type="button" title="Start buying"
-                class="w-full py-3 px-6 text-center rounded-xl transition bg-gray-700 shadow-xl hover:bg-gray-600 active:bg-gray-700 focus:bg-gray-600 sm:w-max">
-                <span class="block text-white font-semibold">
-                  Inscribete
-                </span>
-              </button>
+            <div class="inline-block align-bottom">
+              <button
+                class="bg-primary opacity-75 hover:opacity-100 text-white hover:text-gray-900 rounded-full px-10 py-2 font-semibold"><i
+                  class="mdi mdi-cart -ml-2 mr-2"></i> Registrate ahora</button>
             </div>
           </div>
         </div>
-        @endforeach
       </div>
     </div>
   </div>
+
+   @endforeach 
+
 
   @component('layouts.components.footer') @endcomponent
   {{-- Scripts --}}

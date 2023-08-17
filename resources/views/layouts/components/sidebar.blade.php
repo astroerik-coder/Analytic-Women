@@ -101,12 +101,12 @@
                     Tablas
                 </h3>
                 <ul class="mb-8 text-sm font-medium">
-                    <li>
+                   {{--  <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="blogs">
                             <span class="select-none">Blogs</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a class="active flex items-center rounded py-3 pl-3 pr-4 text-gray-50 hover:bg-gray-600"
                             href="categorias">

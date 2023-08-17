@@ -27,22 +27,22 @@
             </div>
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500 mt-8"
                 wire:loading.class.delay="opacity-50">
-            <thead class="bg-gray-5">
-                <tr class="px-6 py-4 font-medium text-white bg-primary">
-                            <td scope="col" class="px-6 py-4">
-                                <div class="flex items-center">
-                                    <button wire:click="sortBy('NOMBRE_CAT')">Nombre Cat</button>
-                                    <x-tall-crud-sort-icon sortField="NOMBRE_CAT" :sort-by="$sortBy"
-                                        :sort-asc="$sortAsc" />
-                                </div>
-                            </td>
-                            <td scope="col" class="px-6 py-4">Acciones</td>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
-                        @foreach($results as $result)
-                        <tr class="hover:bg-violet-50">
-                            <td class="px-6 py-4">{{ $result->ID_CAT }}</td>
+                <thead class="bg-gray-5">
+                    <tr class="px-6 py-4 font-medium text-white bg-primary">
+                        <td scope="col" class="px-6 py-4">Id</td>
+                        <td scope="col" class="px-6 py-4">
+                            <div class="flex items-center">
+                                <button wire:click="sortBy('NOMBRE_CAT')">Nombre Cat</button>
+                                <x-tall-crud-sort-icon sortField="NOMBRE_CAT" :sort-by="$sortBy" :sort-asc="$sortAsc" />
+                            </div>
+                        </td>
+                        <td scope="col" class="px-6 py-4">Acciones</td>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 border-t border-gray-100 ">
+                    @foreach($results as $result)
+                    <tr class="hover:bg-violet-50">
+                        <td class="px-6 py-4">{{ $result->ID_CAT }}</td>
                         <td class="px-6 py-4">{{ $result->NOMBRE_CAT }}</td>
                         <td class="px-6 py-4">
                             <div class="flex justify-center gap-4">
